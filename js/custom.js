@@ -3,7 +3,7 @@ jQuery(document).ready(function() {
 	$('#gf').text('GitHub Followers');
     $('#gfr').text('GitHub Repos');		
 	
-	JSONP( 'https://api.github.com/users/erjjones?callback=?', function( response ) {
+	JSONP( 'https://api.github.com/users/fbla?callback=?', function( response ) {
 		var data = response.data;
 		$('#gf').text(data.followers + ' GitHub Followers');
         $('#gfr').text(data.public_repos + ' GitHub Repos');
