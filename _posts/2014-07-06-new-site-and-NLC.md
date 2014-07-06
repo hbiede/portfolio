@@ -2,6 +2,7 @@
 layout: post
 category : news
 tags : [nlc, website, tennessee, nashville]
+image: http://i.imgur.com/Z3d37ht.jpg
 ---
 {% include JB/setup %}
 
