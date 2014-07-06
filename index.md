@@ -1,7 +1,7 @@
 ---
-layout: page
-title: Hello World!
-tagline: Supporting tagline
+layout: default
+title: FBLA
+tagline: Adams Central
 ---
 {% include JB/setup %}
 
