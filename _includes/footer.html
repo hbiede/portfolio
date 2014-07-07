@@ -2,6 +2,6 @@
   <div class="container">
 	<p class="pull-right">{% if page.previous.url %} <a href="{{page.previous.url}}" title="Previous Post: {{page.previous.title}}">&laquo; Previous Blog Post</a> 	{% endif %}  |  <a href="#">Back to top</a>  |  {% if page.next.url %} 	<a href="{{page.next.url}}" title="Next Post: {{page.next.title}}">Next Blog Post &raquo; </a> 	{% endif %} </p>        
 	<p>Page last generated on {{ site.time | date: "%B %e, %Y" }}</p>
-	<a href="sitemap.txt">Sitemap </a> | <a href="rss.xml"> RSS </a> | <a href="atom.xml"> Atom</a><br>
+	<a href="{{ site.JB.sitemap_path }}">Sitemap </a> | <a href="{{ site.JB.rss_path }}"> RSS </a> | <a href="{{ site.JB.atom_path }}"> Atom</a><br>
   </div>
 </footer>
