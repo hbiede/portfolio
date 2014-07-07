@@ -15,4 +15,4 @@ Welcome to the new Adams Central FBLA News Site.  This site will be used to spre
 
 ![NLC Attendees](http://i.imgur.com/Z3d37ht.jpg "Logo Title Text 1")
 
-####Thanks to Mrs. Schuck for acting as sponsor for this event
+####Thanks to Mrs. Schuck for acting as sponsor for this event!
