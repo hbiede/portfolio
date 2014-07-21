@@ -1,0 +1,21 @@
+officers:
+  - name: Mr. Mulligan
+    office: Advisor
+    
+  - name: Jade Spady
+    office: President
+    
+  - name: Alyssa Ehlers
+    office: President
+    
+  - name: Eliza Donley
+    office: Secretary
+    
+  - name: Trey Alexander
+    office: Treasurer
+    
+  - name: Sam Cass
+    office: Reporter
+    
+  - name: Erin McCready
+    office: Historian
