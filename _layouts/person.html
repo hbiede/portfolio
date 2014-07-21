@@ -10,8 +10,10 @@
 			<div class="span7 columns">
 				    	<img src="{{ page.image }}" align="left" alt="{{ post.title }}" height="300" width="200">
 				    	{{ content }}
-				    	<blockquote style="border: 2px solid #666; padding: 10px; background-color: #ccc;"> {{ page.quote }} <br> {{ page.quoteSource }}</blockquote>
-			</div>	
+			</div>
+			<div class="span7 columns">
+				<blockquote style="border: 2px solid #666; padding: 10px; background-color: #ccc;"> {{ page.quote }} <br> {{ page.quoteSource }}</blockquote>
+			</div>
 
 		</div>
 		{% include JB/comments-providers/disqus %}
