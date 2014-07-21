@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html class="fuelux" lang="en">
+  {% include header.html %}
+  <body>
+      {% include nav.html %}
+      <div class="container">	
+	  	  <div class="marketing">
+	<div class="content">	  
+		<div class="row">
+			<div class="span7 columns">
+				    	<img src="{{ page.image }}" align="left">
+				    	<p>{{ page.title }} is {{ page.positiveAdj }} to be serving as Adams Centrals FBLA Chapter {{ page.officeHeld }} for the {{ this_year }} school year!<p>
+			</div>	
+
+		</div>
+		{% include JB/comments-providers/disqus %}
+	</div>	
+</div>		 
+	</div>
+	   {% include footer.html %}
+     <script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+   </body>
+</html>
