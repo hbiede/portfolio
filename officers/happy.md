@@ -1,5 +1,5 @@
 ---
-layout: person
+layout: officer
 title: Happy Guy Officer
 image: http://www.clipartbest.com/cliparts/nTE/XXK/nTEXXKkTA.png
 positiveAdj: happy
