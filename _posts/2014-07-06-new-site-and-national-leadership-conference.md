@@ -5,7 +5,6 @@ summary: New Website for FBLA and NLC Attendees Return from Nashville
 tags : [nlc, website, tennessee, nashville]
 image: http://i.imgur.com/Z3d37ht.jpg
 ---
-{% include JB/setup %}
 
 ## Adams Central FBLA
 Welcome to the new Adams Central FBLA News Site.  This site will be used to spread news about Local FBLA Events, News from the State, Regional, and National Levels, and to Share FBLA Documents with Members for Easy Access
