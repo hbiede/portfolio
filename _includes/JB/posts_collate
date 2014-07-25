@@ -39,13 +39,13 @@ Usage:
     {% else %}
       {% if this_year != next_year %}
         </ul>
-        <h2>{{next_year}}</h2>
-        <h3>{{next_month}}</h3>
+        <h2 id="{{next_year}}">{{next_year}}</h2>
+        <h3 id="{{next_year}}-{{next_month}}">{{next_month}}</h3>
         <ul>
       {% else %}    
         {% if this_month != next_month %}
           </ul>
-          <h3>{{next_month}}</h3>
+          <h3 id="{{next_year}}-{{next_month}}">{{next_month}}</h3>
           <ul>
         {% endif %}
       {% endif %}
