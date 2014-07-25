@@ -2,7 +2,7 @@
 layout: post
 catagory: news
 summary: New Website for FBLA and NLC Attendees Return from Nashville 
-tags : [nlc, website, tennessee, nashville]
+tags : [nlc, website, tennessee, nashville, conference, 2014]
 image: http://i.imgur.com/Z3d37ht.jpg
 ---
 
