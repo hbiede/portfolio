@@ -20,10 +20,10 @@ tagline: The Latest from Adams Central FBLA
         </p>
 		<p>
           <i class="icon-calendar"></i> {{ post.date | date: "%B %e, %Y" }}
-          | <i class="icon-comment"></i> <a href="{{ site.production_url }}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}"></a>     
+          | <i class="icon-comment"></i> <a href="{{ site.production_url }}{{ post.url }}#disqus_thread" title="Discussion Page"data-disqus-identifier="{{ post.url }}"></a>     
 		  | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="{{ site.JB.tags_path }}#{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>  {% if forloop.last != true %} {% endif %} {% endfor %}		            
         </p>
-        <p><a href="{{ post.url }}">Read more</a></p>
+        <p><a href="{{ post.url }}" title="{{ post.title }}">Read more</a></p>
       </div>
     </div>
   </div>
