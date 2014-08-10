@@ -6,11 +6,11 @@ tags : [nlc, website, tennessee, nashville, conference, 2014]
 image: http://i.imgur.com/1IsoP4z.jpg
 ---
 
-## Adams Central FBLA
-Welcome to the new Adams Central FBLA News Site.  This site will be used to spread news about Local FBLA Events, News from the State, Regional, and National Levels, and to Share FBLA Documents with Members for Easy Access
+<h2>Adams Central FBLA</h2>
+<p>Welcome to the new Adams Central FBLA News Site.  This site will be used to spread news about Local FBLA Events, News from the State, Regional, and National Levels, and to Share FBLA Documents with Members for Easy Access</p>
 
-###NLC Attendees
-6 Adams Central FBLA Members recently returned from Nashville, TN, where they attended the National Leadership Conference, along with over 10,000 other FBLA members from all corners of the nation. In addition to partaking in the test/performance event they qualified in, they toured the Grand Ole Opry, took a riverboat cruise where they enjoyed great food and an amazing performance by the Crew, and Swing danced at the Wild Horse Saloon.  Overall it was a great experience for all the students that attended.
+<h3>NLC Attendees</h3>
+<p>6 Adams Central FBLA Members recently returned from Nashville, TN, where they attended the National Leadership Conference, along with over 10,000 other FBLA members from all corners of the nation. In addition to partaking in the test/performance event they qualified in, they toured the Grand Ole Opry, took a riverboat cruise where they enjoyed great food and an amazing performance by the Crew, and Swing danced at the Wild Horse Saloon.  Overall it was a great experience for all the students that attended.</p>
 
 <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#imgModal">
 	<img src="http://i.imgur.com/1IsoP4z.jpg" title="Nashville NLC Attendees" alt="Nashville NLC Attendees" width="150">
@@ -42,4 +42,4 @@ Welcome to the new Adams Central FBLA News Site.  This site will be used to spre
 	</div>
 </div
 
-####Thanks to Mrs. Schuck for acting as sponsor for this event!
+<h4>Thanks to Mrs. Schuck for acting as sponsor for this event!</h4>
