@@ -6,6 +6,6 @@ image: http://i.imgur.com/UKZtCoa.png
 ---
 
 ##EMail Notifications
-To recieve emails whenever ACFBLA posts a new article to this website, click 
+To recieve emails whenever ACFBLA posts a new article to this website, click:
 ###[This Link](https://groups.google.com/forum/#!forum/acfbla)
 Then, click "Join Group", then change 'Don't Send Me Emails' to 'Send Me an EMail for Every New Message'.
