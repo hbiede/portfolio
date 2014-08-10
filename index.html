@@ -73,7 +73,7 @@ tagline: Adams Central
           | <i class="icon-comment"></i> <a href="{{ site.production_url}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}" title="{{ post.title }} Discussion Page"></a>     
 		  | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="/tags.html#{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>  {% if forloop.last != true %} {% endif %} {% endfor %}		            
         </p>
-        <button type="button" class="btn btn-default btn-info" onClick="window.location='{{ post.url }}';" title="Read the Full Article: <br>{{ post.title }}">Read more</a></p>
+        <button type="button" class="btn btn-default btn-info" onClick="window.location='{{ post.url }}';" title="Read the Full Article: <br>{{ post.title }}">Read more</button></p>
         <h5><small><a href="news.html" title="Read our Most Recent Articles">More News</a></small></h5>
       </div>
     </div>    
