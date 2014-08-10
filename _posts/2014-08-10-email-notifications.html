@@ -12,7 +12,7 @@ image: http://i.imgur.com/UKZtCoa.png
 
 <br><br><br>
 <button class="btn btn-success" data-toggle="modal" data-target="#imgModal">
-	<img src="http://i.imgur.com/UKZtCoa.png" title="EMail Notifications" alt="EMail" width="250">
+	<img src="{{ page.image }}" title="{{ page.title }}" alt="{{ page.title }}" width="250">
 	<p>Click to See Full Size Image</p>
 </button>
 
@@ -30,11 +30,11 @@ image: http://i.imgur.com/UKZtCoa.png
 				</button>
 			</div>
 			<div class="modal-body">
-				<h2>Nashville NLC Attendees</h2>
-				<img src="http://i.imgur.com/UKZtCoa.png" alt="EMail" tile="EMail Notification" width="100%">
+				<h2>{{ page.title }}</h2>
+				<img src="http://i.imgur.com/UKZtCoa.png" alt="EMail" tile="{{ page.title }}" width="400">
 			</div>
 			<div class="modal-footer">
-				<button type="button" class="btn btn-default" onclick="window.location='http://i.imgur.com/UKZtCoa.png';">Image Link</button>
+				<button type="button" class="btn btn-default" onclick="window.location='{{ page.image }}';">Image Link</button>
 				<button type="button" class="btn btn-info" onClick="window.location='https://groups.google.com/forum/#!forum/acfbla';">Sign-up!</button>
 				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
 			</div>
