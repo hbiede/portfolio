@@ -3,7 +3,7 @@ layout: post
 catagory: news
 summary: New Website for FBLA and NLC Attendees Return from Nashville 
 tags : [nlc, website, tennessee, nashville, conference, 2014]
-image: http://i.imgur.com/Z3d37ht.jpg
+image: http://i.imgur.com/1IsoP4z.jpg
 ---
 
 ## Adams Central FBLA
@@ -12,6 +12,34 @@ Welcome to the new Adams Central FBLA News Site.  This site will be used to spre
 ###NLC Attendees
 6 Adams Central FBLA Members recently returned from Nashville, TN, where they attended the National Leadership Conference, along with over 10,000 other FBLA members from all corners of the nation. In addition to partaking in the test/performance event they qualified in, they toured the Grand Ole Opry, took a riverboat cruise where they enjoyed great food and an amazing performance by the Crew, and Swing danced at the Wild Horse Saloon.  Overall it was a great experience for all the students that attended.
 
-![NLC Attendees](http://i.imgur.com/Z3d37ht.jpg "Adams Central FBLA NLC Attendees")
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#imgModal">
+	<img src="http://i.imgur.com/1IsoP4z.jpg" title="Nashville NLC Attendees" alt="Nashville NLC Attendees" width="150">
+	<p>Click to See Full Size Image</p>
+</button>
+
+<div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labeledby="imgModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">
+						&times;
+					</span>
+					<span class="sr-only">
+						Close
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h2>Nashville NLC Attendees</h2>
+				<img src="http://i.imgur.com/1IsoP4z.jpg" alt="Nashville NLC Attendees" tile="Nashville NLC Attendees">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" onclick="window.location='http://i.imgur.com/1IsoP4z.jpg';">Image Link</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div
 
 ####Thanks to Mrs. Schuck for acting as sponsor for this event!
