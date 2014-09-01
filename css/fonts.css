@@ -1,0 +1,23 @@
+.xsmall,
+xsmall,
+.h1 xsmall,
+h1 .xsmall,
+h1 xsmall,
+.h2 xsmall,
+h2 .xsmall,
+h2 xsmall,
+.h3 xsmall,
+h3 .xsmall,
+h3 xsmall,
+.h4 xsmall,
+h4 .xsmall,
+h4 xsmall,
+.h5 xsmall,
+h5 .xsmall,
+h5 xsmall,
+.h6 xsmall,
+h6 .xsmall,
+h6 xsmall,
+{
+  font-size: 66%;
+}
