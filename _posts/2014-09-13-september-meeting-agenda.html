@@ -1,0 +1,56 @@
+---
+layout: post
+summary: September 2014’s Meeting Agenda is now Available Online
+tags: [meeting, agenda, september]
+image: http://i.imgur.com/UKZtCoa.png
+agendalink: https://doc-08-ac-docs.googleusercontent.com/docs/securesc/uljk7rp8dhiofs7m7vsm7nn14opkqqur/636bo19r4d40uvtgtucpco2bgbud4ks7/1410638400000/13292136367249533183/13292136367249533183/0B0gVCi7WZrEjTmtETU9zdE5qOHM?e=download&h=16653014193614665626&nonce=k2u8coc12jeki&user=13292136
+---
+
+<h2>September Agenda</h2>
+<p>At this months meeting, the topics of discussion include Committee Signup, FLC at Kearney, Fall trash Pickup, Concession Stand Workers, and Teacher Breakfast.</p>
+
+<br><br><br>
+<button class="btn btn-success" data-toggle="modal" data-target="#agendaModal">
+	<img src="{{ page.image }}" title="{{ page.title }}" alt="{{ page.title }}" width="250">
+	<p>Click to See Full Agenda</p>
+</button>
+
+<div class="modal fade" id="agendaModal" tabindex="-1" role="dialog" aria-labeledby="agendaModal" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">
+					<span aria-hidden="true">
+						&times;
+					</span>
+					<span class="sr-only">
+						Close
+					</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h2>{{ page.title }}</h2>
+				<object data="{{ page.agendalink }}" type="application/pdf" width="100%" height="700">
+  					<p>
+  						It appears you don't have a PDF plugin for this browser.
+  						You can <a href="docs/Resume.pdf">click here to
+  						download the PDF file.</a>
+  					</p>
+				</object>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" onclick="window.location='{{ page.image }}';">Agenda Download</button>
+				<button type="button" class="btn btn-info" onClick="window.location='https://groups.google.com/forum/#!forum/acfbla';">Sign-up for Emails!</button>
+				<button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div><hr width="70%">
+
+<h5>To recieve emails whenever ACFBLA posts a new article to this website, click:</h5>
+<button type="button" class="btn btn-success" onClick="window.location='https://groups.google.com/forum/#!forum/acfbla';">This Button!</button>
+<br><h5>Then, click Subscribe. You will now recieve an email whenever we add a new Article here!</h5>
+
+<h5>Follow us on Twitter:</h5>
+<p><a href="https://twitter.com/{{ site.author.twitter }}" class="twitter-follow-button" data-link-color="#0069D6" data-show-count="true">Follow @{{ site.author.twitter }}</a></p>
+<br>
