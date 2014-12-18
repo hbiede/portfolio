@@ -1,19 +1,45 @@
----
-layout: default
-title: Tags
-tagline: Posts By Tag
----
+<!DOCTYPE html>
+<html class="fuelux" lang="en">
+	{% include header.html %}
+	<body>
+		{% include nav.html %}
+		<div class="container">	
+			<div class="marketing">
+				<div class="content">
+					<div class="row">
+						<div class="span8 columns">
+							<h1>{{ page.title }} <small>{{ page.tagline }}</small></h1><br>
+							<ul class="tag_box inline">
+                {% assign tags_list = site.tags %}  
+                {% include JB/tags_list %}
+              </ul>
 
-<ul class="tag_box inline">
-  {% assign tags_list = site.tags %}  
-  {% include JB/tags_list %}
-</ul>
 
-
-{% for tag in site.tags %} 
-  <h2 id="{{ tag[0] }}">{{ tag[0] }}</h2>
-  <ul>
-    {% assign pages_list = tag[1] %}  
-    {% include JB/pages_list %}
-  </ul>
-{% endfor %}
+              {% for tag in site.tags %} 
+                <h2 id="tag-{{ tag[0] }}">{{ tag[0] }}</h2>
+                <ul>
+                  {% assign pages_list = tag[1] %}  
+                  {% include JB/pages_list %}
+                </ul>
+              {% endfor %}
+ 					
+						</div>	
+				      
+						<div class="span3 columns">
+						  <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+  						  <ul class="nav">
+    							{% for tag in site.tags %}
+    							<li>
+                    <a href="#tag-{{  tag[0]  }}">{{ tag[0] }}</a>
+                  </li>
+    							{% endfor %}
+  							</ul>
+           	</div>	
+			      	
+					</div>						
+				</div>	
+			</div>		 
+		</div>
+	   	{% include footer.html %}
+   	</body>
+</html>
