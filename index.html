@@ -2,83 +2,85 @@
 layout: homepage
 title: FBLA
 ---
+<div class="jumbotron">
+	<h1>{{ page.title }} <small>{{ site.data.fbla.motto.realMotto }}</small></h1><br>
+	<br>
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators">
+	    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+	    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+	  </ol>
 
-<br>
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="http://i.imgur.com/yTeJ0pl.png" alt="Minions" height="400" title="Minions!!">
-      <div class="carousel-caption">
-        <h3>Halloween Meeting</h3>
-        <p>Despicable Me Minions at the October Meeting</p>
-      </div>
-    </div>
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner">
+	    <div class="item active">
+	      <img src="http://i.imgur.com/yTeJ0pl.png" alt="Minions" height="400" title="Minions!!">
+	      <div class="carousel-caption">
+	        <h3>Halloween Meeting</h3>
+	        <p>Despicable Me Minions at the October Meeting</p>
+	      </div>
+	    </div>
     
-    <div class="item">
-      <img src="http://i.imgur.com/yYqTW5S.png" alt="Santa" height="400" title="Santa and His Helpers">
-      <div class="carousel-caption">
-        <h3>Santa and His Helpers</h3>
-        <p>Santa Visits the Elementary Schools</p>
-      </div>
-    </div>
+	    <div class="item">
+	      <img src="http://i.imgur.com/yYqTW5S.png" alt="Santa" height="400" title="Santa and His Helpers">
+	      <div class="carousel-caption">
+	        <h3>Santa and His Helpers</h3>
+	        <p>Santa Visits the Elementary Schools</p>
+	      </div>
+	    </div>
     
-    <div class="item">
-      <img src="http://i.imgur.com/3d5dceg.png" alt="Trash Pickup" height="400" title="The Clean Up Crew">
-      <div class="carousel-caption">
-        <h3>The Clean Up Crew</h3>
-        <p>Members picking up trash along Adams Central Avenue</p>
-      </div>
-    </div>
-  </div>
+	    <div class="item">
+	      <img src="http://i.imgur.com/3d5dceg.png" alt="Trash Pickup" height="400" title="The Clean Up Crew">
+	      <div class="carousel-caption">
+	        <h3>The Clean Up Crew</h3>
+	        <p>Members picking up trash along Adams Central Avenue</p>
+	      </div>
+	    </div>
+	  </div>
 
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" title="Back">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" title="Next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-  </a>
-</div>
+	  <!-- Controls -->
+	  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev" title="Back">
+	    <span class="glyphicon glyphicon-chevron-left"></span>
+	  </a>
+	  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next" title="Next">
+	    <span class="glyphicon glyphicon-chevron-right"></span>
+	  </a>
+	</div>
+	</div>
 
-<hr>
+	<hr>
 
 {% for post in site.posts offset: 0 limit: 1 %}
 <div class="row">
-  <div class="span7">    
-    <div class="row">
-      <h3>Latest News</h3>
-      <div class="span2">
-        <a href="{{ post.url }}" >
-        	<img border="0" width="250" height="150" src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}">
-        </a>
-      </div>
-      <div class="span5">
-	      <h4>
-		      <strong>
-		        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-		      </strong>
-		    </h4>      
-        <p>
-          {{ post.summary }}
-        </p>
-	<p>
-          <i class="icon-calendar"></i> {{ post.date | date: "%B %e, %Y" }} | <i class="icon-comment"></i> <a href="{{ site.production_url}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}" title="{{ post.title }} Discussion Page"></a> | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="/tags.html#{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>
-{% endfor %}
+  <div class="span7">
+  <div class="row">
+  	<h3>Latest News</h3>
+  	<div class="span2">
+  		<a href="{{ post.url }}" >
+	          	<img border="0" width="250" height="150" src="{{ post.image }}" alt="{{ post.title }}" title="{{ post.title }}">
+	        </a>
+	</div>
+	<div class="span5">
+		<h4>
+			<strong>
+			        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
+			</strong>
+		</h4>      
+	        <p>
+	          {{ post.summary }}
+	        </p>
+		<p>
+	          <i class="icon-calendar"></i> {{ post.date | date: "%B %e, %Y" }} | <i class="icon-comment"></i> <a href="{{ site.production_url}}{{ post.url }}#disqus_thread" data-disqus-identifier="{{ post.url }}" title="{{ post.title }} Discussion Page"></a> | <i class="icon-tags"></i> Tags :{% for tag in post.tags %} <a href="/tags.html#{{ tag }}" rel="tooltip" title="View posts tagged with &quot;{{ tag }}&quot;"><span class="label label-info">{{ tag }}</span></a>
+	{% endfor %}
 
-        </p>
-        <button type="button" class="btn btn-default btn-info" onClick="window.location='{{ post.url }}';" title="Read the Full Article: <br>{{ post.title }}">Read more</button>
-        <h5><small><a href="news.html" title="Read our Most Recent Articles">More News</a></small></h5>
-      </div>
-    </div>    
-	<hr>
-  </div>
-</div>
-{% endfor %}
+	        </p>
+	        <button type="button" class="btn btn-default btn-info" onClick="window.location='{{ post.url }}';" title="Read the Full Article: <br>{{ post.title }}">Read more</button>
+	        <h5><small><a href="news.html" title="Read our Most Recent Articles">More News</a></small></h5>
+	      </div>
+	    </div>    
+		<hr>
+	  </div>
+	</div>
+	{% endfor %}
