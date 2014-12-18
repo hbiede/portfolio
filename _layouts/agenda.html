@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html class="fuelux" lang="en">
     {% include header.html %}
@@ -13,8 +11,8 @@
                         <div class="span7 columns">
                             <div role="tabpanel">
                                 <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#recap" aria-controls="home" role="tab" data-toggle="tab">Recap</a></li>
-                                    <li role="presentation"><a href="#agenda" aria-controls="profile" role="tab" data-toggle="tab">Agenda</a></li>
+                                    <li role="presentation" class="active"><a href="{{ page.url }}#recap" aria-controls="home" role="tab" data-toggle="tab">Recap</a></li>
+                                    <li role="presentation"><a href="{{ page.url }}#agenda" aria-controls="profile" role="tab" data-toggle="tab">Agenda</a></li>
                                 </ul>
                                 <div class="tab-content">
                                     <div role="tabpanel" class="tab-pane active" id="recap">
