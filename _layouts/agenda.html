@@ -6,38 +6,40 @@
     <body>
         {% include nav.html %}
         <div class="container">
-        <div class="marketing">
-            <div class="content">
-                <div class="row">
-                    {% include post_header.html %}
-                    <div class="span7 columns">
-                        <div role="tabpanel">
-                            <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#recap" aria-controls="home" role="tab" data-toggle="tab">Recap</a></li>
-                                <li role="presentation"><a href="#agenda" aria-controls="profile" role="tab" data-toggle="tab">Agenda</a></li>
-                            </ul>
-                            <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="recap">
-                                    {{ content }}
-                                </div>
-                                <div role="tabpanel" class="tab-pane" id="agenda">
-                                    <h2>{{ page.title }}</h2>
-                                    <iframe src="{{ page.agendalink }}" type="application/pdf" width="100%" height="750">
-                                        <p>
-                                            It appears you don't have a PDF plugin for this browser.
-                                            You can <a href="{{ page.agendalink }}">click here to
-                                            download the PDF file.</a>
-                                        </p>
-                                    </iframe>
+            <div class="marketing">
+                <div class="content">
+                    <div class="row">
+                        {% include post_header.html %}
+                        <div class="span7 columns">
+                            <div role="tabpanel">
+                                <ul class="nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#recap" aria-controls="home" role="tab" data-toggle="tab">Recap</a></li>
+                                    <li role="presentation"><a href="#agenda" aria-controls="profile" role="tab" data-toggle="tab">Agenda</a></li>
+                                </ul>
+                                <div class="tab-content">
+                                    <div role="tabpanel" class="tab-pane active" id="recap">
+                                        {{ content }}
+                                    </div>
+                                    <div role="tabpanel" class="tab-pane" id="agenda">
+                                        <h2>{{ page.title }}</h2>
+                                        <iframe src="{{ page.agendalink }}" type="application/pdf" width="100%" height="750">
+                                            <p>
+                                                It appears you don't have a PDF plugin for this browser.
+                                                You can <a href="{{ page.agendalink }}">click here to
+                                                download the PDF file.</a>
+                                            </p>
+                                        </iframe>
+                                    </div>
                                 </div>
                             </div>
+                            </div>
+                            <div class="span4 columns">					
+                                {% include aboutme.html %}							
+                            </div>
                         </div>
-                        <div class="span4 columns">					
-                            {% include aboutme.html %}							
-                        </div>
+                        <hr>
+                        {% include JB/comments-providers/disqus %}
                     </div>
-                    <hr>
-                    {% include JB/comments-providers/disqus %}
                 </div>
             </div>
         </div>
