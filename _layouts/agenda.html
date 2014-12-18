@@ -6,58 +6,29 @@
     <body>
         {% include nav.html %}
         <div class="container">
-            <div class="marketing">
-                <div class="content">
-                    <div class="row">
-                        {% include post_header.html %}
-                        <div class="span7 columns">
-                            <div role="tabpanel">
-                                <ul class="nav nav-tabs" role="tablist">
-                                    <li role="presentation" class="active"><a href="#recap" aria-controls="home" role="tab" data-toggle="tab">Recap</a></li>
-                                    <li role="presentation"><a href="#agenda" aria-controls="profile" role="tab" data-toggle="tab">Agenda</a></li>
-                                </ul>
+        <div class="marketing">
+            <div class="content">
+                <div class="row">
+                    {% include post_header.html %}
+                    <div class="span7 columns">
+                        <div role="tabpanel">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#recap" aria-controls="home" role="tab" data-toggle="tab">Recap</a></li>
+                                <li role="presentation"><a href="#agenda" aria-controls="profile" role="tab" data-toggle="tab">Agenda</a></li>
+                            </ul>
+                            <div class="tab-content">
                                 <div role="tabpanel" class="tab-pane active" id="recap">
                                     {{ content }}
                                 </div>
-                                <div class="tab-content">
-                                    <div role="tabpanel" class="tab-pane active" id="agenda">
-                                        <br><br>
-                                        <button class="btn btn-success" data-toggle="modal" data-target="#agendaModal">
-                                            <img src="{{ page.image }}" title="{{ page.title }}" alt="{{ page.title }}" width="250">
-                                            <p>Click to See Full Agenda</p>
-                                        </button>
-                                        <div class="modal fade" id="agendaModal" tabindex="-1" role="dialog" aria-labeledby="agendaModal" aria-hidden="true">
-                                            <div class="modal-dialog">
-                                                <div class="modal-content">
-                                                    <div class="modal-header">
-                                                        <button type="button" class="close" data-dismiss="modal">
-                                                        <span aria-hidden="true">
-                                                        &times;
-                                                        </span>
-                                                        <span class="sr-only">
-                                                        Close
-                                                        </span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <h2>{{ page.title }}</h2>
-                                                        <iframe src="{{ page.agendalink }}" type="application/pdf" width="100%" height="750">
-                                                            <p>
-                                                                It appears you don't have a PDF plugin for this browser.
-                                                                You can <a href="{{ page.agendalink }}">click here to
-                                                                download the PDF file.</a>
-                                                            </p>
-                                                        </iframe>
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" onclick="window.location='{{ page.agendalink }}';">Agenda Link</button>
-                                                        <button type="button" class="btn btn-info" onClick="window.location='https://groups.google.com/forum/#!forum/acfbla';">Sign-up for Emails!</button>
-                                                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div role="tabpanel" class="tab-pane active" id="recap">
+                                    <h2>{{ page.title }}</h2>
+                                    <iframe src="{{ page.agendalink }}" type="application/pdf" width="100%" height="750">
+                                        <p>
+                                            It appears you don't have a PDF plugin for this browser.
+                                            You can <a href="{{ page.agendalink }}">click here to
+                                            download the PDF file.</a>
+                                        </p>
+                                    </iframe>
                                 </div>
                             </div>
                         </div>
