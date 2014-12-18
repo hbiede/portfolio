@@ -11,7 +11,7 @@ title: Tags
 			<div class="marketing">
 				<div class="content">
 					<div class="row">
-						<div class="span8 columns">
+						<div class="span8 columns" data-target="undercover-spy">
 							<h1>{{ page.title }} <small>{{ page.tagline }}</small></h1><br>
 
 
@@ -26,8 +26,8 @@ title: Tags
 						</div>	
 				      
 						<div class="span3 columns">
-						  <div data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-  						  <ul class="nav">
+						  <div data-spy="affix" id="undercover-spy" data-offset-top="60" data-offset-bottom="200">
+	  						<ul class="nav">
     							{% for tag in site.tags %}
 	    							<li>
 						                    <a href="tags.html#tag-{{  tag[0]  }}">{{ tag[0] }}</a>
