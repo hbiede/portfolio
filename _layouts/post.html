@@ -1,61 +1,55 @@
----
----
-
 <!DOCTYPE html>
 <html class="fuelux" lang="en">
-  {% include header.html %}
-  <body>
-      {% include nav.html %}
-      <div class="container">	
-	  	  <div class="marketing">
-	<div class="content">	  
-		<div class="row">
-      {% include post_header.html %}
-			<div class="span7 columns">
-				    {{ content }}
-				    <br><br>
-                         <button class="btn btn-success" data-toggle="modal" data-target="#imgModal">
-	                         <img src="{{ page.image }}" title="{{ page.title }}" alt="{{ page.title }}" width="250">
-	                         <p>Click to See Full Size Image</p>
-                         </button>
-
-                         <div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labeledby="imgModal" aria-hidden="true">
-                              <div class="modal-dialog">
-                                   <div class="modal-content">
+    {% include header.html %}
+    <body>
+        {% include nav.html %}
+        <div class="container">
+            <div class="marketing">
+                <div class="content">
+                    <div class="row">
+                        {% include post_header.html %}
+                        <div class="span7 columns">
+                            {{ content }}
+                            <br><br>
+                            <button class="btn btn-success" data-toggle="modal" data-target="#imgModal">
+                                <img src="{{ page.image }}" title="{{ page.title }}" alt="{{ page.title }}" width="250">
+                                <p>Click to See Full Size Image</p>
+                            </button>
+                            <div class="modal fade" id="imgModal" tabindex="-1" role="dialog" aria-labeledby="imgModal" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
                                         <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal">
-                                                  <span aria-hidden="true">
-                                                       &times;
-                                                  </span>
-                                                  <span class="sr-only">
-                                                       Close
-                                                  </span>
-                                             </button>
+                                            <button type="button" class="close" data-dismiss="modal">
+                                            <span aria-hidden="true">
+                                            &times;
+                                            </span>
+                                            <span class="sr-only">
+                                            Close
+                                            </span>
+                                            </button>
                                         </div>
                                         <div class="modal-body">
-                                             <h2>{{ page.title }}</h2>
-                                             <img src="{{ page.image }}" alt="Page Image" tile="{{ page.title }}" width="400">
+                                            <h2>{{ page.title }}</h2>
+                                            <img src="{{ page.image }}" alt="Page Image" tile="{{ page.title }}" width="400">
                                         </div>
                                         <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" onclick="window.location='{{ page.image }}';">Image Link</button>
-                                             <button type="button" class="btn btn-info" onClick="window.location='https://groups.google.com/forum/#!forum/acfbla';">Sign-up for Emails!</button>
-                                             <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-default" onclick="window.location='{{ page.image }}';">Image Link</button>
+                                            <button type="button" class="btn btn-info" onClick="window.location='https://groups.google.com/forum/#!forum/acfbla';">Sign-up for Emails!</button>
+                                            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
                                         </div>
-                                   </div>
-                              </div>
-                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="span4 columns">					
+                            {% include aboutme.html %}							
+                        </div>
                     </div>
-
-			<div class="span4 columns">					
-				{% include aboutme.html %}							
-           		</div>	
-
-		</div>
-		<hr>
-		{% include JB/comments-providers/disqus %}
-	</div>	
-	</div>		 
-	</div>
-	   {% include footer.html %}
-   </body>
+                    <hr>
+                    {% include JB/comments-providers/disqus %}
+                </div>
+            </div>
+        </div>
+        {% include footer.html %}
+    </body>
 </html>
