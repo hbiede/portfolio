@@ -17,8 +17,17 @@ author :
   email : hundter.biede@adams-central.org
   github : fbla
   twitter : ACFBLA
-
-production_url : http://fbla.github.io
+  
+# Officers
+#
+officers :
+    advisor : Mr. Mulligan
+    president : Hundter Biede
+    vp : Eliza Donley
+    secretary : Grady Kershner
+    treasurer : Ema Schutte
+    reporter : Emily Vonderfecht
+    historian : Sam Cass
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

@@ -1,25 +1,44 @@
+---
+title: News Post
+---
+
 <!DOCTYPE html>
-<html class="fuelux" lang="en">
-   {% include header.html %}
-   <body>
-      {% include nav.html %}
-      <div class="container">
-         <div class="marketing">
-            <div class="content">
-               <div class="row">
-                  {% include post_header.html %}
-                  <div class="span7 columns">
-                     {{ content }}
-                     {% include mc.html %}
-                  <div class="span4 columns">					
-                     {% include aboutme.html %}							
-                  </div>
-               </div>
-               <hr>
-               {% include JB/comments-providers/disqus %}
-            </div>
-         </div>
-      </div>
-      {% include footer.html %}
-   </body>
+<html lang="en">
+    <head>
+    </head>
+    <body class="royal_loader">
+         <p>﻿ 
+            <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> 
+            <![endif]-->
+            <!--[if gt IE 8]>
+            <!-->
+        </p>
+         <!--<![endif]-->
+    </body>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    {% include JB/analytics %}
 </html>
+
+
+{% include header.html %}
+
+
+<!-- Primary Page Layout================================================== -->
+
+<!-- MENU================================================== -->
+{% include nav.html %}
+
+<!-- AGENDA================================================== -->
+<section class="about">
+    {% include post_header.html %}
+    <div class="container" id="agenda">
+        <div class="sixteen columns">
+            {{ content }}
+        </div>
+        <hr>
+        {% include JB/comments-providers/disqus %}
+    </div>
+</section>
+
+{% include footer.html %}
+

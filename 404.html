@@ -1,8 +1,44 @@
 ---
-layout: default
 title: 404
 tagline: Page not Found
 ---
 
-<p>This Page doesn't exist</p>
-<p>If you got here by accident, please report what you were doing to get here to <a href="mailto:hbiede@gmail.com?subject=Broken Link">The Site Manager</a></p>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    </head>
+    <body class="royal_loader">
+         <p>﻿
+            <!--[if IE 8]>
+                <html class="no-js lt-ie9" lang="en">
+            <![endif]-->
+            <!--[if gt IE 8]>
+                <!--></p>
+            <!--<![endif]-->
+    </body>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    {% include JB/analytics %}
+</html>
+
+
+{% include header.html %}
+
+<!-- Primary Page Layout================================================== -->
+
+<!-- MENU================================================== -->
+{% include nav.html %}
+
+
+<!-- PARALLAX SECTION================================================== -->
+<section class="parallax-section" id="clients">
+    <div class="parallax-1"></div>
+    <div class="container z-index-pages">
+        <div class="sixteen columns">
+            <h1 style="text-align:center;">404</h1>
+            <h3 style="text-align:center;">Page Not Found</h3>
+        </div>
+    </div>
+</section>
+
+{% include footer.html %}
+          
