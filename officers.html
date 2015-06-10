@@ -1,3 +1,6 @@
+---
+title: Leadership Team
+---
 <!DOCTYPE HTML>
 <!--[if lt IE 7]>
 <html
@@ -15,21 +18,22 @@ class="no-js lt-ie9" lang="en">
 <html
 class="no-js" lang="en">
 <![endif]-->
+<html lang="en">
 <head>
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-     <title>Studio Meta, agence Web à Strasbourg</title>
-     <meta name="description" content="L’agence Web Studio Meta est composée de profils créatifs et techniques partageant l’envie de créer des sites qui sortent du lot. Nous cultivons le souci du détail et de l’élégance pour vous proposer des projets sur-mesure, avec comme première motivation l’amour du travail bien fait.">
-     <meta property="og:title" content="Studio Meta, agence Web à Strasbourg">
+     <title>{{ page.title }}</title>
+     <meta name="description" content="Adams Central FBLA is a great way to get involved in the school, community, and state!">
+     <meta property="og:title" content="Adams Central FBLA">
      <meta property="og:type" content="website">
      <meta property="og:url" content="http://hbiede.github.io">
-     <meta property="og:image" content="http://hbiede.github.io/img/layout/studiometa.jpg">
-     <meta property="og:image:type" content="image/jpeg">
-     <meta property="og:site_name" content="Studio Meta, agence Web à Strasbourg">
-     <meta property="og:description" content="L’agence Web Studio Meta est composée de profils créatifs et techniques partageant l’envie de créer des sites qui sortent du lot. Nous cultivons le souci du détail et de l’élégance pour vous proposer des projets sur-mesure, avec comme première motivation l’amour du travail bien fait.">
+     <meta property="og:image" content="http://hbiede.github.io/img/acfbla2.png">
+     <meta property="og:image:type" content="image/png">
+     <meta property="og:site_name" content="Adams Central FBLA">
+     <meta property="og:description" content="Adams Central FBLA is a great way to get involved in the school, community, and state!">
      <link rel="canonical" href="http://hbiede.github.io" />
-     <meta name="author" content="Studio Meta" />
-     <meta name="copyright" content="© Studio Meta" />
+     <meta name="author" content="{{ site.author.name }}" />
+     <meta name="copyright" content="© {{ site.author.name }}" />
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=yes">
      <link rel="apple-touch-icon" sizes="57x57" href="/img/apple-touch-icon-57x57.png">
      <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-touch-icon-60x60.png">
@@ -42,27 +46,54 @@ class="no-js" lang="en">
      <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon-180x180.png">
      <link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
      <link rel="icon" type="image/png" href="/img/android-chrome-192x192.png" sizes="192x192">
-     <link rel="icon" type="image/png" href="/img/favicon.ico" sizes="80x80">
      <link rel="icon" type="image/png" href="/img/favicon-96x96.png" sizes="96x96">
      <link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
      <link rel="manifest" href="/manifest.json">
      <meta name="msapplication-TileColor" content="#2b5797">
      <meta name="msapplication-TileImage" content="/mstile-144x144.png">
      <meta name="theme-color" content="#ffffff">
-     <link rel="shortcut icon" href="/favicon.ico" />
-     <link rel="stylesheet" href="http://hbiede.github.io/assets/cache/fcfbb808efdb3c738a4c1792e19ffc99.1432198151.css">
+     <link rel="shortcut icon" href="img/favicon.ico" />
+     <link rel="stylesheet" href="http://hbiede.github.io/css/officer.css">
      <script>
-          !function(e){var t,a={kitId:"beg1hqp",scriptTimeout:3e3},c=e.documentElement,i=setTimeout(function(){c.className=c.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"},a.scriptTimeout),n=e.createElement("script"),o=!1,s=e.getElementsByTagName("script")[0];c.className+=" wf-loading",n.src="//use.typekit.net/"+a.kitId+".js",n.async=!0,n.onload=n.onreadystatechange=function(){if(t=this.readyState,!(o||t&&"complete"!=t&&"loaded"!=t)){o=!0,clearTimeout(i);try{Typekit.load(a)}catch(e){}}},s.parentNode.insertBefore(n,s)}(document);
+          !function(e) {
+               var t,
+               a = {
+                    kitId:"beg1hqp",scriptTimeout:3e3
+               },
+               c = e.documentElement,
+               i=setTimeout
+               (    function() {
+                    c.className=c.className.replace(/\bwf-loading\b/g,"")+" wf-inactive"
+               },
+               a.scriptTimeout),
+               n=e.createElement("script"),
+               o=!1,
+               s=e.getElementsByTagName("script")[0];
+               c.className+=" wf-loading",
+               n.src="//use.typekit.net/"+a.kitId+".js",
+               n.async=!0,
+               n.onload=n.onreadystatechange=function() { 
+               if(  t=this.readyState,
+                    !(o||t&&"complete"!=t&&"loaded"!=t
+               )) {
+                    o=!0,
+                    clearTimeout(i);
+                    try {
+                         Typekit.load(a)
+                    }catch(e){}
+                    }
+               },
+               s.parentNode.insertBefore(n,s)}(document);
      </script>
      <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-          <script src="/assets/js/vendor/selectivizr.min.js"></script>
+          <script src="/js/selectivizr.min.js"></script>
      <![endif]-->
 </head>
 <body>
      <header class="header">
           <h1 class="header-title" id="title">
-               Studio Meta,<br> agence web à Strasbourg
+               Adams Central<br> FBLA
           </h1>
           <button class="header-btn btn" id="btn-contact-open">
                Become an Officer
@@ -553,74 +584,6 @@ class="no-js" lang="en">
                </div>
           </article>
      </main>
-     <section class="contact" id="contact">
-          <div class="contact-bg" id="contact-bg"></div>
-          <article class="contact-content">
-               <div class="table">
-                    <div class="cell">
-                         <header class="contact-header">
-                              <h3 class="contact-baseline">
-                                   <span>B</span><span>e</span><span>c</span><span>o</span><span>m</span><span>e</span>
-                                   <span>a</span><span>n</span>
-                                   <span>O</span><span>f</span><span>f</span><span>i</span><span>c</span><span>e</span><span>r</span>
-                              </h3>
-                         </header>
-                         <p class="contact-desc">L’agence Web Studio Meta est composée de profils créatifs et techniques partageant l’envie de créer des sites qui sortent du lot. Nous cultivons le souci du détail et de l’élégance pour vous proposer des projets sur-mesure, avec comme première motivation l’amour du travail bien fait.</p>
-                         <address class="contact-info">
-                              <ul class="contact-list">
-                                   <li class="contact-item">
-                                        <a class="contact-link" href="https://www.google.com/maps/place/Adams+Central+Junior-Senior+High+School/@40.5701393,-98.4606967,15z/data=!4m7!1m4!3m3!1s0x8799a841d3dc7dd9:0x7ecb857f18a7d73f!2sS+Adams+Central+Ave,+Nebraska!3b1!3m1!1s0x0000000000000000:0x6f0ef954c040b185" title="Directions to Adams Central">
-                                             <i class="i-pin">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
-                                                       <path d="M11 22c0 0-7-8-7-15s7-7 7-7 7 0 7 7S11 22 11 22zM15.9 6.1c-0.2-1.2-0.9-2.3-1.9-3C14 3 13.9 3 13.9 2.9c-0.1-0.1-0.3-0.2-0.5-0.3 -0.1-0.1-0.3-0.2-0.4-0.2 -0.1-0.1-0.3-0.1-0.4-0.1 -0.2-0.1-0.3-0.1-0.5-0.2C11.7 2 11.4 2 11 2c0 0 0 0 0 0 0 0 0 0 0 0 -0.3 0-0.7 0-1 0.1C9.3 2.2 8.7 2.5 8.2 2.8c0 0 0 0 0 0C8 3 7.8 3.2 7.6 3.3 7.6 3.4 7.5 3.4 7.4 3.5 7.3 3.6 7.2 3.8 7.1 3.9 7 4 6.9 4.1 6.8 4.3 6.8 4.4 6.7 4.5 6.7 4.6 6.6 4.7 6.5 4.9 6.4 5.1c0 0.1 0 0.2-0.1 0.2C6.2 5.6 6.1 5.8 6.1 6 6 6.4 6 6.7 6 7c0 5 5 12 5 12s5-7 5-12C16 6.7 16 6.4 15.9 6.1zM8 7c0-1.7 1.3-3 3-3s3 1.3 3 3 -1.3 3-3 3S8 8.7 8 7z"/>
-                                                  </svg>
-                                             </i>
-                                             18 rue de Stosswihr, 67100&nbsp;Strasbourg
-                                        </a>
-                                   </li>
-                                   <li class="contact-item">
-                                        <a class="contact-link" href="tel:03 88 44 50 95" title="Appelez nous !">
-                                             <i class="i-tel">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
-                                                       <path d="M17.3 22H17c-2.9 0-8.5-2.8-11.4-5.6S0 7.9 0 5V4.7l0.2-0.3C1.3 2.8 3.4 0 5 0c1.6 0 4.2 2.6 5 4.4 0.6 1.4 0.1 2.2-0.3 2.6C9.1 7.6 8.5 8 8.1 8.3 7.3 8.7 7.3 8.8 7.3 9c0 0.9 1.3 2.2 2.4 3.3 1.1 1.1 2.4 2.4 3.3 2.4 0.2 0 0.3 0 0.7-0.7 0.3-0.5 0.6-1 1.2-1.6 0.4-0.4 0.9-0.6 1.4-0.6 2.2 0 5.6 3.5 5.6 5.3 0 1.6-2.8 3.7-4.4 4.8L17.3 22zM2 5.3c0.2 2.5 2.7 7.4 5 9.7 2.3 2.3 7.2 4.8 9.7 5 1.6-1.1 3.2-2.5 3.3-3 -0.1-0.7-2.5-3.2-3.6-3.2 -0.4 0.4-0.7 0.8-0.9 1.2 -0.5 0.8-1 1.7-2.4 1.7 -1.7 0-3.3-1.5-4.7-3 -1.5-1.5-3-3-3-4.7 0-1.4 0.9-2 1.7-2.4 0.4-0.3 0.8-0.5 1.3-0.9 0 0-0.1-0.4-0.5-1.1C6.9 3.2 5.4 2.1 5 2 4.5 2.1 3.1 3.6 2 5.3z"/>
-                                                  </svg>
-                                             </i>
-                                             03 88 44 50 95
-                                        </a>
-                                   </li>
-                                   <li class="contact-item">
-                                        <a class="contact-link" href="mailto:info@studiometa.fr">
-                                             <i class="i-mail">
-                                                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0" width="22" height="22" viewBox="0 0 22 22" enable-background="new 0 0 22 22" xml:space="preserve">
-                                                       <path d="M20 19H2c-1.1 0-2-0.9-2-2V5c0-1.1 0.9-2 2-2h18c1.1 0 2 0.9 2 2v12C22 18.1 21.1 19 20 19zM19 17l-5.7-5L11 14l-2.3-2L3 17H19zM2 16l5.6-5L2 6V16zM3 5l8 7 8-7H3zM20 6l-5.6 5 5.6 5V6z"/>
-                                                  </svg>
-                                             </i>
-                                             info@studiometa.fr
-                                        </a>
-                                   </li>
-                              </ul>
-                              <ul class="social-list">
-                                   <li class="social-item">
-                                        <a class="btn social-link social-twitter" href="https://twitter.com/ACFBLA" title="On est sur Twitter !">
-                                             <span class="btn-bg"></span>
-                                             <span class="btn-bg"></span>
-                                             <svg xmlns="http://www.w3.org/2000/svg" class="i-twitter" version="1.1" x="0" y="0" width="40" height="40" viewBox="0 0 40 40" enable-background="new 0 0 40 40" xml:space="preserve">
-                                                  <path d="M30 13.8c-0.7 0.3-1.5 0.5-2.4 0.6 0.8-0.5 1.5-1.3 1.8-2.3 -0.8 0.5-1.7 0.8-2.6 1 -0.7-0.8-1.8-1.3-3-1.3 -2.3 0-4.1 1.8-4.1 4.1 0 0.3 0 0.6 0.1 0.9 -3.4-0.2-6.4-1.8-8.5-4.3 -0.4 0.6-0.6 1.3-0.6 2.1 0 1.4 0.7 2.7 1.8 3.4 -0.7 0-1.3-0.2-1.9-0.5 0 0 0 0 0 0.1 0 2 1.4 3.6 3.3 4 -0.3 0.1-0.7 0.1-1.1 0.1 -0.3 0-0.5 0-0.8-0.1 0.5 1.6 2 2.8 3.8 2.8 -1.4 1.1-3.2 1.8-5.1 1.8 -0.3 0-0.7 0-1-0.1 1.8 1.2 4 1.8 6.3 1.8 7.5 0 11.7-6.3 11.7-11.7 0-0.2 0-0.4 0-0.5C28.8 15.3 29.4 14.6 30 13.8L30 13.8z"/>
-                                             </svg>
-                                        </a>
-                                   </li>
-                              </ul>
-                         </address>
-                         <button class="btn contact-btn" id="btn-contact-close">
-                              <i class="btn-placeholder">Nous contacter</i>
-                              <i class="btn-label">Fermer</i>
-                              <span class="btn-bg"></span>
-                              <span class="btn-bg"></span>
-                         </button>
-                    </div>
-               </div>
-          </article>
-     </section>
      <canvas class="canvas" id="canvas" resize="true" keepalive="true" hidpi="on"></canvas>
      <script defer src="http://hbiede.github.io/js/officer.js"></script>
      <script>
