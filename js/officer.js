@@ -15823,7 +15823,6 @@ app.loader = function() {
             onComplete: function() {
                 setTimeout(function() {
                     $html.addClass('is-loaded');
-                    $logo.hide();
                 }, 1000);
             }
         });
@@ -15943,7 +15942,7 @@ slider.slide = function(index, direction) {
         $prevMask = $masks.eq(_prev),
         $prevContent = $contents.eq(_prev);
     if (!$link.data('active')) {
-        History.replaceState('', 'Studio Meta, agence web à Strasbourg — Projet — ' + $link.data('title'), '/' + $link.attr('href'));
+        History.replaceState('', 'ACFBLA — ' + $link.data('title'), '/' + $link.attr('href'));
         $navLinks.removeClass('is-active').data('active', false);
         $link.addClass('is-active').data('active', true);
         $projects.removeClass('is-active');
