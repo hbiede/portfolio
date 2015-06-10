@@ -841,6 +841,7 @@ ul.slimmenu.collapsed li > ul {
 
 
 .team{
+	background-color: #292929;
 	position: relative; 
 	margin: 0 auto;
 	width: 100%;
@@ -848,6 +849,9 @@ ul.slimmenu.collapsed li > ul {
 	padding-bottom:70px;
 }
 
+.team h1 {
+	color: #EEE;
+}
 
 .team-box{
 	position: relative; 
@@ -895,6 +899,7 @@ ul.slimmenu.collapsed li > ul {
 .team-box-down h6{
 	padding-bottom:5px;
 	text-align:center;
+	color: #EEE;
 }
 .team-box-down p{
 	text-align:center;
@@ -3306,17 +3311,3 @@ ul.slimmenu li > ul {
     font-weight: normal;
     font-style: normal;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
