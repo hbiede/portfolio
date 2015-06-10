@@ -21,13 +21,21 @@ author :
 # Officers
 #
 officers :
-    advisor : Mr. Mulligan
+    advisor : Mr. Shawn Mulligan
     president : Hundter Biede
     vp : Eliza Donley
     secretary : Grady Kershner
     treasurer : Ema Schutte
     reporter : Emily Vonderfecht
     historian : Sam Cass
+    descriptions:
+        advisor : Mr. Mulligan serves as our FBLA advisor, is an acting member of the State FBLA Board of Directors, and is the Head Coach for the Patriot Football team.
+        president : Hundter serves as our Chapter President.  He participates in Football, Golf, Speech, among other activities.
+        vp : Eliza serves as our Chapter Vice President.  She participates in Band, 
+        secretary : Grady serves as our 
+        treasurer :
+        reporter :
+        historian :
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
