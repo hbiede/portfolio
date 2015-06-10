@@ -28,14 +28,21 @@ officers :
     treasurer : Ema Schutte
     reporter : Emily Vonderfecht
     historian : Sam Cass
-    descriptions:
+    description :
         advisor : Mr. Mulligan serves as our FBLA advisor, is an acting member of the State FBLA Board of Directors, and is the Head Coach for the Patriot Football team.
         president : Hundter serves as our Chapter President.  He participates in Football, Golf, Speech, among other activities.
-        vp : Eliza serves as our Chapter Vice President.  She participates in Band, 
-        secretary : Grady serves as our 
-        treasurer :
-        reporter :
-        historian :
+        vp : Eliza serves as our Chapter Vice President.  She participates in Band, FFA, and Choir.
+        secretary : Grady serves as our Chapter Secretary.  He patricipates in Football, Track, and SkillsUSA, among other activities.
+        treasurer : Ema serves as our Chapter Treasurer.  She patricipates in Softball and Band.
+        reporter : Emily serves as our Chapter Reporter.  She patricipates in Volleyball, Choir, and Band, among other activities.
+        historian : Sam serves as our Chapter Historian.  He patricipates in Cross Country, Band, and Track, among other activities.
+    twitterHandle :
+        president : HBiede
+        vp : e_donley98
+        secretary : grady_kersh1503
+        treasurer : EmaSchutte12
+        reporter : EmilyVonderfech
+        historian : SamCass_
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
