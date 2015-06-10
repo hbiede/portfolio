@@ -15693,8 +15693,6 @@ var $document = $(document),
     transitionEnd = 'webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend';
 desktop = Detectizr.device.type == 'desktop';
 var $main = $('#main'),
-    $contact = $('#contact'),
-    $contactBg = $('#contact-bg'),
     $logo = $('#logo'),
     $loaderBg = $('#loader-bg'),
     $nav = $('#nav'),
@@ -15702,8 +15700,6 @@ var $main = $('#main'),
     $dots = $('.dot'),
     $dotClone = $('#dot'),
     $title = $('#title'),
-    $btnContact = $('#btn-contact-open'),
-    $closeContact = $('#btn-contact-close'),
     $btns = $('.btn'),
     $btnsBGs = $('.btn-bg-mask'),
     $btnNext = $('#btn-next'),
@@ -15765,13 +15761,6 @@ app.init = function(parent, children) {
         }]
     };
     var bLazy = new Blazy(bLazyOptions);
-    app.contact.init();
-    $btnContact.on('click', function(e) {
-        app.contact.open();
-    });
-    $closeContact.on('click', function(e) {
-        app.contact.close();
-    });
     $window.on('load', function() {
         app.loader();
         bLazy.revalidate();
@@ -15800,7 +15789,6 @@ app.init = function(parent, children) {
         }
         $window.on('resize', function() {
             app.paper.resize();
-            app.contact.init();
             if ($window.outerWidth() < 1025) {
                 $document.unbind('mousewheel DOMMouseScroll', app.scrollNav);
             } else {
@@ -15907,7 +15895,6 @@ slider.init = function() {
         main: $project.data('main') === undefined ? null : app.hexToRgb($project.data('main')),
         secondary: $project.data('secondary') === undefined ? null : app.hexToRgb($project.data('secondary')),
         siteTitle: $project.data('sitetitle') === undefined ? null : $project.data('sitetitle'),
-        btnContact: $project.data('btncontact') === undefined ? null : $project.data('btncontact'),
         logo: $project.data('logo') === undefined ? null : $project.data('logo')
     };
     slider.updateColors(_prevColors, null);
@@ -15930,7 +15917,6 @@ slider.slide = function(index, direction) {
         main: $project.data('main') === undefined ? null : app.hexToRgb($project.data('main')),
         secondary: $project.data('secondary') === undefined ? null : app.hexToRgb($project.data('secondary')),
         siteTitle: $project.data('sitetitle') === undefined ? '#fff' : $project.data('sitetitle'),
-        btnContact: $project.data('btncontact') === undefined ? '#fff' : $project.data('btncontact'),
         logo: $project.data('logo') === undefined ? null : $project.data('logo')
     };
     slider.updateColors(_colors, _direction);
@@ -16045,7 +16031,6 @@ slider.updateColors = function(colors, direction) {
     if (direction === null) {
         $body.css('background', colors.bg);
         $title.css('color', colors.siteTitle);
-        $btnContact.css('color', colors.btnContact);
         $btnsBGs.css('background', colors.bg);
         $btnNext.css('background', colors.bg);
         $btnNext.find('svg').css('fill', colors.btnContact);
@@ -16063,7 +16048,6 @@ slider.updateColors = function(colors, direction) {
             });
         } else {
             $title.css('color', colors.siteTitle);
-            $btnContact.css('color', colors.btnContact);
         }
         TweenLite.to($body, 1, {
             backgroundColor: colors.bg
