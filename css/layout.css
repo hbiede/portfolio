@@ -408,7 +408,7 @@ ul.slimmenu > li:first-child { border-left: 0 }
 ul.slimmenu > li:last-child { margin-right: 0 }
 ul.slimmenu li a {
     display: block;
-    color: #000;
+    color: #FFF;
     padding: 8px 23px;
 	margin: 2px 0;
 	cursor:pointer;
