@@ -2121,6 +2121,9 @@ body {
     -webkit-transition: opacity .6s 1.25s cubic-bezier(0.19, 1, 0.22, 1), color .6s 0s cubic-bezier(0.19, 1, 0.22, 1), top 0s 0s, right 0s 0s, border-color .6s 0s cubic-bezier(0.19, 1, 0.22, 1);
     transition: opacity .6s 1.25s cubic-bezier(0.19, 1, 0.22, 1), color .6s 0s cubic-bezier(0.19, 1, 0.22, 1), top 0s 0s, right 0s 0s, border-color .6s 0s cubic-bezier(0.19, 1, 0.22, 1)
 }
+.twitter-logo-link {
+     font-family: 'FontAwesome';
+}
 @media (min-width: 1025px) {
     .contact-btn {
         position: fixed;
