@@ -547,8 +547,7 @@ body {
     width: 5em;
     height: 5em;
     margin: 2em auto;
-    background: #fff
-}
+    background: transparent;}
 @media (min-width: 1025px) {
     .logo {
         position: absolute;
@@ -607,6 +606,8 @@ body {
     transform: scaleX(1) scaleY(1) !important;
     -webkit-transition: all 1s .1s cubic-bezier(0.485, 0.605, 0, 1);
     transition: all 1s .1s cubic-bezier(0.485, 0.605, 0, 1)
+;
+    background-color: transparent;
 }
 @media (max-width: 1025px) {
     .loader-bg {
