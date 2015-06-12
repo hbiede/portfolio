@@ -192,7 +192,7 @@ body {
     font-size: 17px;
     font-family: "Meta OT", "ff-meta-web-pro", "Helvetica", Helvetica, Arial, sans-serif;
     color: #fff;
-    background: #292929 url("http://www.studiometa.fr/assets/svg/pattern.svg") repeat center center/70px 70px
+    background: #292929 url("http://fbla.github.io/svg/bg.svg") repeat center center/70px 70px
 }
 .is-locked body {
     overflow: hidden;
@@ -221,7 +221,7 @@ body {
 }
 @media (max-width: 1025px) {
     body {
-        background: #292929 url("http://www.studiometa.fr/assets/svg/pattern.svg") repeat center center/70px 70px !important
+        background: #292929 url("http://fbla.github.io/svg/bg.svg") repeat center center/70px 70px !important
     }
 }
 .main {
@@ -371,33 +371,6 @@ body {
 }
 .i {
     display: inline-block
-}
-.awwwards {
-    display: block;
-    width: 5.2em;
-    height: 5.2em;
-    margin: 2em auto 0;
-    border-radius: 50%;
-    background: #fff no-repeat 49% 50%/84% auto
-}
-.awwwards:after,
-.awwwards:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 1.2em;
-    height: 1px;
-    background-color: #fff;
-    opacity: .3
-}
-.awwwards:before {
-    left: -1.6em
-}
-.awwwards:after {
-    right: -1.6em
-}
-.awwwards.site-of-the-day {
-    background-image: url("http://www.studiometa.fr/assets/svg/awwwards.svg")
 }
 .i-down {
     width: 3.4em;

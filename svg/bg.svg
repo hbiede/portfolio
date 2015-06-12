@@ -1,0 +1,29 @@
+<!-- Generator: Adobe Illustrator 18.1.1, SVG Export Plug-In  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/" x="0px" y="0px" width="140px" height="140px" viewBox="0 0 140 140" enable-background="new 0 0 140 140" xml:space="preserve">
+<symbol id="symbol" preserveAspectRatio="xMinYMin meet" viewBox="0 0 140 140">
+	<rect opacity="0" width="140" height="140"/>
+	<circle fill="#000" opacity="0.1" cx="100" cy="40" r="7"/>
+	<circle fill="#000" opacity="0.1" cx="40" cy="120" r="7"/>
+	<rect fill="#000" opacity="0.1" x="24" y="22" transform="matrix(0.766 0.6428 -0.6428 0.766 27.12 -10.5115)" width="8" height="20">
+		<animateTransform
+			attributeName="transform"
+			begin="0s"
+			dur="5s"
+			type="rotate"
+			from="40 28 32"
+			to="220 28 32"
+			repeatCount="indefinite"/>
+	</rect>
+	<rect fill="#000" opacity="0.1" x="104" y="98" transform="matrix(0.5 -0.866 0.866 0.5 -39.5307 147.5307)" width="8" height="20">
+		<animateTransform
+			attributeName="transform"
+			begin="0s"
+			dur="10s"
+			type="rotate"
+			from="60 108 108"
+			to="240 108 108"
+			repeatCount="indefinite"/>
+	</rect>
+</symbol>
+<use xlink:href="#symbol" x="0" y="0" />
+</svg>
