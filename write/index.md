@@ -9,7 +9,7 @@ title: Write a post
 
 [Agenda Summary][agendaPost]
 
-[Agenda with a PDF of the Full Agenda][agendaAdv]
+[Agenda with a PDF of the Full Agenda - Recommended][agendaAdv]
 
 [News Post][newsPost]
 
