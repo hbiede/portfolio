@@ -229,7 +229,7 @@ ul.slimmenu li a.mPS2id-highlight{
 }
 
 .cbp-af-header.cbp-af-header-shrink {
-	background:rgba(250,250,250,1);
+	background: rgba(0,0,0,1);
     -webkit-transition: all 300ms linear;
     -moz-transition: all 300ms linear;
     -o-transition: all 300ms linear;
