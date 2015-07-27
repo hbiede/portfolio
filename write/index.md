@@ -7,7 +7,9 @@ title: Write a post
 #### What type of post would you like to make?
 
 [Agenda Summary][agendaPost]
+
 [Agenda with a PDF of the Full Agenda][agendaAdv]
+
 [News Post][newsPost]
 
 
