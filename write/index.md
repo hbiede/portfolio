@@ -4,6 +4,7 @@ title: Write a post
 ---
 # How to Write a Blog Post
 ***
+
 #### What type of post would you like to make?
 
 [Agenda Summary][agendaPost]
