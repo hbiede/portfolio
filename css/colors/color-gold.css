@@ -1,5 +1,3 @@
-
-
 .thin-text,
 .sub-text a,
 .about-box .about-box-icon,
@@ -16,44 +14,27 @@
 .project-section-down h6 span,
 .blog-text-name,
 .blog-text-wrap p span{ 
-	color:#cbab82;
+	color:#8D1F00;
 }
 .sub-text a::before{
-	border: 1px solid #cbab82;
+	border: 1px solid #8D1F00;
+}
+logo-border{
+	border: 2px solid #000;
+}
+.redify{
+	background:#8D1F00 !important;
 }
 .about-bottom-right,
 .work-bottom,
 .project-link-to-page1:hover,
 .project-link-to-page2:hover{
-	background:#cbab82;
+	background:#8D1F00;
 }
 .about-bottom-left .link-left a::after,
 .link-project a::after{
-	border: 1px solid #cbab82;
+	border: 1px solid #8D1F00;
 }
 .tp-grid li a{
-	border:5px solid #cbab82;
+	border:5px solid #8D1F00;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
