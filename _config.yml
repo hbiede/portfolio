@@ -26,26 +26,25 @@ members : 140
 officers :
     advisor : Mr. Shawn Mulligan
     president : Hundter Biede
-    vp : Eliza Donley
-    secretary : Grady Kershner
-    treasurer : Ema Schutte
+    vp : Grady Kershner
+    secretary : Maxwell Winkler
+    treasurer : Cole Spady
     reporter : Emily Vonderfecht
-    historian : Sam Cass
+    historian : Hannah Mulligan
     description :
-        advisor : Mr. Mulligan serves as our FBLA advisor, is an acting member of the State FBLA Board of Directors, and is the Head Coach for the Patriot Football team.
-        president : Hundter serves as our Chapter President.  He participates in Football, Golf, Speech, among other activities.
-        vp : Eliza serves as our Chapter Vice President.  She participates in Band, FFA, and Choir.
-        secretary : Grady serves as our Chapter Secretary.  He patricipates in Football, Track, and SkillsUSA, among other activities.
-        treasurer : Ema serves as our Chapter Treasurer.  She patricipates in Softball and Band.
+        advisor : Mr. Mulligan serves as our FBLA advisor, and is the Head Coach for the Patriot Football team.
+        president : Hundter serves as our Chapter President.  He participates in Football, SkillsUSA, AcaDeca, among other activities.
+        vp : Grady serves as our Chapter Vice President.  He patricipates in Football, Track, and SkillsUSA, among other activities.
+        secretary : Max serves as our Chapter Secretary.  He patricipates in Football, Track, and SkillsUSA, among other activities.
+        treasurer : Cole serves as our Chapter Treasurer.  He patricipates in Football, Quiz Bowl, among other activiites.
         reporter : Emily serves as our Chapter Reporter.  She patricipates in SkillsUSA, Choir, Band, among other activities.
-        historian : Sam serves as our Chapter Historian.  He patricipates in Cross Country, Band, Track, among other activities.
+        historian : Sam serves as our Chapter Historian.  She patricipates in Volleyball, Band, Track, among other activities.
     twitterHandle :
         president : HBiede
-        vp : e_donley98
-        secretary : grady_kersh1503
-        treasurer : EmaSchutte12
+        vp : grady_kersh1503
+        secretary : _maxw
+        treasurer : CSpady13
         reporter : EmilyVonderfech
-        historian : SamCass_
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
