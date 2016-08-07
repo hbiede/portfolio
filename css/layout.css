@@ -428,6 +428,7 @@ ul.slimmenu li a {
 
 ul.slimmenu li a::before,
 ul.slimmenu li a::after  {
+	text-shadow: 2px 2px 2px #000;
 	position: absolute;
 	top: 2px;
 	left: 0;
