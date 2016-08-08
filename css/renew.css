@@ -4866,10 +4866,7 @@ audio:not([controls]),.wpcf7-display-none,.collapse,.x-searchform-overlay .form-
 display:none;
 }
 
-a:focus,select:focus,input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,.x-btn:focus,.button:focus,[type="submit"]:focus {
-outline:5px auto #16a085;
-outline-offset:-1px;
-}
+a:focus,select:focus,input[type="file"]:focus,input[type="radio"]:focus,input[type="checkbox"]:focus,.x-btn:focus,.button:focus,[type="submit"]:focus {outline: 0px auto #16a085 !important;outline-offset:-1px;}
 
 a:hover,a:active,.x-searchform-overlay .form-search .search-query:focus,.x-searchform-overlay .form-search .search-query:active,.mejs-container:focus,.mejs-container:active,.mejs-button button:focus,.mejs-button button:active,.mejs-time-total:focus,.mejs-time-total:active {
 outline:0;
