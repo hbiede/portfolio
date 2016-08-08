@@ -3689,6 +3689,8 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .nav-pills > li {
   float: left;
+  margin-left: auto;
+  margin-right: auto;
 }
 .nav-pills > li > a {
   border-radius: 4px;
@@ -6202,3 +6204,10 @@ button.close {
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
+
+
+.center {
+    margin: auto;
+    padding: 10px;
+    display: table;
+}
