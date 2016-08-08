@@ -6211,3 +6211,8 @@ button.close {
     padding: 10px;
     display: table;
 }
+
+.tab-pad {
+  padding-left: 20px;
+  padding-right:20px;
+}
