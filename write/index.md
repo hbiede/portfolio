@@ -17,6 +17,6 @@ title: Write a post
 
 
 
-[agendaPost]: http://fbla.github.io/write/agenda.md
-[agendaAdv]: http://fbla.github.io/write/agendaAdv.md
-[newsPost]: http://fbla.github.io/write/news.md
+[agendaPost]: http://fbla.github.io/write/agenda.html
+[agendaAdv]: http://fbla.github.io/write/agendaAdv.html
+[newsPost]: http://fbla.github.io/write/news.html
