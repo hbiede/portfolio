@@ -1,5 +1,5 @@
 {
-	"name": "My app",
+	"name": “Hundter Biede“,
 	"icons": [
 		{
 			"src": "\/img\/icons\/android-chrome-36x36.png",
@@ -38,6 +38,6 @@
 			"density": "4.0"
 		}
 	],
-	"start_url": "http:\/\/fbla.github.io\/",
+	"start_url": "http:\/\/hbiede.github.io\/",
 	"display": "standalone"
 }
