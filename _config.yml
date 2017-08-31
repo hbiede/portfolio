@@ -2,7 +2,7 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
 
-production_url: http://fbla.github.io
+production_url: http://hbiede.github.io
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
@@ -12,40 +12,14 @@ markdown: kramdown
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
-title : ACFBLA
-tagline: The Homepage for all things Adams Central FBLA
+title : Hundter Biede
+tagline: The Personal Ramblings of Hundter Biede
 author :
   name : Hundter Biede
-  email : hundter.biede@adams-central.org
-  github : fbla
+  email : hbiede@unomaha.edu
+  github : hbiede
   twitter : hbiede
   
-members : 140
-# Officers
-#
-officers :
-    advisor : Mr. Shawn Mulligan
-    president : Hundter Biede
-    vp : Grady Kershner
-    secretary : Maxwell Winkler
-    treasurer : Cole Spady
-    reporter : Emily Vonderfecht
-    historian : Hannah Mulligan
-    description :
-        advisor : Mr. Mulligan serves as our FBLA advisor, and is the Head Coach for the Patriot Football team.
-        president : Hundter serves as our Chapter President.  He participates in Football, SkillsUSA, AcaDeca, among other activities.
-        vp : Grady serves as our Chapter Vice President.  He patricipates in Football, Track, and SkillsUSA, among other activities.
-        secretary : Max serves as our Chapter Secretary.  He patricipates in Football, Track, and SkillsUSA, among other activities.
-        treasurer : Cole serves as our Chapter Treasurer.  He patricipates in Football, Quiz Bowl, among other activiites.
-        reporter : Emily serves as our Chapter Reporter.  She patricipates in SkillsUSA, Choir, Band, among other activities.
-        historian : Sam serves as our Chapter Historian.  She patricipates in Volleyball, Band, Track, among other activities.
-    twitterHandle :
-        president : HBiede
-        vp : grady_kersh1503
-        secretary : _maxw
-        treasurer : CSpady13
-        reporter : EmilyVonderfech
-
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
@@ -100,9 +74,7 @@ JB :
   # Set 'provider' to false to turn commenting off globally.
   #
   comments :
-    provider : disqus
-    disqus :
-      short_name : acfbla
+    provider : false
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -111,7 +83,7 @@ JB :
   analytics :
     provider : google 
     google : 
-        tracking_id : 'UA-40004318-4'
+        tracking_id : 'UA-40004318-1'
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
