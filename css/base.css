@@ -3,11 +3,11 @@ body {
     color: #303030;
     line-height: 1.6;
     font-size: 16pt;
-    font-weight: 300;
+    font-weight: 400;
 }
 
 .siteTitle {
-	font-family: sans-serif;
+	font-family: "omnes-pro", sans-serif;
 }
 
 a {
