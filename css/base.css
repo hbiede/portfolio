@@ -241,7 +241,8 @@ body pre
 
 .homepage .copyright
 {
-    margin-top: -2em;
+    margin-top: 24px;
+    padding-top: 10px;
 }
 
 .homepage .article hr
