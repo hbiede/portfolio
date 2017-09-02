@@ -15,10 +15,10 @@
         <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
 		<div class="article">
 			<div class="postHeader">
-				<a class="postTitle" href="{{ post.url }}">{{ post.title }}</a>
-				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d %Y"}}</time>
+				<a class="postTitle" href="{{ page.url }}">{{ page.title }}</a>
+				<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d %Y"}}</time>
 			</div>
-			{{ post.content }}
+			{{ content }}
 		</div>
 		<hr class="dayBreak">
         </div>
