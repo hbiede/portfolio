@@ -22,6 +22,8 @@ author :
   github : hbiede
   twitter : hbiede
   
+site_about: This website was built based on [Casey Liss's personal page](caseyliss.com). The favicon used for this website (the icon on the tab for this page and if you were to add this as a bookmark, etc.) was created by [rajakumara](https://thenounproject.com/rajakumara12121) on [The Noun Project](https://thenounproject.com/).
+  
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
 JB :
