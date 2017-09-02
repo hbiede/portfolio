@@ -1,13 +1,15 @@
 body {
-    background-color: #f7f7f7;
+    background-color: #fff;
     color: #303030;
     line-height: 1.6;
     font-size: 16pt;
     font-weight: 400;
+    font-family: "lato",sans-serif;
 }
 
 .siteTitle {
 	font-family: "omnes-pro", sans-serif;
+	text-transform: titlecase;
 }
 
 a {
@@ -176,7 +178,7 @@ blockquote {
 
 /* INDEX */
 
-.homepage .day .daybreak
+.homepage .daybreak
 {
     margin-top: 3em;
     border: 0;
@@ -201,6 +203,7 @@ blockquote {
     font-size: 2.2em;
     font-weight: 500;
     line-height: 1.2;
+    text-transform: titlecase;
 }
 
 .postTitle img

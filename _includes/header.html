@@ -1,46 +1,51 @@
-<!-- Basic Page Needs================================================== -->
-
-<!-- Mobile Specific Metas================================================== -->
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-<meta http-equiv="cache-control" content="max-age=0">
-<title>{{ page.title }} - {{ site.title }}</title>
-<meta name="keywords" content="{{ site.keywords }}">
-<meta name="author" content="{{ site.author.name }}">
-<meta name="copyright" content="© {{ site.author.name }}">
-<meta property="og:title" content="{{ site.title }}">
-<meta property="og:type" content="website">
-<meta property="og:url" content="{{ site.production_url }}/">
-<meta property="og:image" content="{{ site.production_url }}/img/logo1.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:description" content="{{ site.title }}">
-<!-- CSS================================================== -->
-<link href="{{ site.production_url }}/css/base.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/skeleton.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/layout.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/font-awesome.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/owl.carousel.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/settings.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/retina.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/text_overlay.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/modal.css" rel="stylesheet">
-<link href="{{ site.production_url }}/css/glyphs.css" rel="stylesheet">
-<script type="text/javascript" src="{{ site.production_url }}/js/modernizer.custom.js"></script>
-<script type="text/javascript" src="{{ site.production_url }}/js/jquery.js"></script>
-<script type="text/javascript" src="{{ site.production_url }}/js/modal.js"></script>
-<!-- Favicons================================================== -->
-<link href="{{ site.production_url }}/img/favicon.ico" rel="shortcut icon">
-<link rel="apple-touch-icon" sizes="57x57" href="{{ site.production_url }}/img/icons/apple-touch-icon.png">
-<link rel="apple-touch-icon" sizes="60x60" href="{{ site.production_url }}/img/icons/apple-touch-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="{{ site.production_url }}/img/icons/apple-touch-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="{{ site.production_url }}/img/icons/apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="{{ site.production_url }}/img/icons/apple-touch-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="{{ site.production_url }}/img/icons/apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="{{ site.production_url }}/img/icons/apple-touch-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="{{ site.production_url }}/img/icons/apple-touch-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.production_url }}/img/icons/apple-touch-icon-180x180.png">
-<link rel="manifest" href="{{ site.production_url }}/manifest.json">
-<meta name="msapplication-TileColor" content="#2b5797">
-<meta name="msapplication-TileImage" content="{{ site.production_url }}/img/icons/mstile-144x144.png">
-<meta name="theme-color" content="#ffffff">
+	<title>{{ site.title }} - {{ page.title }}</title>
+	
+	<meta name="keywords" content="{{ site.keywords }}">
+	<meta name="author" content="{{ site.author.name }}">
+	<meta name="copyright" content="© {{ site.author.name }}">
+	<meta charset="UTF-8">
+	
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+    <script src="https://use.typekit.net/kph1gew.js"></script>
+    <link type="text/javascript" src="/js/scroll.js">
+    
+    <link href="{{ site.production_url }}/img/favicon.ico" rel="shortcut icon">
+    <link rel="icon" type="image/png" href="{{ production_url }}/images/favicon.png">
+    
+    <!-- Homescreen Icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="{{ site.production_url }}/img/icons/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="{{ site.production_url }}/img/icons/apple-touch-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="{{ site.production_url }}/img/icons/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="{{ site.production_url }}/img/icons/apple-touch-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="{{ site.production_url }}/img/icons/apple-touch-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="{{ site.production_url }}/img/icons/apple-touch-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="{{ site.production_url }}/img/icons/apple-touch-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="{{ site.production_url }}/img/icons/apple-touch-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.production_url }}/img/icons/apple-touch-icon-180x180.png">
+    <!-- Safari Pinned Tab -->
+    <link rel="mask-icon" href="{{ production_url }}/images/favicon.svg" color="black">
+    
+    <!-- Android -->
+    <link rel="manifest" href="{{ site.production_url }}/manifest.json">
+    
+    <!-- Microsoft -->
+    <meta name="msapplication-TileColor" content="#0083ff">
+	<meta name="msapplication-TileImage" content="{{ site.production_url }}/img/icons/mstile-144x144.png">
+	<meta name="theme-color" content="#ffffff">
+    
+    <!-- Twitter Cards -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="@{{ site.author.twitter }}">
+    <meta property="twitter:creator" content="@{{ site.author.twitter }}">
+    <meta property="twitter:title" content="{{ page.title }}">
+    <meta property="twitter:description" content="Read more on {{ site.title }}">
+    <meta property="twitter:image" content="">
+    
+    <!-- Facebook Open Graph -->
+    <meta property="og:title" content="{{ page.title }}">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="{{ site.production_url }}/">
+	<meta property="og:image" content="">
+	<meta property="og:image:type" content="">
+	<meta property="og:site_name" content="{{ site.title }}">
+	<meta property="og:description" content="{{ site.tagline }}">

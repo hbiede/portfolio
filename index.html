@@ -1,42 +1,31 @@
 ---
 title: Hundter Biede
 ---
+
+<!DOCTYPE html>
 <html>
-   <head>
-      <link rel="icon" type="image/png" href="{{ production_url }}/images/favicon.png">
-      <link href="css/base.css" rel="stylesheet" type="text/css">
-      <script src="https://use.typekit.net/kph1gew.js"></script>
-      <link type="text/javascript" src="/js/scroll.js">
-      <!-- Homescreen Icon -->
-      <link rel="apple-touch-icon" href="{{ production_url }}/images/favicon.png">
-      <!-- Safari Pinned Tab -->
-      <link rel="mask-icon" href="{{ production_url }}/images/favicon.svg" color="black">
-      <!-- Twitter Cards -->
-      <meta property="twitter:card" content="summary">
-      <meta property="twitter:site" content="{{ site.author.twitter }}">
-      <meta property="twitter:creator" content="{{ site.author.twitter }}">
-      <meta property="twitter:title" content="{{ page.title }}">
-      <meta property="twitter:description" content="Read more on {{ site.title }}">
-      <meta property="twitter:image" content="">
-      <meta charset="UTF-8">
-   </head>
-   <body>
-      <div class="content">
-         <div class="header">
-            <div class="masthead">
-               <div class="siteTitle"> <a href="/">{{ site.title }}</a>                    </div>
-               <div class="siteByline">By {{ site.author.name }}</div>
-               <nav>
-                  <a href="{{ production_url }}/about" rel="author">About</a><span class="dot">•</span>
-                  <a href="{{ production_url }}/contact">Contact</a><span class="dot">•</span>
-                  <a href="{{ production_url }}/elsewhere">Elsewhere</a><span class="dot">•</span>
-                  <a href="{{ production_url }}/rss">RSS</a>
-               </nav>
-            </div>
-            <!-- masthead -->
+
+<head>
+	{% include header.html %}
+</head>
+
+<body class="homepage">
+
+    <div class="content">
+        <div class="header">
+            {% include nav.html %}
             <div style="clear: both"></div>
-            <!-- limContent -->
-         </div>
-      </div>
-   </body>
+        </div>
+        <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+            {% for post in site.posts limit:10 %}
+            {% endfor %}
+        </div>
+        <div class="paginationFooterNext">
+        	<a href="{{ production_url }}/blog" class="nextPage">Older Posts</a>
+        </div>
+        <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
+    </div>
+
+</body>
+
 </html>
