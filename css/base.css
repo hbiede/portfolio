@@ -3,13 +3,12 @@ body {
     color: #303030;
     line-height: 1.6;
     font-size: 16pt;
-    font-weight: 400;
+    font-weight: 300;
     font-family: "lato",sans-serif;
 }
 
 .siteTitle {
 	font-family: "jaf-facitweb",sans-serif;
-	text-transform: titlecase;
 }
 
 a {
