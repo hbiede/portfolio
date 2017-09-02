@@ -20,7 +20,7 @@ title: Hundter Biede
         {% for post in site.posts limit:10 %}
 		<div class="article">
 			<div class="postHeader">
-				<a class="postTitle" href="link">{{ post.title }}</a>
+				<a class="postTitle" href="{{ post.url }}">{{ post.title }}</a>
 				<time datetime="2017-09-01T21:29:00.000Z">{{ post.date | date_to_string }}</time>
 			</div>
 			{{ post.content }}
