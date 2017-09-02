@@ -21,7 +21,7 @@ title: Hundter Biede
 		<div class="article">
 			<div class="postHeader">
 				<a class="postTitle" href="link">{{ post.title }}</a>
-				<time>{{ post.date | date_to_string }}</time>
+				<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d %Y"}}</time>
 			</div>
 			{{ post.content }}
 		</div>
