@@ -9,6 +9,9 @@ highlighter: rouge
 
 markdown: kramdown
 
+paginate: 10
+paginate_path: "/:num/"
+
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
