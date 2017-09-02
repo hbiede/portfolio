@@ -15,18 +15,8 @@
         <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
 		<div class="article">
 			<div class="postHeader">
-<<<<<<< HEAD
-<<<<<<< HEAD
 				<a class="postTitle" href="{{ page.url }}">{{ page.title }}</a>
-				<time datetime="2017-09-01T21:29:00.000Z">{{ page.date | date_to_string }}</time>
-=======
-				<a class="postTitle" href="{{ post.url }}">{{ post.title }}</a>
-				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d %Y"}}</time>
->>>>>>> bf99dd071b397a0a0996898f32f6075b0130c0d6
-=======
-				<a class="postTitle" href="{{ page.url }}">{{ page.title }}</a>
-				<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d %Y"}}</time>
->>>>>>> 41e47b8c5a37fd39bd5cc6e6968df0cc4cc15630
+				<time datetime="{{ page.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d %Y"}}</time>
 			</div>
 			{{ content }}
 		</div>
