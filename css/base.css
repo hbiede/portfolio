@@ -189,12 +189,7 @@ blockquote {
 .homepage .postHeader
 {
     margin-top: 3em;
-    margin-bottom: 2em;
-}
-
-.homepage .postHeader:nth-of-type(1)
-{
-	margin-top: 2em;
+    margin-bottom: 0em;
 }
 
 .homepage .postHeader .postTitle
