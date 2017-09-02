@@ -1,173 +1,37 @@
-<!DOCTYPE html>
-<html>
-   <head>
+---
+title: Hundter Biede
+---
 
-      <!-- Highlight -->
-      <script src="/js/highlight.pack.js" defer></script>
-   </head>
-   <body class="@@BodyClass@@">
-      <div class="container">
-         <div class="content">
-            <div class="header">
-               <div class="limContent">
-                  <div class="masthead">
-                     <div class="siteTitle"><a href="/">Liss is More</a></div>
-                     <div class="siteByline">By Casey Liss</div>
-                     <nav>
-                        <a href="https://www.caseyliss.com/about" rel="author">About</a><span class="dot">&bull;</span>
-                        <a href="https://www.caseyliss.com/contact">Contact</a><span class="dot">&bull;</span>
-                        <a href="https://www.caseyliss.com/elsewhere">Elsewhere</a><span class="dot">&bull;</span>
-                        <a href="https://www.caseyliss.com/rss">RSS</a>
-                     </nav>
-                  </div>
-                  <!-- masthead -->
-                  <div style="clear: both"></div>
-               </div>
-               <!-- limContent -->
-            </div>
-            <!-- header -->
-            <div class="main">
-               <div style="float: right; display: inline; height: 240px;">
-                  <img src="/images/404.gif" alt="Retreat!" />
-               </div>
-               <div style="height: 350px">
-                  <h1>Not Found</h1>
-                  <p>Whatever you’re looking for… isn’t here.</p>
-               </div>
-            </div>
-            <!-- main -->
-         </div>
-         <!-- content -->
-         <div class="copyright">Copyright &copy; 2014-2017 Limitliss LLC</div>
-      </div>
-      <!-- container -->
-   </body>
-</html>
-Hundters-MacBook-Pro:~ hundterbiede$ curl https://www.caseyliss.com/about
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>About &mdash; Liss is More</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-      <meta name="author" content="Casey Liss">
-      <link rel="stylesheet" type="text/css" href="/css/site.css">
-      <link rel="stylesheet" href="https://www.caseyliss.com/css/highlight.css">
-      <link rel="alternate" type="application/rss+xml" title="Liss is More" href="https://www.caseyliss.com/rss">
-      <link rel="alternate" type="application/rss+xml" title="Liss is More with link posts pointed to Liss is More" href="https://www.caseyliss.com/rss-alternate">
-      <link rel="canonical" href="https://www.caseyliss.com/about" />
-      <link rel="icon" type="image/png" href="https://www.caseyliss.com/images/favicon.png">
-      <!-- Homescreen Icon -->
-      <link rel="apple-touch-icon" href="https://www.caseyliss.com/images/favicon.png"/>
-      <!-- Safari Pinned Tab -->
-      <link rel="mask-icon" href="https://www.caseyliss.com/images/favicon.svg" color="black" />
-      <!-- Twitter Cards -->
-      <meta property="twitter:card" content="summary" />
-      <meta property="twitter:site" content="@caseylisscom" />
-      <meta property="twitter:creator" content="@caseyliss" />
-      <meta property="twitter:title" content="About" />
-      <meta property="twitter:description" content="Read more on Liss is More" />
-      <meta property="twitter:image" content="" />
-      <!-- Facebook Open Graph -->
-      <meta property="og:title" content="About" />
-      <meta property="og:site_name" content="Liss is More" />
-      <meta property="og:url" content="https://www.caseyliss.com/about" />
-      <meta property="og:description" content="Read more on Liss is More" />
-      <meta property="og:image" content="" />
-      <!-- TypeKit -->
-      <link rel="stylesheet" href="https://use.typekit.net/htq0mod.css">
-      <!-- Google Analytics -->
-      <script defer>
-         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-         
-         ga('create', 'UA-50526552-1', 'caseyliss.com');
-         ga('send', 'pageview');
-      </script>
-      <!-- Highlight -->
-      <script src="/js/highlight.pack.js" defer></script>
-   </head>
-   <body class="about">
-      <div class="container">
-         <div class="content">
-            <div class="header">
-               <div class="limContent">
-                  <div class="masthead">
-                     <div class="siteTitle"><a href="/">Liss is More</a></div>
-                     <div class="siteByline">By Casey Liss</div>
-                     <nav>
-                        <a href="https://www.caseyliss.com/about" rel="author">About</a><span class="dot">&bull;</span>
-                        <a href="https://www.caseyliss.com/contact">Contact</a><span class="dot">&bull;</span>
-                        <a href="https://www.caseyliss.com/elsewhere">Elsewhere</a><span class="dot">&bull;</span>
-                        <a href="https://www.caseyliss.com/rss">RSS</a>
-                     </nav>
-                  </div>
-                  <!-- masthead -->
-                  <div style="clear: both"></div>
-               </div>
-               <!-- limContent -->
-            </div>
-            <!-- header -->
-            <div class="main">
-               <a href="https://www.caseyliss.com/images/casey-big.jpg">
+
+<head>
+	{% include header.html %}
+</head>
+
+<body class="homepage">
+
+    <div class="content">
+        <div class="header">
+            {% include nav.html %}
+            <div style="clear: both"></div>
+        </div>
+        <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+		<div class="article">
+			<div class="postHeader">
+				<a class="postTitle" href="{{ production_url }}/about">About</a>
+				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d %Y"}}</time>
+			</div>
+			<a href="https://www.caseyliss.com/images/casey-big.jpg">
                <img src="https://www.caseyliss.com/images/casey.jpg" class="headshot" alt="😊" />
-               </a>
-               <h1>About Casey Liss</h1>
-               <p>Hi, I’m Casey. 👋🏻</p>
-               <p>I’m a <a href="https://github.com/cliss">developer</a>, <a href="/elsewhere">podcaster</a>, and <a href="/">writer</a> living and working in
-                  the suburbs of <a href="http://www.richmondgov.com/">Richmond, Virginia, USA</a>. I married up (<em>way</em> up) and have
-                  somehow convinced my amazing wife, <a href="https://twitter.com/erinliss">Erin</a>, to stay with me for
-                  <a href="/2015/1/16/ten-years">over a decade now</a>.
-               </p>
-               <p>On 29 October 2014, we were lucky enough to <a href="/2014/10/30/declan">welcome our son Declan</a>
-                  to the family. You may see many references to “Sprout”
-                  (<img src="https://www.caseyliss.com/images/sprout.png" style="top: 5px; position: relative;" />)
-                  throughout this site; that was Declan’s nickname in utero. More on what it took to bring
-                  Declan into the world can be found in <a href="/2014/5/14/finally">this post</a>.
-               </p>
-               <p>You may know me from my podcast miniseries with friends <a href="http://www.marco.org/">Marco Arment</a> and
-                  <a href="http://hypercritical.co/">John Siracusa</a>, called <a href="http://neutral.fm/">Neutral</a>. It ran from January through April of 2013.
-                  After we stopped recording Neutral every week, we found ourselves often times talking
-                  about technology, as three developers tend to do. Those casual post-show conversations
-                  became the  <a href="http://atp.fm/">Accidental Tech Podcast</a>, which <a href="https://twitter.com/marcoarment/status/299234141470343169">unofficially began in February of 2013</a>,
-                  but <a href="https://twitter.com/caseyliss/statuses/311240395612884992?tw_i=311240395612884992&amp;tw_e=details&amp;tw_p=archive">formally began in March</a> of that year. ATP continues to release episodes weekly to this day.
-               </p>
-               <p>In August of 2014, my friend <a href="http://mykehurley.net/">Myke Hurley</a> and I <a href="/2014/8/11/announcing-analog">started</a> <a href="http://relay.fm/analogue/">Analog(ue)</a>. This show
-                  aims to explore the feely bits rather than the thinky bits of our lives — both online and
-                  off. As the tagline says, “There’s space between zero and one”. You can find Analog(ue) on the
-                  podcast network Myke and <a href="http://512pixels.net/">Stephen Hackett</a> created, <a href="http://relay.fm/">Relay FM</a>.
-               </p>
-               <p>Occasionally, I speak on other shows, live, and contribute to written pieces. A list of those
-                  appearances can be found <a href="/elsewhere">on this site</a>.
-               </p>
-               <p><a id="site"></a></p>
-               <h1>About This Site</h1>
-               <p>This site is a place for me to write, when I feel so inclined. While my Tumblr account was that place
-                  from 2008 until 2014, I wanted to do what the cool kids do and write my own engine. You’re reading this
-                  page thanks to that engine.
-               </p>
-               <p>The engine, which I’m calling “Camel”, uses <a href="http://nodejs.org/">Node</a>, <a href="http://expressjs.com/">Express</a>, and <a href="/elsewhere">several other packages</a>
-                  for Node. The text is all written in <a href="http://daringfireball.net/projects/markdown/">Markdown</a>; to see the source for any page, simply add <code>.md</code> to
-                  the end of the URL. For example, <a href="/about.md">here</a> is this page’s source.
-               </p>
-               <p>I <a href="/2014/5/2/camel-open-sourced">open sourced Camel</a> (you can <a href="http://github.com/cliss/camel">find it on GitHub</a>) in early May, 2014.</p>
-               <p>This site is presently hosted on <a href="http://www.heroku.com/">Heroku</a>, because it was free, I’ve heard good things, and it was
-                  <a href="/2014/5/1/heroku-first-impressions">stupidly easy to set up</a>.
-               </p>
-               <p>The CSS was written mostly by me, but with some essential adjustments by my pal <a href="http://swiadek.org/">Jakub Świadek</a>
-                  to make the site quite a bit easier on the eyes.
-               </p>
-               <p>The name, <em>Liss is More</em>, was <a href="https://twitter.com/bltitus/status/462303832802721792">a suggestion</a>, but one that I am quite fond of.</p>
-               <p>The <a href="https://en.wikipedia.org/wiki/Favicon">favicon</a> was found <a href="https://thenounproject.com/term/thumbs-up/29570/">here</a>.</p>
-               <p>I use affiliate links for <a href="http://www.amazon.com/?tag=liismo-20">Amazon</a> and <a href="http://itunes.apple.com/">iTunes</a> products.</p>
-            </div>
-            <!-- main -->
-         </div>
-         <!-- content -->
-         <div class="copyright">Copyright &copy; 2014-2017 Limitliss LLC</div>
-      </div>
-      <!-- container -->
-   </body>
+            </a>
+			{{ site.author.about_text }}
+		</div>
+		<hr class="dayBreak">
+        </div>
+    </div>
+    <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
+
+</body>
+
 </html>
