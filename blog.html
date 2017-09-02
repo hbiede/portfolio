@@ -17,7 +17,7 @@ title: Hundter Biede
             <div style="clear: both"></div>
         </div>
         <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-        {% for post in site.posts limit:10 %}
+        {% for post in site.posts %}
 		<div class="article">
 			<div class="postHeader">
 				<a class="postTitle" href="link">{{ post.title }}</a>
@@ -27,9 +27,6 @@ title: Hundter Biede
 		</div>
 		<hr class="dayBreak">
         {% endfor %}
-        </div>
-        <div class="paginationFooterNext">
-        	<a href="{{ production_url }}/blog" class="nextPage">Older Posts</a>
         </div>
     </div>
     <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
