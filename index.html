@@ -28,9 +28,11 @@ title: Hundter Biede
 		<hr class="dayBreak">
         {% endfor %}
         </div>
+        {% if site.posts | size > 10 %}
         <div class="paginationFooterNext">
         	<a href="{{ production_url }}/blog" class="nextPage">Older Posts</a>
         </div>
+        {% endif %}
     </div>
     <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
 
