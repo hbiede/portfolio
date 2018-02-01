@@ -1,0 +1,26 @@
+---
+layout: default
+permalink: /template/
+img: imgur.com/fljdl;a.jpg2
+imgAlt: Test
+---
+<img src="{{ page.img }}" alt="{{ page.imgAlt }}" class="wide" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+<p>This is some text</p>
+<ul>
+   <li>test</li>
+   <li>test 2</li>
+</ul>
+<ol>
+   <li>test</li>
+   <li>test 2</li>
+</ol>
+<pre>
+	<code>
+public static void main(){
+	System.out.println("Hello World");
+}
+	</code>
+</pre>
+<div class="center">
+   <iframe class="youtube" src="//www.youtube-nocookie.com/embed/GW11Lez4elc?rel=0" frameborder="0" allowfullscreen=""></iframe>
+</div>
