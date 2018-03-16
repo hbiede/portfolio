@@ -1,36 +1,42 @@
 ---
-title: Hundter Biede
+title: Blog Posts
 ---
 
 <!DOCTYPE html>
 <html>
-
-<head>
-	{% include header.html %}
-</head>
-
-<body class="homepage">
-
-    <div class="content">
-        <div class="header">
+   <head>
+      {% include header.html %}
+   </head>
+   <body class="homepage">
+      <div class="content">
+         <div class="header">
             {% include nav.html %}
             <div style="clear: both"></div>
-        </div>
-        <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-        {% for post in site.posts %}
-		<div class="article">
-			<div class="postHeader">
-				<a class="postTitle" href="link">{{ post.title }}</a>
-				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d %Y"}}</time>
-			</div>
-			{{ post.content }}
-		</div>
-		<hr class="dayBreak">
-        {% endfor %}
-        </div>
-    </div>
-    <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
-
-</body>
-
+         </div>
+         <div class="articles">
+            {% for post in paginator.posts %}
+            <div class="article">
+               <div class="postHeader">
+                  <a class="postTitle" href="{{ post.url }}">{{ post.title }}</a>
+                  <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y"}}</time>
+               </div>
+               {{ post.content }}
+            </div>
+            <hr class="dayBreak">
+            {% endfor %}
+         </div>
+         {% if paginator.total_pages > 1 %}
+         <!-- Pagination links -->
+         <div class="pagination">
+            {% if paginator.previous_page %}
+            <a href="{{ paginator.previous_page_path }}" class="paginationFooterPrevious">Previous</a>
+            {% endif %}
+            {% if paginator.next_page %}
+            <a href="{{ paginator.next_page_path }}" class="paginationFooterNext">Next</a>
+            {% endif %}
+         </div>
+         {% endif %}
+      </div>
+      <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
+   </body>
 </html>
