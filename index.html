@@ -16,12 +16,12 @@ title: Hundter Biede
             {% include nav.html %}
             <div style="clear: both"></div>
         </div>
-        <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+        <div class="articles">
         {% for post in site.posts limit:10 %}
 		<div class="article">
 			<div class="postHeader">
 				<a class="postTitle" href="{{ post.url }}">{{ post.title }}</a>
-				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d %Y"}}</time>
+				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y"}}</time>
 			</div>
 			{{ post.content }}
 		</div>
