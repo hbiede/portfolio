@@ -4,10 +4,10 @@ body {
      line-height: 1.6;
      font-size: 16pt;
      font-weight: 300;
-     font-family: "lato",sans-serif;
+     font-family: "lato", sans-serif;
 }
  .siteTitle {
-     font-family: "jaf-facitweb",sans-serif;
+     font-family: sans-serif;
 }
  a {
      text-decoration: none;
