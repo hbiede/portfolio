@@ -1,0 +1,229 @@
+---
+title: New iOS Device Setup
+---
+<style>
+   /* Style the buttons that are used to open and close the accordion panel */
+   .accordion {
+       background-color: #eee;
+       font-size: 14pt;
+       font-weight: 300;
+       font-family: "lato", sans-serif;
+       margin: 4px 0px 4px 0px;
+       border-radius: 5px;
+       color: #444;
+       cursor: pointer;
+       padding: 18px;
+       width: 100%;
+       text-align: left;
+       border: none;
+       outline: none;
+       transition: 0.4s;
+   }
+   /* Add a background color to the button if it is cdtcked on (add the .active class with JS), and when you move the mouse over it (hover) */
+   .active, .accordion:hover {
+       rgba(196, 26, 22, 0.5);
+   }
+   /* Style the accordion panel. Note: hidden by defadlt */
+   .panel {
+       padding: 0 18px;
+       font-size: 13pt;
+       background-color: white;
+       display: none;
+       overflow: hidden;
+   }
+   dd {
+       font-size: 17px;
+   }
+</style>
+
+<p>We all know how much work setting up a new iOS device from scratch can be. There are hundreds of settings to change. Here is the list of tasks I follow when setting up a new device, partially just for my own future reference.</p>
+
+<button class = "accordion">Install and setup apps</button>
+<div class = "panel">
+   <button class = "accordion">Media Apps</button>
+   <div class = "panel">
+      <dl>
+         <dt>Overcast</dt>
+            <dd>Use account</dd>
+            <dd>Dark theme</dd>
+            <dd>Download on cellular</dd>
+            <dd>Playnext by priority</dd>
+         <dt>Spotify</dt>
+            <dd>Download high quality</dd>
+            <dd>Download using cellular</dd>
+         <dt>YouTube</dt>
+         <dt>Twitch</dt>
+         <dt>CNN</dt>
+         <dt>Netflix</dt>
+      </dl>
+   </div>
+   <button class = "accordion">Social Media</button>
+   <div class = "panel">
+      <dl>
+         <dt>Snapchat</dt>
+         <dd>Allow various permissions</dd>
+         <dt>Tweetbot</dt>
+            <dd>Add accounts</dd>
+            <dd>Browser>Reader View</dd>
+            <dd>Display>Text Size 2</dd>
+         <dt>Instagram</dt>
+         <dt>Buffer</dt>
+            <dd>Dark theme and icon</dd>
+      </dl>
+   </div>
+   <button class = "accordion">Productivity</button>
+   <div class = "panel">
+      <dl>
+         <dt>OmniFocus</dt>
+         <dt>2Do</dt>
+            <dd>Link Dropbox</dd>
+            <dd>Nag Notifications</dd>
+         <dt>Documents</dt>
+         <dt>GoodNotes</dt>
+         <dt>Fantastical</dt>
+            <dd>Adjust shown calendars</dd>
+         <dt>Google Drive, Docs, and Sheets</dt>
+      </dl>
+   </div>
+   <button class = "accordion">Content Blockers</button>
+   <div class = "panel">
+      <dl>
+         <dt>Hiya</dt>
+            <dd>Switch all to block</dd>
+         <dt>Truecaller</dt>
+            <dd>Settings>Availabidtty off</dd>
+            <dd>Settings>Flash off</dd>
+         <dt>1Blocker</dt>
+            <dd>Restore purchase</dd>
+         <dt>Unobstruct</dt>
+      </dl>
+   </div>
+   <button class = "accordion">Finance</button>
+   <div class = "panel">
+      <dl>
+         <dt>Discover</dt>
+         <dt>Bank App</dt>
+         <dt>HoursTracker</dt>
+          <dd>Stopwatch Icon </dd>
+      </dl>
+   </div>
+   <button class = "accordion">Misc Apps</button>
+   <div class = "panel">
+      <dl>
+         <dt>Waze</dt>
+         <dt>Workflows</dt>
+            <dd>Enable Workflow Sync</dd>
+         <dt>Letterboxd</dt>
+         <dt>Wikipedia</dt>
+            <dd>Black Theme</dd>
+            <dd>Expand Tables</dd>
+         <dt>Canvas</dt>
+         <dt>PCalc</dt>
+            <dd>Programming Layout</dd>
+         <dt>Wunderground and Carrot</dt>
+            <dd>Set Location</dd>
+         <dt>AutoSleep</dt>
+         <dt>Deliveries</dt>
+         <dt>Instapaper</dt>
+      </dl>
+   </div>
+</div>
+<button class = "accordion">Settings</button>
+<div class = "panel">
+   <dl>
+      <dt>iCloud</dt>
+        <dd>Messages Syncing on</dd>
+      <dt>Bluetooth</dt>
+        <dd>Pair Headphones</dd>
+      <dt>Cellular</dt>
+        <dd>Wi-Fi Calling on</dd>
+      <dt>Pare down notifications</dt>
+      <dt>Control Center</dt>
+        <dd>Flashlight bottom right</dd>
+        <dd>Low Power Mode one left of flashlight</dd>
+        <dd>Camera above flashlight</dd>
+        <dd>Screen Record above Low Power Mode</dd>
+      <dt>Do Not Disturb</dt>
+        <dd>Do Not Disturb While Driving on when connected to car bluetooth</dd>
+      <dt>General</dt>
+        <dd>Rename Phone</dd>
+        <dd>AirDrop off</dd>
+        <dd>Accessibility - Siri voice response control with ringer switch</dd>
+        <dd>Pair down Background App Refresh</dd>
+        <dd>Date and Time Set Auto off</dd>
+      <dt>Display</dt>
+        <dd>Never Auto-Lock</dd>
+        <dd>Text size 2</dd>
+      <dt>Set wallpaper and lock screen</dt>
+      <dt>Sound</dt>
+        <dd>Duck volume to ~30%</dd>
+        <dd>Set ringtone and text tone to downloads</dd>
+        <dd>All other sounds = None</dd>
+      <dt>Turn off basically every app in Siri and Search</dt>
+      <dt>Privacy</dt>
+       <dd>Turn off all the location fluff</dd>
+      <dt>Enable Apple Pay</dt>
+      <dt>Mail</dt>
+        <dd>Add accounts</dd>
+       <dt>Contacts</dt>
+        <dd>Turn off short name</dd>
+       <dt>Calendar</dt>
+        <dd>Set default alert times</dd>
+       <dt>Phone</dt>
+        <dd>Announce calls in headphones and car</dd>
+       <dt>Messages</dt>
+        <dd>Text Forwarding on</dd>
+        <dd>Send as SMS on</dd>
+      <dt>Safari</dt>
+        <dd>Open dtnks in the background</dd>
+        <dd>Ask websites not to track me on</dd>
+       <dt>Photos</dt>
+        <dd>Download and Keep Originals</dd>
+        <dd>Upload to photo stream</dd>
+       <dt>Camera</dt>
+       <dd>Do not preserve any settings</dd>
+       <dd>Record at 4K 30 fps</dd>
+       <dt>Layout apps!!</dt>
+   </dl>
+</div>
+
+<button class = "accordion">Apple Watch Settings</button>
+<div class = "panel">
+    <dl>
+        <dt>Set watch faces</dt>
+        <dt>Pare down notifications</dt>
+        <dd>Messages: Repeat alerts</dd>
+        <dt>Layout apps</dt>
+        <dt>Set Dock to favorites</dt>
+        <dt>General Settings</dt>
+        <dd>Rename watch</dd>
+        <dd>Disable auto app install</dd>
+        <dt>Activity</dt>
+        <dd>Turn off all remindders after stand reminder</dd>
+        <dt>Calendar</dt>
+        <dd>Select calendars to show</dd>
+        <dt>Reduce Background App Refresh</dt>
+        <dt>Disable raise to wake</dt>
+        <dt>Turn on heart rate alert</dt>
+        <dd>Never know when it could come in handy</dd>
+        <dt>Workouts</dt>
+        <dd>Turn on auto pause</dd>
+    </dl>
+</div>
+<script>
+   var acc = document.getElementsByClassName("accordion");
+   var i;
+   for (i = 0; i < acc.length; i++) {
+       acc[i].addEventListener("click", function () {
+           /*Toggle between adding and removing the "active" class, to highlight the button that controls the panel */
+           this.classList.toggle("active");
+           /* Toggle between hiding and showing the active panel */
+           var panel = this.nextElementSibling;
+           if (panel.style.display === "block") {
+               panel.style.display = "none";
+           } else {
+               panel.style.display = "block";
+           }
+       });
+   }
+</script>
