@@ -250,51 +250,6 @@ body {
      width: 250px;
      margin-right: 1em;
 }
-/* SHOWBOT */
- .showbot table {
-    /*text-align: center;
-     Because Siracusa said I wasn't allowed. */
-     margin-left: auto;
-     margin-right: auto;
-}
- .showbot h2 {
-     text-align: center;
-     text-decoration: underline;
-}
- .showbot .tables {
-     display: none;
-}
-/* Siracusa tables */
- .siracusa-table table {
-     border-collapse: collapse;
-     border-spacing: 0;
-     border-top: none;
-}
- .siracusa-table th {
-     border-bottom: 2px solid dimgray;
-     border-left: 1px solid #ddd;
-     text-align: center;
-}
- .siracusa-table th:first-child, .siracusa-table td:first-child {
-     border-left: none;
-}
- .siracusa-table td {
-     border-bottom: 1px solid dimgray;
-     border-left: 1px solid #ddd;
-     vertical-align: baseline;
-}
- .siracusa-table td:nth-child(4) {
-     text-align: center;
-}
- .siracusa-table tr:last-child td {
-     border-bottom: none;
-}
-/* Talk Show Embeds */
- iframe.talkshow-embed {
-     margin-left: auto;
-     margin-right: auto;
-     display: block;
-}
 /* iPad */
  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
      .center img.wide {
