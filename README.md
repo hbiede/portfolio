@@ -1,4 +1,4 @@
 hbiede.github.io
 ==============
 
-Working on a personal website based on the website I created for my high school FBLA chapter.
+Personal website based on (Casey Liss's blog)[https://www.caseyliss.com].
