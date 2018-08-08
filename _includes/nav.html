@@ -2,7 +2,9 @@
                 <div class="siteTitle"> <a href="/">{{ site.title }}</a> </div>
                 <div class="siteByline">By {{ site.author.name }}</div>
                 <nav>
+		    {% unless page.title == "Hundter Biede" &}
                     <a href="{{ site.production_url }}/blog">Posts</a><span class="dot">•</span>
+		    {% endunless %}
                     <a href="{{ site.production_url }}/about" rel="author">About</a><span class="dot">•</span>
 		    <a href="{{ site.production_url }}/portfolio" rel="author">Portfolio</a><span class="dot">•</span>
                     <a href="{{ site.production_url }}/rss">RSS</a>
