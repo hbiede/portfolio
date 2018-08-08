@@ -2,7 +2,7 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /posts/:year/:month/:day/:title 
 
-production_url: https://hbiede.github.io
+production_url: https://hbiede.com
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
