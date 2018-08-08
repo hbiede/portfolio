@@ -16,9 +16,6 @@ body {
  a.anchor {
      color: #303030;
 }
- time {
-     color: rgb(171, 171, 171);
-}
  .strike {
      text-decoration: line-through;
 }
