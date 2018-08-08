@@ -9,6 +9,9 @@ body {
  .siteTitle {
      font-family: sans-serif;
 }
+time {
+    color: rbg(171,171,171)
+}
  a {
      text-decoration: none;
      color: rgb(0, 131, 255);
@@ -140,6 +143,7 @@ body {
      font-weight: 500;
      line-height: 1.2;
      text-transform: titlecase;
+     color: #000;
 }
  .postTitle img {
      width: 1.5em;
@@ -319,4 +323,3 @@ body {
          max-width: 100% 
     }
 }
- 
