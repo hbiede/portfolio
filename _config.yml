@@ -3,6 +3,7 @@
 permalink: /posts/:year/:month/:day/:title 
 
 production_url: https://hbiede.com
+resourse_url: https://hbiede.github.io
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
