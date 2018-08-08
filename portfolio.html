@@ -17,16 +17,10 @@ title: Portfolio
             <div style="clear: both"></div>
         </div>
         <div class="articles">
-		<div class="article">
-			<div class="postHeader">
-				<h1 class="postTitle" href="{{ production_url }}/about">About</h1>
-			</div>
-			<a href="{{ site.author.big_image }}">
-               			<img src="{{ site.author.image }}" class="headshot" alt="😊" />
-            		</a>
-			{{ site.author.about_text }}<br><br>{{ site.author.site_about }}
-		</div>
-		<hr class="dayBreak">
+		<ul>
+			<li><a href="https://github.com/hbiede/Lazy-Clock">Lazy Clock</a>
+			<li><a href="https://github.com/hbiede/Natural-Language-Time">Natural Language Time Framework</a>
+		</ul>
         </div>
     </div>
     <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
