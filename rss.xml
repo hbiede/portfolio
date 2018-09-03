@@ -17,7 +17,7 @@
                 <title>{{ post.title }}</title>
                 <link>{{ site.production_url }}{{ post.url }}</link>
                 <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
-                <description>{{ post.content }}</description>
+                <description>{{ post.description }}</description>
         </item>
 {% endfor %}
 
