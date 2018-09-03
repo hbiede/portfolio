@@ -164,23 +164,23 @@ time {
      font-size: 0.9em;
      display: block;
 }
- .homepage .day .article {
+ .homepage main {
      margin-bottom: 2em;
 }
  .homepage .copyright {
      margin-top: 24px;
      padding-top: 10px;
 }
- .homepage .article hr {
+ .homepage main hr {
      width: 35%;
      margin-top: 2em;
      margin-bottom: 2em;
      border-top: 1px dashed black;
 }
- .homepage .article th {
+ .homepage main th {
      padding: 0 0.5em 0 0.5em 
 }
- .homepage .article td {
+ .homepage main td {
      padding: 0 0.5em 0 0.5em;
 }
  .homepage .paginationFooter {
@@ -233,7 +233,7 @@ time {
      margin-bottom: 2em;
      border-top: 1px dashed black;
 }
- .homepage .article hr.footnotes-sep {
+ .homepage main hr.footnotes-sep {
      width: 50%;
      border-top: 1px solid #555 
 }
