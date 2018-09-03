@@ -12,15 +12,15 @@
             {% include nav.html %}
             <div style="clear: both"></div>
         </div>
-        <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-		<div class="article">
+        <div class="articles">
+		<main>
 			<div class="postHeader">
 				<h1><a class="postTitle" href="{{ page.url }}">{{ page.title }}</a></h1>
 				<div class="byline">By <a href="{{ production_url }}">
 				<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d, %Y"}}</time></div>
 			</div>
 			{{ content }}
-		</div>
+		</main>
 		<hr class="dayBreak">
         </div>
     </div>
