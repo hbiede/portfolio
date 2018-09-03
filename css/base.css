@@ -45,7 +45,7 @@ time {
      margin-right:1em;
 }
  .content .header {
-     text-align: center;
+     text-align: left;
      border-bottom-style: solid;
      border-bottom-color: rgb(228, 228, 228);
      border-bottom-width: 0.3em;
@@ -196,7 +196,7 @@ time {
 }
 /* POSTS */
  .post .postHeader {
-     text-align: center;
+     text-align: left;
      margin-bottom: 3em;
 }
  .post .postHeader .postTitle {
