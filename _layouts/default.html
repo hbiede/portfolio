@@ -15,7 +15,7 @@
         <div class="articles" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
 		<div class="article">
 			<div class="postHeader">
-				<a class="postTitle" href="{{ page.url }}">{{ page.title }}</a>
+				<h1><a class="postTitle" href="{{ page.url }}">{{ page.title }}</a></h1>
 				<time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%A, %B %-d %Y"}}</time>
 			</div>
 			{{ content }}
