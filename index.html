@@ -21,7 +21,7 @@ title: Hundter Biede
 		<main class="post">
 			<div class="postHeader">
 				<h1><a class="postTitle" href="{{ post.url }}">{{ post.title }}</a></h1>
-				<div class="byline" itemscope itemtype="http://schema.org/Person"><p>By <span itemprop="author">{{ site.author.name}}</span></p>
+				<div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
 				<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%A, %B %-d, %Y"}}</time></div>
 			</div>
 			{{ post.content }}
