@@ -18,14 +18,14 @@ title: Hundter Biede
         </div>
         <div class="articles">
         {% for post in site.posts limit:10 %}
-		<div class="article">
+		<main class="post">
 			<div class="postHeader">
 				<h1><a class="postTitle" href="{{ post.url }}">{{ post.title }}</a></h1>
-				<div class="byline">By <a href="{{ production_url }}">
+				<div class="byline">By <a href="{{ production_url }}">{{ page.author }}</a>
 				<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%A, %B %-d, %Y"}}</time></div>
 			</div>
 			{{ post.content }}
-		</div>
+		</main>
 		<hr class="dayBreak">
         {% endfor %}
         </div>
