@@ -1,3 +1,4 @@
+/* Based on the CSS from caseyliss.com */
 body {
      background-color: #fff;
      color: #303030;
@@ -231,7 +232,7 @@ time {
  .post .postHeader .postTitle:visited {
      color: black;
 }
- .post hr {
+ .post hr:not(.dayBreak) {
      width: 35%;
      margin-top: 2em;
      margin-bottom: 2em;
