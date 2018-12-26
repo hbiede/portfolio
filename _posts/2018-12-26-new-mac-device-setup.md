@@ -5,7 +5,7 @@ date: 2018-12-26T17:30:00Z
 description: How I set up a new Mac device
 ---
 
- * <pre>Run my Defaults script (run "curl https://raw.githubusercontent.com/hbiede/Defaults/master/defaults.sh | sh" in terminal)</pre>
+ * Run my Defaults script <pre>(run "curl https://raw.githubusercontent.com/hbiede/Defaults/master/defaults.sh | sh" in terminal)</pre>
  * Log in to Internet Accounts in System Preferences
  * Turn Off Spotlight Shortcut (So Alfred can take it)
  * Turn on “Log In From Apple Watch”
