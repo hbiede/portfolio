@@ -16,11 +16,11 @@
 		<main>
 			<div class="postHeader">
 				<h1><a class="postTitle" href="{{ page.url }}">{{ page.title }}</a></h1>
-				<h6>{{ page.description }}</h6>
+				<h3 class="subtitle">{{ page.description }}</h4>
 				<div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
 				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%A, %B %-d, %Y"}}</time></div>
 			</div>
-			<hr>
+			<hr class="dayBreak">
 			{{ content }}
 		</main>
 		<hr class="dayBreak">
