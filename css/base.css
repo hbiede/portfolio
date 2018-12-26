@@ -171,11 +171,15 @@ time {
      margin-top: 24px;
      padding-top: 10px;
 }
- .homepage main hr {
+ .homepage main hr:not(.dayBreak) {
      width: 35%;
      margin-top: 2em;
      margin-bottom: 2em;
      border-top: 1px dashed black;
+}
+.postHeader .subtitle {
+    font-weight: normal;
+    color: #454545;
 }
  .homepage main th {
      padding: 0 0.5em 0 0.5em 
