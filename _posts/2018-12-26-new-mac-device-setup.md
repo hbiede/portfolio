@@ -1,7 +1,7 @@
 ---
 layout: default
 title: New Mac Device Setup
-date: 2018-12-26T18:00:00Z
+date: 2018-12-26T17:30:00Z
 description: How I set up a new Mac device
 ---
 
