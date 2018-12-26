@@ -32,12 +32,7 @@ time {
      max-width: 775px;
      margin: 0 auto 2em auto;
 }
- .content ul {
-     padding-left: 2.5em;
-    /*list-style: circle;
-    */
-}
- .content ol {
+ .content ul, .content ol {
      padding-left: 2.5em;
 }
  .container {
@@ -127,8 +122,8 @@ time {
  .instagram-media {
      margin: 0 auto !important;
 }
-/* INDEX */
- .homepage .daybreak {
+/* INDEX.html */
+ .homepage .dayBreak {
      margin-top: 3em;
      border: 0;
      color: rgb(228, 228, 228);
