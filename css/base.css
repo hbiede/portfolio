@@ -138,7 +138,7 @@ time {
      font-size: 2.2em;
      font-weight: 500;
      line-height: 1.2;
-     text-transform: titlecase;
+     text-transform: capitalize;
      color: #000;
 }
  .postTitle img {
@@ -175,6 +175,7 @@ time {
 }
 .postHeader .subtitle {
     font-weight: normal;
+    text-transform: capitalize;
     color: #454545;
 }
  .homepage main th {
