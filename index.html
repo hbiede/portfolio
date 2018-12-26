@@ -24,8 +24,8 @@ title: Hundter Biede
 				<h3 class="subtitle">{{ post.description }}</h4>
 				<div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
 				<time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%A, %B %-d, %Y"}}</time></div>
+				<hr class="dayBreak">
 			</div>
-			<hr class="dayBreak">
 			{{ post.content }}
 		</main>
 		<hr class="dayBreak">
