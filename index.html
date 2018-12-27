@@ -8,9 +8,11 @@ title: Hundter Biede
 <head>
 	{% include header.html %}
 	<meta property="og:title" content="{{ site.tagline }}" />
-	<meta property="og:image" content="">
-	<meta property="og:image:type" content="">
+	<meta property="og:image" content="{{ site.author.image }}">
 	<meta property="og:description" content="{{ site.tagline }}">
+	<meta property="twitter:title" content="{{ page.title }}">
+	<meta property="twitter:description" content="{{ site.tagline }}">
+	<meta property="twitter:image" content="{{ site.author.image }}">
 </head>
 
 <body class="homepage">
