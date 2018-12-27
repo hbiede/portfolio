@@ -1,6 +1,7 @@
 ---
 layout: default
 title: I Am Pro-Sadness
+image: http://www.aculife.ie/wp-content/uploads/2015/04/sadness.jpg
 date: 2018-12-19T22:38:00Z
 description: Why Sadness is a Part of Life
 ---
