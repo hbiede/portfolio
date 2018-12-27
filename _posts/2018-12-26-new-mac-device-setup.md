@@ -1,6 +1,8 @@
 ---
 layout: default
 title: New Mac Device Setup
+image: https://support.apple.com/library/content/dam/edam/applecare/images/en_US/macbook/osx-el-capitan-setup-macbook-gold-open.png
+imageType: image/png
 date: 2018-12-26T17:30:00Z
 description: How I set up a new Mac device
 ---
