@@ -7,6 +7,7 @@ date: 2018-12-26T17:30:00Z
 description: How I set up a new Mac device
 ---
 
+ * Install [BBEdit](https://www.barebones.com/products/bbedit/)
  * Run my Defaults script (run "curl https://raw.githubusercontent.com/hbiede/Defaults/master/defaults.sh \| sh" in terminal) 
  * Log in to Internet Accounts in System Preferences
  * Turn Off Spotlight Shortcut (So Alfred can take it) 
@@ -18,7 +19,7 @@ description: How I set up a new Mac device
  * Install PiPifier, The Unarchiver, and Xcode from the App Store
  * Install [Spectacle](https://www.spectacleapp.com)
  * Use [Get Mac Apps](http://www.getmacapps.com) to install Chrome, Spotify, Source Tree, Caffeine, Alfred
- * Install [BBEdit](https://www.barebones.com/products/bbedit/) and [Discord](https://discordapp.com)
+ * Install [Discord](https://discordapp.com)
  * Arrange Dock
  * Show Bookmarks Bar on Chrome
  * Dark Theme for Chrome
