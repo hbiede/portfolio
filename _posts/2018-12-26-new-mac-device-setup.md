@@ -20,6 +20,7 @@ description: How I set up a new Mac device
  * Use [Get Mac Apps](http://www.getmacapps.com) to install Chrome, Spotify, Source Tree, Caffeine, Alfred
  * Install [BBEdit](https://www.barebones.com/products/bbedit/)
  * Install [Discord](https://discordapp.com)
+ * Install [OmniFocus](https://www.omnigroup.com/omnifocus/)
  * Arrange Dock
  * Show Bookmarks Bar on Chrome
  * Dark Theme for Chrome
