@@ -16,11 +16,6 @@ description: How I set up a new Mac device
  * Ask Websites not to Track Me
  * Safari>View>Show Favorites Bar
  * Install PiPifier, The Unarchiver, and Xcode from the App Store
- * Install [Spectacle](https://www.spectacleapp.com)
- * Use [Get Mac Apps](http://www.getmacapps.com) to install Chrome, Spotify, Source Tree, Caffeine, Alfred
- * Install [BBEdit](https://www.barebones.com/products/bbedit/)
- * Install [Discord](https://discordapp.com)
- * Install [OmniFocus](https://www.omnigroup.com/omnifocus/)
  * Arrange Dock
  * Show Bookmarks Bar on Chrome
  * Dark Theme for Chrome
