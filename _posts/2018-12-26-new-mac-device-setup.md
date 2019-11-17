@@ -15,7 +15,7 @@ description: How I set up a new Mac device
  * Show Full Address in Safari
  * Ask Websites not to Track Me
  * Safari>View>Show Favorites Bar
- * Install PiPifier, The Unarchiver, and Xcode from the App Store
+ * Install PiPifier and Xcode from the App Store
  * Arrange Dock
  * Show Bookmarks Bar on Chrome
  * Dark Theme for Chrome
