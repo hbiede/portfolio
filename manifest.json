@@ -1,5 +1,6 @@
 {
-	"name": "Hundter Biede",
+	"name": "Hundter Biede's Portfolio",
+	"short_name": "HBiede",
 	"icons": [
 		{
 			"src": "\/assets\/images\/icons\/android-chrome-36x36.png",
@@ -38,6 +39,7 @@
 			"density": "4.0"
 		}
 	],
+	"background_color": "#dae3e7",
 	"start_url": "http:\/\/hbiede.com\/",
 	"display": "standalone"
 }
