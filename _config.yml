@@ -3,7 +3,7 @@
 permalink: /posts/:year/:month/:day/:title 
 
 production_url: https://hbiede.com
-resourse_url: https://hbiede.com
+resourse_url: https://hbiede.com/assets
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
@@ -23,9 +23,10 @@ title : HBiede
 tagline: The Personal Ramblings of Hundter Biede
 author :
   name : Hundter Biede
+  job_title: Computer Engineering Student
   about_text: Hundter Biede is a junior at the University of Nebraska Lincoln, currently studying Computer Engineering with the goal of being a software engineer. Hundter enjoys working as a Course Leader for introductory Computer Science courses, reffing intramural football, and playing pitch with friends. 
-  image: https://hbiede.github.io/img/hbiede.jpg
-  big_image: https://hbiede.github.io/img/hbiede-full.jpg
+  image: /img/hbiede.jpg
+  big_image: /img/hbiede-full.jpg
   github : hbiede
   twitter : HBiede
   linkedin: hbiede

@@ -6,8 +6,10 @@
 <meta charset="UTF-8">
 <meta http-equiv="Cache-Control" content="no-store" />
 
-<!-- Base CSS/JS -->
-<link href="{{ site.resourse_url }}/css/base.css" rel="stylesheet" type="text/css">
+<!-- Fonts -->
+<link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+<script defer src="{{ site.resourse_url }}/fontawesome/js/all.js"></script>
 
 <!-- Favicon -->
 <link href="{{ site.resourse_url }}/img/favicon.ico" rel="shortcut icon">
@@ -44,8 +46,21 @@
 <meta property="twitter:card" content="summary">
 <meta property="twitter:site" content="{{ page.url }}/">
 <meta property="twitter:creator" content="@{{ site.author.twitter }}">
+<meta property="twitter:title" content="{{ page.title }}">
+<meta property="twitter:description" content="{{ site.tagline }}">
+<meta property="twitter:image" content="{{ site.author.image }}">
 
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ page.url }}/">
 <meta property="og:site_name" content="{{ site.title }}">
+<meta property="og:title" content="{{ site.tagline }}" />
+<meta property="og:image" content="{{ site.author.image }}">
+<meta property="og:description" content="{{ site.tagline }}">
+
+
+<!-- github calendar css -->
+<link rel="stylesheet" href="{{ site.resourse_url }}/plugins/github-calendar/dist/github-calendar.css">
+<!-- github activity css -->    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+<link rel="stylesheet" href="{{ site.resourse_url }}/plugins/github-activity/github-activity-0.1.5.min.css">
