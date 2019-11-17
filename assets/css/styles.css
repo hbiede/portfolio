@@ -649,7 +649,13 @@ a.dotted-link:hover {
 }
 
 .blog .item p {
+  margin-top: 10px;
   margin-bottom: 5px;
+  word-break: break-word;
+}
+
+.blog .item time {
+  color: var(--SpecialTextColor);
 }
 
 .blog .item:last-child {
