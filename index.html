@@ -35,16 +35,16 @@
     <!-- ******HEADER****** --> 
     <header class="header">
         <div class="container clearfix">                       
-            <img class="profile-image img-fluid float-left" src="assets/images/profile.png" alt="James Lee" />
+            <img class="profile-image img-fluid float-left" src="{{ site.author.big_image }}" alt="{{ site.author.name }}" />
             <div class="profile-content float-left">
-                <h1 class="name">James Lee</h1>
-                <h2 class="desc">Web App Developer</h2>   
+                <h1 class="name">{{ site.author.name }}</h1>
+                <h2 class="desc">{{ site.author.job_title }}</h2>   
                 <ul class="social list-inline">
                     <li class="list-inline-item"><a href="https://www.twitter.com/{{ site.author.twitter }}"><i class="fab fa-twitter"></i></a></li>
                     <li class="list-inline-item"><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
                     <li class="list-inline-item last-item"><a href="https://www.github.com/{{ site.author.github }}"><i class="fab fa-github-alt"></i></a></li>
                 </ul> 
-            </div><!--//profile-->
+            </div><!--//profile-content-->
             <a class="btn btn-cta-primary float-right" href="https://themes.3rdwavemedia.com/" target="_blank"><i class="fas fa-paper-plane"></i> Contact Me</a>              
         </div><!--//container-->
     </header><!--//header-->
