@@ -403,15 +403,16 @@
                         <ul class="list-unstyled">
                             <li class="item">
                                 <span class="title"><strong>English:</strong></span>
-                                <span class="level">Native Speaker <br class="visible-xs"/><i
-                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                                        class="fas fa-star"></i> <i class="fas fa-star"></i> </span>
+                                <span class="level">Native Speaker <br class="visible-xs"/>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                                </span>
                             </li><!--//item-->
                             <li class="item">
                                 <span class="title"><strong>Spanish:</strong></span>
-                                <span class="level">Professional Proficiency <br class="visible-sm visible-xs"/><i
-                                        class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                                        class="fas fa-star-half"></i></span>
+                                <span class="level">Proficient <br class="visible-sm visible-xs"/>
+                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star-half"></i>
+                                </span>
                             </li><!--//item-->
                         </ul>
                     </div><!--//content-->
@@ -421,10 +422,22 @@
             <aside class="blog aside section">
                 <div class="section-inner">
                     <h2 class="heading">Latest Blog Posts</h2>
-                    <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery
-                        RSS plugin</a> to pull in your blog post feeds.</p>
                     <div id="rss-feeds" class="content">
-
+                        <div class="items">
+                            {% for post in site.posts limit:10 %}
+                            <div class="item">
+                                <h3 class="title">
+                                    <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
+                                </h3>
+                                <div>
+                                    <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%A, %B %-d, %Y"}}</time>
+                                    <p>
+                                        {{ post.content | strip_html | truncatewords: 20 }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        </div>
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </aside><!--//section-->
