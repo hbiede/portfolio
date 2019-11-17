@@ -192,22 +192,22 @@ title: Portfolio
                 <div class="section-inner">
                     <h2 class="heading">Work Experience</h2>
                     <div class="content">
+                        {% assign startDate = '2019-05-18' | date| date: '%Y' %}
+                        {% capture now %} {{'now' | date: '%s' | plus: 0 %}} {% endcapture %}
+                        {% if startDate < now %}
                         <div class="item">
-                            <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a
-                                    href="#">Startup Hub</a></span> <span class="year">(2014 - Present)</span></h3>
-                            <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante,
-                                dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius
-                                laoreet. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit
-                                amet orci eget eros faucibus tincidunt.</p>
+                            <h3 class="title">Software Development Intern<span class="place"><a
+                                    href="https://www.dmsi.com">DMSi</a></span> <span class="year">(Summer 2020)</span></h3>
+                            <p></p>
+                            <h6>Technologies used:</h6>
                             <ul class="list-inline">
                                 <li class="list-inline-item"><span
-                                        class="badge badge-primary badge-pill">Video Editing</span></li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Color Correction</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Film Photography</span>
+                                        class="badge badge-primary badge-pill">TBD</span></li>
+                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Agile Development Strategies</span>
                                 </li>
                             </ul><!--//technologies-->
                         </div><!--//item-->
+                        {% endif %}
 
                         <div class="item">
                             <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span>
@@ -215,6 +215,7 @@ title: Portfolio
                             <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu
                                 suscipit pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh.
                                 Donec sodales sagittis magna.</p>
+                            <h6>Technologies used:</h6>
                             <ul class="list-inline">
                                 <li class="list-inline-item"><span
                                         class="badge badge-primary badge-pill">Video Editing</span></li>
@@ -230,6 +231,7 @@ title: Portfolio
                                     class="year">(2012 - 2013)</span></h3>
                             <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet
                                 adipiscing sem neque sed ipsum.</p>
+                            <h6>Technologies used:</h6>
                             <ul class="list-inline">
                                 <li class="list-inline-item"><span
                                         class="badge badge-primary badge-pill">Video Editing</span></li>
@@ -333,7 +335,7 @@ title: Portfolio
                                                                    title="Published App Store Developer">
                                     <i class="fas fa-info-circle"></i>Novice</span></h3>
                                 <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="35%">
+                                    <div class="level-bar-inner" data-level="42%">
                                     </div>
                                 </div><!--//level-bar-->
                             </div><!--//item-->
