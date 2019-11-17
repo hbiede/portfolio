@@ -7,30 +7,32 @@
  * Website: https://themes.3rdwavemedia.com/
 */
 
-@TextColor = #434343;
-@SpecialTextColor = #778492;
-@HoverTextColor = #5f6b77;
-@DarkTextColor = #212529;
-@White = #fff;
-@LightGrey = #e8e8e8
-@Grey = #999;
-@PrimaryBackground = #dae3e7;
-@PrimaryThemeColor = #66cb8c;
-@PrimaryThemeHoverColor = #49ac43;
-@PrimaryTheme-Dark = #326f2e;
-@SecondaryThemeColor = #58677c;
-@SecondaryThemeHoverColor = #66cb8c;
-@DangerColor = #dc3545;
-@DangerHoverColor = #bd2130;
-@WarningColor = #ffc107;
-@WarningHoverColor = #e5ad06;
-@InfoColor = #17a2b8;
-@InfoHoverColor = #128193;
+:root {
+  --TextColor: #434343;
+  --SpecialTextColor: #778492;
+  --HoverTextColor: #5f6b77;
+  --DarkTextColor: #212529;
+  --White: #fff;
+  --LightGrey: #e8e8e8;
+  --Grey: #999;
+  --PrimaryBackground: #dae3e7;
+  --PrimaryThemeColor: #66cb8c;
+  --PrimaryThemeHoverColor: #49ac43;
+  --PrimaryTheme-Dark: #326f2e;
+  --SecondaryThemeColor: #58677c;
+  --SecondaryThemeHoverColor: #66cb8c;
+  --DangerColor: #dc3545;
+  --DangerHoverColor: #bd2130;
+  --WarningColor: #ffc107;
+  --WarningHoverColor: #e5ad06;
+  --InfoColor: #17a2b8;
+  --InfoHoverColor: #128193;
+}
 
 body {
   font-family: 'Lato', arial, sans-serif;
-  color: @TextColor;
-  background: @PrimaryBackground;
+  color: var(--TextColor);
+  background: var(--PrimaryBackground);
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -39,11 +41,11 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 a {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
   -webkit-transition: all 0.4s ease-in-out;
   -moz-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -52,7 +54,7 @@ a {
 
 a:hover {
   text-decoration: underline;
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 a:focus {
@@ -76,27 +78,27 @@ a:focus {
 }
 
 .btn:focus, a.btn:focus {
-  color: @White;
+  color: var(--White);
 }
 
 a.btn-cta-primary, .btn-cta-primary {
-  background: @PrimaryThemeColor;
-  border: 1px solid @PrimaryThemeColor;
-  color: @White;
+  background: var(--PrimaryThemeColor);
+  border: 1px solid var(--PrimaryThemeColor);
+  color: var(--White);
   font-weight: 600;
   text-transform: uppercase;
 }
 
 a.btn-cta-primary:hover, .btn-cta-primary:hover {
-  background: @PrimaryThemeHoverColor;
-  border: 1px solid @PrimaryThemeHoverColor;
-  color: @White;
+  background: var(--PrimaryThemeHoverColor);
+  border: 1px solid var(--PrimaryThemeHoverColor);
+  color: var(--White);
 }
 
 .badge-theme {
-  background: @PrimaryThemeColor;
+  background: var(--PrimaryThemeColor);
   font-size: 12px;
-  color: @White;
+  color: var(--White);
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   -ms-border-radius: 2px;
@@ -108,20 +110,20 @@ a.btn-cta-primary:hover, .btn-cta-primary:hover {
 }
 
 a.dotted-link {
-  border-bottom: 1px dotted @SpecialTextColor;
-  color: @SpecialTextColor;
+  border-bottom: 1px dotted var(--SpecialTextColor);
+  color: var(--SpecialTextColor);
 }
 
 a.dotted-link:hover {
   text-decoration: none;
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 /* ======= Header ======= */
 .header {
   padding: 30px 0;
-  background: @White;
-  border-top: 10px solid @SpecialTextColor;
+  background: var(--White);
+  border-top: 10px solid var(--SpecialTextColor);
 }
 
 .header .btn {
@@ -136,14 +138,14 @@ a.dotted-link:hover {
 }
 
 .header .profile-content .name {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
   font-size: 38px;
   margin-bottom: 5px;
   margin-top: 30px;
 }
 
 .header .profile-content .desc {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
   font-family: "Lato", arial, sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -152,7 +154,7 @@ a.dotted-link:hover {
 }
 
 .header .profile-content .social a {
-  background: @SpecialTextColor;
+  background: var(--SpecialTextColor);
   width: 36px;
   height: 36px;
   display: inline-block;
@@ -164,12 +166,12 @@ a.dotted-link:hover {
   -moz-background-clip: padding;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  color: @White;
+  color: var(--White);
   text-align: center;
 }
 
 .header .profile-content .social a:hover {
-  background: @SpecialTextColor;
+  background: var(--SpecialTextColor);
 }
 
 .header .profile-content .social a .svg-inline--fa {
@@ -188,14 +190,14 @@ a.dotted-link:hover {
 }
 
 .section .section-inner {
-  background: @White;
+  background: var(--White);
   padding: 30px;
 }
 
 .section .heading {
   margin-top: 0;
   margin-bottom: 30px;
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
   font-size: 24px;
 }
 
@@ -223,11 +225,11 @@ a.dotted-link:hover {
 }
 
 .latest .item .title a {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .latest .item .title a:hover {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 .latest .item .project-image:hover {
@@ -252,7 +254,7 @@ a.dotted-link:hover {
 
 .latest .featured .summary {
   margin-bottom: 30px;
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .latest .featured img {
@@ -269,8 +271,8 @@ a.dotted-link:hover {
 }
 
 .latest .has-ribbon .text {
-  background: @PrimaryThemeColor;
-  color: @White;
+  background: var(--PrimaryThemeColor);
+  color: var(--White);
 }
 
 .latest .has-ribbon .ribbon {
@@ -293,7 +295,7 @@ a.dotted-link:hover {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: @White;
+  color: var(--White);
   -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
   -moz-transform: rotate(45deg) translate3d(0, 0, 0);
   -ms-transform: rotate(45deg) translate3d(0, 0, 0);
@@ -304,7 +306,7 @@ a.dotted-link:hover {
   content: '';
   position: absolute;
   bottom: -5px;
-  border-top: 5px solid @PrimaryThemeColor;
+  border-top: 5px solid var(--PrimaryThemeColor);
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
 }
@@ -330,11 +332,11 @@ a.dotted-link:hover {
 }
 
 .projects .item .title a {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .projects .item .title a:hover {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 /* Work Section */
@@ -350,20 +352,20 @@ a.dotted-link:hover {
 }
 
 .experience .item .title .place {
-  color: @Grey;
+  color: var(--Grey);
   font-weight: normal;
 }
 
 .experience .item .title .place a {
-  color: @Grey;
+  color: var(--Grey);
 }
 
 .experience .item .title .place a:hover {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 .experience .item .title .year {
-  color: @Grey;
+  color: var(--Grey);
   font-weight: normal;
 }
 
@@ -395,58 +397,58 @@ a.dotted-link:hover {
 }
 
 .badge-primary {
-  color: @White;
-  background-color: @PrimaryThemeColor;
+  color: var(--White);
+  background-color: var(--PrimaryThemeColor);
 }
 
 .badge-primary[href]:hover, .badge-primary[href]:focus {
-  color: @White;
+  color: var(--White);
   text-decoration: none;
-  background-color: @PrimaryThemeHoverColor;
+  background-color: var(--PrimaryThemeHoverColor);
 }
 
 .badge-secondary {
-  color: @White;
-  background-color: @SecondaryThemeColor;
+  color: var(--White);
+  background-color: var(--SecondaryThemeColor);
 }
 
 .badge-secondary[href]:hover, .badge-secondary[href]:focus {
-  color: @White;
+  color: var(--White);
   text-decoration: none;
-  background-color: @PrimaryThemeColor;
+  background-color: var(--PrimaryThemeColor);
 }
 
 .badge-info {
-  color: @White;
-  background-color: @InfoColor;
+  color: var(--White);
+  background-color: var(--InfoColor);
 }
 
 .badge-info[href]:hover, .badge-info[href]:focus {
-  color: @White;
+  color: var(--White);
   text-decoration: none;
-  background-color: @InfoHoverColor;
+  background-color: var(--InfoHoverColor);
 }
 
 .badge-warning {
-  color: @DarkTextColor;
-  background-color: @WarningColor;
+  color: var(--DarkTextColor);
+  background-color: var(--WarningColor);
 }
 
 .badge-warning[href]:hover, .badge-warning[href]:focus {
-  color: @DarkTextColor;
+  color: var(--DarkTextColor);
   text-decoration: none;
-  background-color: @WarningHoverColor;
+  background-color: var(--WarningHoverColor);
 }
 
 .badge-danger {
-  color: @White;
-  background-color: @DangerColor;
+  color: var(--White);
+  background-color: var(--DangerColor);
 }
 
 .badge-danger[href]:hover, .badge-danger[href]:focus {
-  color: @White;
+  color: var(--White);
   text-decoration: none;
-  background-color: @DangerHoverColor;
+  background-color: var(--DangerHoverColor);
 }
 
 /* Git section */
@@ -478,7 +480,7 @@ a.dotted-link:hover {
 /* Info Section */
 .info .svg-inline--fa {
   margin-right: 15px;
-  color: @PrimaryThemeColor;
+  color: var(--PrimaryThemeColor);
 }
 
 .info .svg-inline--fa.fa-envelope-o {
@@ -514,7 +516,7 @@ a.dotted-link:hover {
 }
 
 .skills .skillset .level-title .level-label {
-  color: @Grey;
+  color: var(--Grey);
   font-size: 14px;
   font-weight: 400;
   font-family: "Lato", arial, sans-serif;
@@ -525,12 +527,12 @@ a.dotted-link:hover {
 
 .skills .skillset .level-bar {
   height: 15px;
-  background: @LightGrey;
+  background: var(--LightGrey);
 }
 
 .skills .skillset .level-bar-inner {
   height: 15px;
-  background: @PrimaryThemeColor;
+  background: var(--PrimaryThemeColor);
 }
 
 .skills .svg-inline--fa {
@@ -549,9 +551,9 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .quote {
-  color: @LightGrey;
+  color: var(--LightGrey);
   font-size: 16px;
-  border-left: 5px solid @PrimaryThemeColor;
+  border-left: 5px solid var(--PrimaryThemeColor);
   padding: 5px 15px;
   margin-bottom: 15px;
 }
@@ -561,7 +563,7 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .quote .svg-inline--fa {
-  color: @PrimaryThemeColor;
+  color: var(--PrimaryThemeColor);
   margin-right: 15px;
 }
 
@@ -572,12 +574,12 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .source .name {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
   font-weight: 600;
 }
 
 .testimonials .item .source .title {
-  color: @Grey;
+  color: var(--Grey);
 }
 
 /* Education section */
@@ -597,13 +599,13 @@ a.dotted-link:hover {
 .education .item .university {
   font-family: "Lato", arial, sans-serif;
   font-size: 13px;
-  color: @Grey;
+  color: var(--Grey);
   font-weight: 600;
   padding-left: 25px;
 }
 
 .education .item .university .year {
-  color: @LightGrey;
+  color: var(--LightGrey);
   font-weight: 500;
 }
 
@@ -613,11 +615,11 @@ a.dotted-link:hover {
 }
 
 .languages .item .title {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .languages .item .level {
-  color: @Grey;
+  color: var(--Grey);
 }
 
 .languages .item:last-child {
@@ -625,7 +627,7 @@ a.dotted-link:hover {
 }
 
 .languages .item .svg-inline--fa {
-  color: @PrimaryThemeColor;
+  color: var(--PrimaryThemeColor);
 }
 
 /* Blog Section */
@@ -639,11 +641,11 @@ a.dotted-link:hover {
 }
 
 .blog .item .title a {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .blog .item .title a:hover {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 .blog .item p {
@@ -664,11 +666,11 @@ a.dotted-link:hover {
 }
 
 .list ul li a {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .list ul li a:hover {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 /* Credits */
@@ -683,15 +685,15 @@ a.dotted-link:hover {
 }
 
 .credits ul li a {
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 .credits ul li a .svg-inline--fa {
-  color: @LightGrey;
+  color: var(--LightGrey);
 }
 
 .credits ul li a:hover {
-  color: @HoverTextColor;
+  color: var(--HoverTextColor);
 }
 
 .credits .btn {
@@ -700,24 +702,24 @@ a.dotted-link:hover {
 
 .aside .subheading {
   font-size: 18px;
-  color: @SpecialTextColor;
+  color: var(--SpecialTextColor);
 }
 
 /* ======= Footer ======= */
 .footer {
   background: @PrimaryTheme-Dark;
-  color: @White;
+  color: var(--White);
   padding: 10px 0;
 }
 
 .footer .copyright {
   line-height: 1.6;
-  color: @LightGrey;
+  color: var(--LightGrey);
   font-size: 14px;
 }
 
 .footer a {
-  color: @White;
+  color: var(--White);
 }
 
 
