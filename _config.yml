@@ -29,9 +29,10 @@ author :
   about_text: Hundter Biede is a junior at the University of Nebraska Lincoln, currently studying Computer Engineering with the goal of being a software engineer. Hundter enjoys working as a Course Leader for introductory Computer Science courses, reffing intramural football, and playing pitch with friends. 
   image: /images/hbiede.jpg
   big_image: /images/hbiede-full.jpg
-  github : hbiede
-  twitter : HBiede
-  linkedin: hbiede
+  social_links:
+    github : hbiede
+    twitter : HBiede
+    linkedin: hbiede
   
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <!--suppress HtmlUnknownTarget -- Jekyll-->
 <html lang="en">
+<!--suppress HtmlRequiredTitleElement -- Title is included in the header-->
 <head>
     {% include header.html %}
 </head>
@@ -17,11 +18,11 @@
             <h1 class="name">{{ site.author.name }}</h1>
             <h2 class="desc">{{ site.author.job_title }}</h2>
             <ul class="social list-inline">
-                <li class="list-inline-item"><a href="https://www.twitter.com/{{ site.author.twitter }}"><i
+                <li class="list-inline-item"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
                         class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item"><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}"><i
+                <li class="list-inline-item"><a href="https://www.linkedin.com/in/{{ site.author.social_links.linkedin }}"><i
                         class="fab fa-linkedin-in"></i></a></li>
-                <li class="list-inline-item last-item"><a href="https://www.github.com/{{ site.author.github }}"><i
+                <li class="list-inline-item last-item"><a href="https://www.github.com/{{ site.author.social_links.github }}"><i
                         class="fab fa-github-alt"></i></a></li>
             </ul>
         </div><!--//profile-content-->
@@ -67,32 +68,26 @@
                                 <p>Lazy Clock was my first foray into Swift development, as well as my first interactions with the App Store Developer Portal known as App Store Connect</p>
                             </div><!--//desc-->
 
-                            <h5>Technologies used:</h5>
-                            <ul class="list-inline">
+                            <h6 class="float-left">Technologies used:</h6>
+                            <ul class="list-inline float-left">
                                 <li class="list-inline-item"><span class="badge badge-primary badge-pill">Swift</span></li>
                             </ul><!--//technologies-->
                         </div><!--//item-->
 
                         <hr class="divider"/>
                         <div class="item row">
-                            <a class="col-md-4 col-12"
-                               href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/instance-bootstrap-portfolio-theme-for-developers/"
-                               target="_blank">
-                                <img class="img-fluid project-image" src="assets/images/projects/project-1.png"
-                                     alt="project name"/>
+                            <a class="col-md-4 col-12" href="https://github.com/hbiede/ContactOutput/" target="_blank">
+                                <img class="img-fluid project-image" src="{{ site.resource_url }}/images/projects/ContactOutput.png" alt="Contact Output"/>
                             </a>
                             <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a
-                                        href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/instance-bootstrap-portfolio-theme-for-developers/"
-                                        target="_blank">Instance - Bootstrap 4 Portfolio Theme for Aspiring Full Stack
-                                    Developers</a></h3>
-                                <p class="mb-2">You can put one of your secondary projects here. Suspendisse in tellus
-                                    dolor. Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam
-                                    aliquam, orci eu suscipit pellentesque, mauris dui tincidunt enim, eget iaculis ante
-                                    dolor non turpis.</p>
-                                <p><a class="more-link"
-                                      href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/instance-bootstrap-portfolio-theme-for-developers/"
-                                      target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a></p>
+                                <h3 class="title">
+                                    <a href="https://github.com/hbiede/ContactOutput/" target="_blank">
+                                        Contact Output - Convert Contact Files to a Folder of Contact Images</a>
+                                </h3>
+                                <p class="mb-2">Takes a vCard (vcf file) as input, outputs a folder full of contact photos</p>
+                                <p>
+                                    <a class="more-link" href="https://github.com/hbiede/ContactOutput/" target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
+                                </p>
                             </div><!--//desc-->
                         </div><!--//item-->
 

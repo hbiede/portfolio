@@ -15,7 +15,6 @@
   --HoverTextColor: #5f6b77;
   --DarkTextColor: #212529;
   --White: #fff;
-  --LightGrey: #e8e8e8;
   --Grey: #999;
   --PrimaryBackground: #dae3e7;
   --PrimaryThemeColor: #66cb8c;
@@ -529,7 +528,7 @@ a.dotted-link:hover {
 
 .skills .skillset .level-bar {
   height: 15px;
-  background: var(--LightGrey);
+  background: var(--Grey);
 }
 
 .skills .skillset .level-bar-inner {
@@ -553,7 +552,7 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .quote {
-  color: var(--LightGrey);
+  color: var(--Grey);
   font-size: 16px;
   border-left: 5px solid var(--PrimaryThemeColor);
   padding: 5px 15px;
@@ -607,7 +606,7 @@ a.dotted-link:hover {
 }
 
 .education .item .university .year {
-  color: var(--LightGrey);
+  color: var(--Grey);
   font-weight: 500;
 }
 
@@ -691,7 +690,7 @@ a.dotted-link:hover {
 }
 
 .credits ul li a .svg-inline--fa {
-  color: var(--LightGrey);
+  color: var(--Grey);
 }
 
 .credits ul li a:hover {
@@ -716,7 +715,7 @@ a.dotted-link:hover {
 
 .footer .copyright {
   line-height: 1.6;
-  color: var(--LightGrey);
+  color: var(--Grey);
   font-size: 14px;
 }
 
