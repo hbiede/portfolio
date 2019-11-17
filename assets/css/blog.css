@@ -32,6 +32,9 @@ time {
      max-width: 1000px;
      margin: 0 auto 2em auto;
 }
+ .content .articles {
+     background: #f5f5f5;
+}
  .content ul, .content ol {
      padding-left: 2.5em;
 }
