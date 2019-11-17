@@ -24,6 +24,8 @@
 @DangerHoverColor = #bd2130;
 @WarningColor = #ffc107;
 @WarningHoverColor = #e5ad06;
+@InfoColor = #17a2b8;
+@InfoHoverColor = #128193;
 
 body {
   font-family: 'Lato', arial, sans-serif;
@@ -416,13 +418,13 @@ a.dotted-link:hover {
 
 .badge-info {
   color: @White;
-  background-color: #17a2b8;
+  background-color: @InfoColor;
 }
 
 .badge-info[href]:hover, .badge-info[href]:focus {
   color: @White;
   text-decoration: none;
-  background-color: #117a8b;
+  background-color: @InfoHoverColor;
 }
 
 .badge-warning {
