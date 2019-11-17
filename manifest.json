@@ -40,6 +40,6 @@
 		}
 	],
 	"background_color": "#1f759c",
-	"start_url": "http://hbiede.com/",
+	"start_url": "https://hbiede.com/",
 	"display": "standalone"
 }
