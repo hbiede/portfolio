@@ -713,7 +713,7 @@ a.dotted-link:hover {
 
 /* ======= Footer ======= */
 .footer {
-  background: @PrimaryTheme-Dark;
+  background: var(--PrimaryTheme-Dark);
   color: var(--White);
   padding: 10px 0;
 }
