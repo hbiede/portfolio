@@ -552,7 +552,6 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .quote {
-  color: var(--Grey);
   font-size: 16px;
   border-left: 5px solid var(--PrimaryThemeColor);
   padding: 5px 15px;
