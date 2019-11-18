@@ -895,3 +895,15 @@ a.dotted-link:hover {
         font-size: 12px;
     }
 }
+
+.paginationFooter {
+    width: 100%;
+    margin-top: 1em;
+}
+.paginationFooter .paginationFooterPrevious {
+    display: inline;
+}
+.paginationFooter .paginationFooterNext {
+    display: inline;
+    float: right;
+}
