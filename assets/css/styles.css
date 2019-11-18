@@ -414,34 +414,34 @@ a.dotted-link:hover {
 }
 
 .badge-primary {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   background-color: var(--PrimaryThemeColor);
 }
 
 .badge-primary[href]:hover, .badge-primary[href]:focus {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   text-decoration: none;
   background-color: var(--PrimaryThemeHoverColor);
 }
 
 .badge-secondary {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   background-color: var(--SecondaryThemeColor);
 }
 
 .badge-secondary[href]:hover, .badge-secondary[href]:focus {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   text-decoration: none;
   background-color: var(--PrimaryThemeColor);
 }
 
 .badge-info {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   background-color: var(--InfoColor);
 }
 
 .badge-info[href]:hover, .badge-info[href]:focus {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   text-decoration: none;
   background-color: var(--InfoHoverColor);
 }
@@ -458,12 +458,12 @@ a.dotted-link:hover {
 }
 
 .badge-danger {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   background-color: var(--DangerColor);
 }
 
 .badge-danger[href]:hover, .badge-danger[href]:focus {
-  color: var(--White);
+  color: var(--AlwaysWhite);
   text-decoration: none;
   background-color: var(--DangerHoverColor);
 }
