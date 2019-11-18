@@ -856,7 +856,7 @@ a.dotted-link:hover {
     text-transform: capitalize;
 }
 
-.postHeader .title {
+.blog .item .postHeader .title {
     font-size: 40px;
 }
 
