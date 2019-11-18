@@ -784,10 +784,10 @@ a.dotted-link:hover {
 .load-spinner {
   margin: 0 auto;
   z-index: 99999;
-  width: 100%;
-  height: 100%;
-  border: 10px solid var(--White);
-  border-top: 10px solid var(--PrimaryTheme-Dark);
+  width: 0;
+  height: 0;
+  border: 15px solid var(--White);
+  border-top: 15px solid var(--PrimaryTheme-Dark);
   border-radius: 50%;
   -webkit-animation: spin 1.5s ease-in-out infinite;
   animation: spin 1.5s ease-in-out infinite;
