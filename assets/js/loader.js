@@ -4,5 +4,5 @@ window.addEventListener("load", () => {
     spinner.className += " site-loaded";
     loaderContainer.className += " site-loaded";
     const scroll = document.querySelector(".scroll-off");
-    scroll.classList.remove("scroll-off");
+    if (scroll) scroll.classList.remove("scroll-off");
 });
