@@ -1,17 +1,21 @@
 $(window).on('load', function () {
-
     $('.level-bar-inner').each(function () {
-
         var itemWidth = $(this).data('level');
 
         $(this).animate({
             width: itemWidth
         }, 800);
-
     });
-
 });
 
+window.addEventListener("load", () => {
+    const loaderContainer = document.querySelector(".loader-container");
+    const spinner = document.querySelector(".load-spinner");
+    loaderContainer.className += " loaded";
+    spinner.className += " loaded";
+    const scroll = document.querySelector(".scroll-off");
+    scroll.classList.remove("scroll-off");
+});
 
 jQuery(document).ready(function ($) {
 
