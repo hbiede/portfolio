@@ -20,7 +20,7 @@ paginate_path: "/blog/page:num/"
 # so be sure to set them if your theme uses them.
 #
 title : HBiede
-tagline: The Personal Ramblings of Hundter Biede
+tagline: Hundter Biede's portfolio
 author :
   name : Hundter Biede
   job_title: Computer Engineering Student
