@@ -22,7 +22,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --TextColor: #b8d1dc;
-    --SpecialTextColor: #a0afbf;
+    --SpecialTextColor: #caddf0;
     --HoverTextColor: #93a5b7;
     --DarkTextColor: #212529;
     --White: #212529;
@@ -312,7 +312,7 @@ a.dotted-link:hover {
   font-weight: bold;
   text-align: center;
   text-transform: uppercase;
-  color: var(--White);
+  color: var(--AlwaysWhite);
   -webkit-transform: rotate(45deg) translate3d(0, 0, 0);
   -moz-transform: rotate(45deg) translate3d(0, 0, 0);
   -ms-transform: rotate(45deg) translate3d(0, 0, 0);
