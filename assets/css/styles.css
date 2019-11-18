@@ -907,3 +907,16 @@ a.dotted-link:hover {
     display: inline;
     float: right;
 }
+
+.item .title {
+    text-transform: capitalize;
+}
+
+.blogPost .subtitle,
+.blogPost .postTitle {
+    text-transform: capitalize;
+}
+
+.blogPost time {
+    color: var(--Grey);
+}

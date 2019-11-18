@@ -2,25 +2,31 @@
 <html lang="en">
 
 <head>
-	{% include header.html %}
+    {% include header.html %}
 </head>
 
 <body class="homepage">
 <div class="header">
-	{% include nav.html %}
+    {% include nav.html %}
 </div>
 
 <div class="container sections-wrapper">
-	<div class="row">
-		<div class="primary col-12">
-			<section class="section">
-				<div class="section-inner">
-					<h2>{{ post.title}}</h2>
-					{{ post.content }}
-				</div>
-			</section>
-		</div>
-	</div>
+    <div class="row">
+        <div class="primary col-12">
+            <section class="section">
+                <div class="section-inner blogPost">
+                    <h2 class="postTitle">{{ post.title}}</h2>
+                    <h3 class="subtitle">{{ page.description }}</h3>
+                    <div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
+                        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date |
+                            date: "%A, %B %-d, %Y"}}
+                        </time>
+                    </div>
+                    {{ post.content }}
+                </div>
+            </section>
+        </div>
+    </div>
 </div>
 
 </body>
