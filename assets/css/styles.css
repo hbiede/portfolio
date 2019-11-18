@@ -15,7 +15,7 @@
         --SpecialTextColor: #778492;
         --HoverTextColor: #5f6b77;
         --DarkTextColor: #212529;
-        --White: #f2f0f0;
+        --PortfolioWhite: #f2f0f0;
     }
 }
 
@@ -25,13 +25,13 @@
         --SpecialTextColor: #caddf0;
         --HoverTextColor: #93a5b7;
         --DarkTextColor: #212529;
-        --White: #212529;
+        --PortfolioWhite: #212529;
     }
 }
 
 :root {
     --AlwaysWhite: #fff;
-    --Grey: #999;
+    --PortfolioGrey: #999;
     --PrimaryBackground: #1f759c;
     --PrimaryThemeColor: #1f759c;
     --PrimaryThemeHoverColor: #155877;
@@ -95,7 +95,7 @@ a:focus {
 }
 
 .btn:focus, a.btn:focus {
-    color: var(--White);
+    color: var(--PortfolioWhite);
 }
 
 a.btn-cta-primary, .btn-cta-primary {
@@ -109,13 +109,13 @@ a.btn-cta-primary, .btn-cta-primary {
 a.btn-cta-primary:hover, .btn-cta-primary:hover {
     background: var(--PrimaryThemeHoverColor);
     border: 1px solid var(--PrimaryThemeHoverColor);
-    color: var(--White);
+    color: var(--PortfolioWhite);
 }
 
 .badge-theme {
     background: var(--PrimaryThemeColor);
     font-size: 12px;
-    color: var(--White);
+    color: var(--PortfolioWhite);
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
@@ -139,7 +139,7 @@ a.dotted-link:hover {
 /* ======= Header ======= */
 .header {
     padding: 30px 0;
-    background: var(--White);
+    background: var(--PortfolioWhite);
     border-top: 10px solid var(--PrimaryBackground);
 }
 
@@ -183,7 +183,7 @@ a.dotted-link:hover {
     -moz-background-clip: padding;
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    color: var(--White);
+    color: var(--PortfolioWhite);
     text-align: center;
 }
 
@@ -207,7 +207,7 @@ a.dotted-link:hover {
 }
 
 .section .section-inner {
-    background: var(--White);
+    background: var(--PortfolioWhite);
     padding: 30px;
 }
 
@@ -289,7 +289,7 @@ a.dotted-link:hover {
 
 .latest .has-ribbon .text {
     background: var(--PrimaryThemeColor);
-    color: var(--White);
+    color: var(--PortfolioWhite);
 }
 
 .latest .has-ribbon .ribbon {
@@ -369,12 +369,12 @@ a.dotted-link:hover {
 }
 
 .experience .item .title .place {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
     font-weight: normal;
 }
 
 .experience .item .title .place a {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
 }
 
 .experience .item .title .place a:hover {
@@ -382,7 +382,7 @@ a.dotted-link:hover {
 }
 
 .experience .item .title .year {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
     font-weight: normal;
 }
 
@@ -533,7 +533,7 @@ a.dotted-link:hover {
 }
 
 .skills .skillset .level-title .level-label {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
     font-size: 14px;
     font-weight: 400;
     font-family: "Lato", arial, sans-serif;
@@ -544,7 +544,7 @@ a.dotted-link:hover {
 
 .skills .skillset .level-bar {
     height: 15px;
-    background: var(--Grey);
+    background: var(--PortfolioGrey);
 }
 
 .skills .skillset .level-bar-inner {
@@ -595,7 +595,7 @@ a.dotted-link:hover {
 }
 
 .testimonials .item .source .title {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
 }
 
 /* Education section */
@@ -615,13 +615,13 @@ a.dotted-link:hover {
 .education .item .university {
     font-family: "Lato", arial, sans-serif;
     font-size: 13px;
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
     font-weight: 600;
     padding-left: 25px;
 }
 
 .education .item .university .year {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
     font-weight: 500;
 }
 
@@ -635,7 +635,7 @@ a.dotted-link:hover {
 }
 
 .languages .item .level {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
 }
 
 .languages .item:last-child {
@@ -711,7 +711,7 @@ a.dotted-link:hover {
 }
 
 .credits ul li a .svg-inline--fa {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
 }
 
 .credits ul li a:hover {
@@ -729,14 +729,17 @@ a.dotted-link:hover {
 
 /* ======= Footer ======= */
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     background: var(--PrimaryTheme-Dark);
-    color: var(--White);
+    color: var(--PortfolioWhite);
     padding: 10px 0;
 }
 
 .footer .copyright {
     line-height: 1.6;
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
     font-size: 14px;
 }
 
@@ -918,5 +921,5 @@ a.dotted-link:hover {
 }
 
 .blogPost time {
-    color: var(--Grey);
+    color: var(--PortfolioGrey);
 }
