@@ -11,8 +11,8 @@ $(window).on('load', function () {
 window.addEventListener("load", () => {
     const loaderContainer = document.querySelector(".loader-container");
     const spinner = document.querySelector(".load-spinner");
-    loaderContainer.className += " loaded";
-    spinner.className += " loaded";
+    loaderContainer.className += " site-loaded";
+    spinner.className += " site-loaded";
     const scroll = document.querySelector(".scroll-off");
     scroll.classList.remove("scroll-off");
 });
