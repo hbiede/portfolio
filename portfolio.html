@@ -6,62 +6,81 @@ title: Portfolio
 <html>
 
 <head>
-	{% include header.html %}
+    {% include header.html %}
 </head>
 
 <body class="homepage">
+<div class="header">
+    {% include nav.html %}
+    <div style="clear: both"></div>
+</div>
 
-    <div class="content">
-        <div class="header">
-            {% include nav.html %}
-            <div style="clear: both"></div>
-        </div>
-        <div class="articles">
-		<h2>iOS Development (Swift):</h2>
-		<ul>
-			<li>Lazy Clock (<a href="https://itunes.apple.com/us/app/lazy-clock-natural-language/id1421644784">App Store</a>) (<a href="https://github.com/hbiede/Lazy-Clock">GitHub</a>)</li>
-			<li>Natural Language Time Framework (<a href="https://github.com/hbiede/Natural-Language-Time">GitHub</a>)</li>
-		</ul>
-		
-		<h2>Java:</h2>
-		<ul>
-			<li>vCard to Image Converter (<a href="https://github.com/hbiede/ContactOutput/releases">Production JARs</a>) (<a href="https://github.com/hbiede/ContactOutput/">GitHub</a>)</li>
-		</ul>
-		
-		<h2>Objective-C:</h2>
-		<ul>
-			<li>Quadratic Solver Framework (<a href="https://github.com/hbiede/QSolver">GitHub</a>)</li>
-		</ul>
-		
-		<h2>Python:</h2>
-		<ul>
-			<li>GUI Quadratic Solver for Pythonista (<a href="https://github.com/hbiede/Quadratic">GitHub</a>)</li>
-		</ul>
-		
-		<h2>HTML/CSS:</h2>
-		<ul>
-			<li>This Website (<a href="https://hbiede.com/">Link</a>) (<a href="https://github.com/hbiede/hbiede.github.io/">GitHub</a>)
-			<li>Fake Bakery Website (<a href="http://fblabake.github.io/">Link</a>) (<a href="https://github.com/fblabake/fblabake.github.io">GitHub</a>)</li>
-		</ul>
-		
-		<h2>PHP:</h2>
-		<ul>
-			<li>Podcast Time Machine (<a href="https://github.com/hbiede/Podcast-Time-Machine">GitHub</a>)
-		</ul>
-		
-		<h2>Unix Bash Scripting:</h2>
-		<ul>
-			<li>MacOS Setup Script (<a href="https://github.com/hbiede/Defaults">GitHub</a>)</li>
-		</ul>
-		
-		<h2>Video Editing:</h2>
-		<ul>
-			<li>Animated Advertisement (<a href="https://youtu.be/llZ3sR2GdoQ">YouTube</a>)</li>
-			<li>Music Video Parody (<a href="https://www.youtube.com/watch?v=aYV4jc9WGj8">YouTube</a>)</li>
-		</ul>
+<div class="container sections-wrapper">
+    <div class="row">
+        <div class="primary col-12">
+            <section class="section">
+                <div class="section-inner">
+                    <h2>iOS Development (Swift):</h2>
+                    <ul>
+                        <li>Lazy Clock (<a
+                                href="https://itunes.apple.com/us/app/lazy-clock-natural-language/id1421644784">App
+                            Store</a>) (<a href="https://github.com/hbiede/Lazy-Clock">GitHub</a>)
+                        </li>
+                        <li>Natural Language Time Framework (<a href="https://github.com/hbiede/Natural-Language-Time">GitHub</a>)
+                        </li>
+                    </ul>
+
+                    <h2>Java:</h2>
+                    <ul>
+                        <li>vCard to Image Converter (<a href="https://github.com/hbiede/ContactOutput/releases">Production
+                            JARs</a>)
+                            (<a href="https://github.com/hbiede/ContactOutput/">GitHub</a>)
+                        </li>
+                    </ul>
+
+                    <h2>Objective-C:</h2>
+                    <ul>
+                        <li>Quadratic Solver Framework (<a href="https://github.com/hbiede/QSolver">GitHub</a>)</li>
+                    </ul>
+
+                    <h2>Python:</h2>
+                    <ul>
+                        <li>GUI Quadratic Solver for Pythonista (<a
+                                href="https://github.com/hbiede/Quadratic">GitHub</a>)
+                        </li>
+                    </ul>
+
+                    <h2>HTML/CSS:</h2>
+                    <ul>
+                        <li>This Website (<a href="https://hbiede.com/">Link</a>) (<a
+                                href="https://github.com/hbiede/hbiede.github.io/">GitHub</a>)
+                        </li>
+                        <li>Fake Bakery Website (<a href="http://fblabake.github.io/">Link</a>) (<a
+                                href="https://github.com/fblabake/fblabake.github.io">GitHub</a>)
+                        </li>
+                    </ul>
+
+                    <h2>PHP:</h2>
+                    <ul>
+                        <li>Podcast Time Machine (<a href="https://github.com/hbiede/Podcast-Time-Machine">GitHub</a>)
+                        </li>
+                    </ul>
+
+                    <h2>Unix Bash Scripting:</h2>
+                    <ul>
+                        <li>MacOS Setup Script (<a href="https://github.com/hbiede/Defaults">GitHub</a>)</li>
+                    </ul>
+
+                    <h2>Video Editing:</h2>
+                    <ul>
+                        <li>Animated Advertisement (<a href="https://youtu.be/llZ3sR2GdoQ">YouTube</a>)</li>
+                        <li>Music Video Parody (<a href="https://www.youtube.com/watch?v=aYV4jc9WGj8">YouTube</a>)</li>
+                    </ul>
+                </div>
+            </section>
         </div>
     </div>
-    <div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div>
+</div>
 
 </body>
 
