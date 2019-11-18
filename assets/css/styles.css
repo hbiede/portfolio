@@ -720,7 +720,6 @@ a.dotted-link:hover {
 
 /* ======= Footer ======= */
 .footer {
-    position: absolute;
     bottom: 0;
     width: 100%;
     background: var(--PrimaryTheme-Dark);
