@@ -1,39 +1,4 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	{% include header.html %}
-	<link rel="stylesheet" href="{{ site.resourse_url }}/css/blog.css">
-</head>
-
-<body class="homepage">
-
-    <div class="content">
-        <div class="header">
-            {% include nav.html %}
-            <div style="clear: both"></div>
-        </div>
-        <div class="articles">
-		<main>
-			<div class="postHeader">
-				<h1><a class="postTitle" href="{{ page.url }}">{{ page.title }}</a></h1>
-				<h3 class="subtitle">{{ page.description }}</h4>
-				<div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
-				<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%A, %B %-d, %Y"}}</time></div>
-				<hr class="dayBreak">
-			</div>
-			{{ content }}
-		</main>
-		<hr class="dayBreak">
-        </div>
-    </div>
-    <footer><div class="copyright">Copyright © {{ site.time | date: "%Y" }}</div></footer>
-
-</body>
-
-</html>
-
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -59,5 +24,5 @@
 </div>
 
 </body>
-
+{% include footer.html %}
 </html>
