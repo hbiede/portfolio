@@ -7,6 +7,9 @@
         {% unless page.title contains "Portfolio" %}
         <a href="{{ site.production_url }}/portfolio" rel="author">Portfolio</a><span class="dot">•</span>
         {% endunless %}
+        {% unless page.title contains "Blog" %}
+        <a href="{{ site.production_url }}/blog" rel="author">Blog</a><span class="dot">•</span>
+        {% endunless %}
         <a href="{{ site.production_url }}/rss">RSS</a>
     </nav>
 </div>
