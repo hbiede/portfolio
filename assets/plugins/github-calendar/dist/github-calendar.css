@@ -70,7 +70,14 @@
     line-height: 1.3em;
     font-size: 24px;
     display: block;
+}
+
+@media (prefers-color-scheme: dark) {
     color: #333;
+}
+
+@media (prefers-color-scheme: dark) {
+    color: #acacac;
 }
 
 .calendar img.spinner {

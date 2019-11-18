@@ -30,6 +30,7 @@
 }
 
 :root {
+  --AlwaysWhite: #fff;
   --Grey: #999;
   --PrimaryBackground: #1f759c;
   --PrimaryThemeColor: #1f759c;
@@ -740,7 +741,7 @@ a.dotted-link:hover {
 }
 
 .footer a {
-  color: #fff;
+  color: var(--AlwaysWhite);
 }
 
 
@@ -801,7 +802,7 @@ a.dotted-link:hover {
   z-index: 99999;
   width: 0;
   height: 0;
-  border: 15px solid var(--White);
+  border: 15px solid var(--AlwaysWhite);
   border-top: 15px solid var(--PrimaryTheme-Dark);
   border-radius: 50%;
   -webkit-animation: spin 1.5s ease-in-out infinite;
