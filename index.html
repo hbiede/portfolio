@@ -471,7 +471,7 @@ title: Portfolio
                     <h2 class="heading">Latest Blog Posts</h2>
                     <div id="rss-feeds" class="content">
                         <div class="items">
-                            {% for post in site.posts limit:10 %}
+                            {% for post in site.posts limit:5 %}
                             <div class="item">
                                 <h3 class="title">
                                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
