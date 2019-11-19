@@ -10,8 +10,6 @@ $(window).on('load', function () {
 
 jQuery(document).ready(function ($) {
 
-    window.scrollReveal = new scrollReveal();
-
 
     /*======= Skillset *=======*/
 
