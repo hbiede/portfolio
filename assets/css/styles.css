@@ -868,3 +868,8 @@ a.dotted-link:hover {
 .blogPost time {
     color: var(--PortfolioGrey);
 }
+
+pre code {
+    background-color: #fff;
+    padding-left: 10px;
+}
