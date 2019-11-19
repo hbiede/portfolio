@@ -2,7 +2,7 @@
 <header class="header">
     <div class="container clearfix">
         <img class="profile-image img-fluid float-left" src="{{ site.resource_url }}{{ site.author.image }}"
-             alt="{{ site.author.name }}"/>
+             alt="{{ site.author.name }}" data-scroll-reveal="enter left move 100px over 0.7s after 0.1s"/>
         <div class="profile-content float-left">
             <h1 class="name" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.name }}</h1>
             <h2 class="desc" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.job_title }}</h2>
@@ -29,8 +29,9 @@
                 <a href="{{ site.production_url }}/rss" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.25s">RSS</a>
             </nav>
         </div><!--//profile-content-->
-        <a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank"><i
-                class="fas fa-paper-plane" data-scroll-reveal="enter right move 100px over 0.5s after 0.3s"></i> Contact Me</a>
+        <a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank" data-scroll-reveal="enter right move 100px over 0.5s after 0.3s">
+            <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
     </div><!--//container-->
 </header><!--//header-->
 
