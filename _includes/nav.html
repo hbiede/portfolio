@@ -4,33 +4,33 @@
         <img class="profile-image img-fluid float-left" src="{{ site.resource_url }}{{ site.author.image }}"
              alt="{{ site.author.name }}"/>
         <div class="profile-content float-left">
-            <h1 class="name">{{ site.author.name }}</h1>
-            <h2 class="desc">{{ site.author.job_title }}</h2>
+            <h1 class="name" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.name }}</h1>
+            <h2 class="desc" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.job_title }}</h2>
             <ul class="social list-inline">
-                <li class="list-inline-item"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
+                <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
                         class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item last-item"><a
+                <li class="list-inline-item last-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a
                         href="https://www.github.com/{{ site.author.social_links.github }}"><i
                         class="fab fa-github"></i></a></li>
-                <li class="list-inline-item"><a
+                <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a
                         href="https://www.linkedin.com/in/{{ site.author.social_links.linkedin }}"><i
                         class="fab fa-linkedin-in"></i></a></li>
             </ul>
             <nav>
                 {% unless page.title contains "Resume" %}
-                <a href="{{ site.production_url }}">Resume</a><span class="dot">•</span>
+                <a href="{{ site.production_url }}" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s">Resume</a><span class="dot">•</span>
                 {% endunless %}
                 {% unless page.title contains "Portfolio" %}
-                <a href="{{ site.production_url }}/portfolio" rel="author">Portfolio</a><span class="dot">•</span>
+                <a href="{{ site.production_url }}/portfolio" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s">Portfolio</a><span class="dot">•</span>
                 {% endunless %}
                 {% unless page.title contains "Blog" %}
-                <a href="{{ site.production_url }}/blog" rel="author">Blog</a><span class="dot">•</span>
+                <a href="{{ site.production_url }}/blog" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s">Blog</a><span class="dot">•</span>
                 {% endunless %}
-                <a href="{{ site.production_url }}/rss">RSS</a>
+                <a href="{{ site.production_url }}/rss" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.25s">RSS</a>
             </nav>
         </div><!--//profile-content-->
         <a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank"><i
-                class="fas fa-paper-plane"></i> Contact Me</a>
+                class="fas fa-paper-plane" data-scroll-reveal="enter right move 100px over 0.5s after 0.3s"></i> Contact Me</a>
     </div><!--//container-->
 </header><!--//header-->
 
