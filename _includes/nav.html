@@ -18,20 +18,20 @@
             </ul>
             <nav>
                 {% unless page.title contains "Resume" %}
-                <a href="{{ site.production_url }}" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s">Resume</a><span class="dot">•</span>
+                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="{{ site.production_url }}">Resume</a><span class="dot">•</span></div>
                 {% endunless %}
                 {% unless page.title contains "Portfolio" %}
-                <a href="{{ site.production_url }}/portfolio" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s">Portfolio</a><span class="dot">•</span>
+                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a href="{{ site.production_url }}/portfolio">Portfolio</a><span class="dot">•</span></div>
                 {% endunless %}
                 {% unless page.title contains "Blog" %}
-                <a href="{{ site.production_url }}/blog" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s">Blog</a><span class="dot">•</span>
+                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a href="{{ site.production_url }}/blog">Blog</a><span class="dot">•</span></div>
                 {% endunless %}
-                <a href="{{ site.production_url }}/rss" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.25s">RSS</a>
+                <div class="float-left" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.25s"><a href="{{ site.production_url }}/rss">RSS</a></div>
             </nav>
         </div><!--//profile-content-->
-        <a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank" data-scroll-reveal="enter right move 100px over 0.5s after 0.3s">
+        <div data-scroll-reveal="enter right move 100px over 0.5s after 0.3s"><a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank">
             <i class="fas fa-paper-plane"></i> Contact Me
-        </a>
+        </a></div>
     </div><!--//container-->
 </header><!--//header-->
 
