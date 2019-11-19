@@ -1,10 +1,10 @@
 <!-- ******HEADER****** -->
 <header class="header">
     <div class="container clearfix">
-        <img class="profile-image img-fluid float-left" src="{{ site.resource_url }}{{ site.author.image }}"
+        <a href="{{ site.production_url }}" target="_blank"><img class="profile-image img-fluid float-left" src="{{ site.resource_url }}{{ site.author.image }}"
              alt="{{ site.author.name }}" data-scroll-reveal="enter left move 100px over 0.7s after 0.1s"/>
-        <div class="profile-content float-left">
-            <h1 class="name" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.name }}</h1>
+        <div class="profile-content float-left"></a>
+            <a href="{{ site.production_url }}" target="_blank"><h1 class="name" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.name }}</h1></a>
             <h2 class="desc" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.job_title }}</h2>
             <ul class="social list-inline">
                 <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
