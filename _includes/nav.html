@@ -9,24 +9,24 @@
             <ul class="social list-inline">
                 <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
                         class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item last-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a
+                <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a
                         href="https://www.github.com/{{ site.author.social_links.github }}"><i
                         class="fab fa-github"></i></a></li>
-                <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a
+                <li class="list-inline-item last-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a
                         href="https://www.linkedin.com/in/{{ site.author.social_links.linkedin }}"><i
                         class="fab fa-linkedin-in"></i></a></li>
             </ul>
-            <nav>
+            <nav class="list-inline">
                 {% unless page.title contains "Resume" %}
-                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="{{ site.production_url }}">Resume</a><span class="dot">&nbsp;•&nbsp;</span></div>
+                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="{{ site.production_url }}">Resume</a></div>
                 {% endunless %}
                 {% unless page.title contains "Portfolio" %}
-                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a href="{{ site.production_url }}/portfolio">Portfolio</a><span class="dot">&nbsp;•&nbsp;</span></div>
+                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a href="{{ site.production_url }}/portfolio">Portfolio</a></div>
                 {% endunless %}
                 {% unless page.title contains "Blog" %}
-                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a href="{{ site.production_url }}/blog">Blog</a><span class="dot">&nbsp;•&nbsp;</span></div>
+                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a href="{{ site.production_url }}/blog">Blog</a></div>
                 {% endunless %}
-                <div class="float-left" data-scroll-reveal="enter right move 100px over 0.5s after 0.25s"><a href="{{ site.production_url }}/rss">RSS</a></div>
+                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.25s"><a href="{{ site.production_url }}/rss">RSS</a></div>
             </nav>
         </div><!--//profile-content-->
         <div data-scroll-reveal="enter right move 100px over 0.5s after 0.3s"><a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank">
