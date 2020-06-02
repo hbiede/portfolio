@@ -257,6 +257,9 @@ a.dotted-link:hover {
     max-height: 250px;
     width: auto;
     height: auto;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
 }
 
 .latest .item .project-image:hover {
