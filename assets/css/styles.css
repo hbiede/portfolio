@@ -251,6 +251,14 @@ a.dotted-link:hover {
     color: var(--HoverTextColor);
 }
 
+.latest .item .project-image {
+    opacity: 0.8;
+    max-width: 250px;
+    max-height: 250px;
+    width: auto;
+    height: auto;
+}
+
 .latest .item .project-image:hover {
     opacity: 0.8;
 }
