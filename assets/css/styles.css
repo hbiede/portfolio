@@ -63,9 +63,6 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
     color: var(--SpecialTextColor);
-    -webkit-transition: all 0.4s ease-in-out;
-    -moz-transition: all 0.4s ease-in-out;
-    -o-transition: all 0.4s ease-in-out;
 }
 
 a:hover {
@@ -253,8 +250,6 @@ a.dotted-link:hover {
 
 .latest .item .project-image {
     opacity: 0.8;
-    max-width: 250px;
-    max-height: 250px;
     width: auto;
     height: auto;
     -webkit-transition: all 0.4s ease-in-out;
@@ -787,6 +782,17 @@ a.dotted-link:hover {
         width: 1360px;
         max-width: inherit;
     }
+    .latest .item .project-image {
+        max-width: 250px;
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 1399px) {
+    .latest .item .project-image {
+        max-width: 200px;
+        max-height: 200px;
+    }
 }
 
 /* =======Full Page Loader======= */
@@ -884,3 +890,4 @@ pre code {
     background-color: #fff;
     padding-left: 10px;
 }
+

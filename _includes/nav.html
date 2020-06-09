@@ -2,39 +2,121 @@
 <header class="header">
     <div class="container clearfix">
         <a href="{{ site.production_url }}" target="_blank"><img class="profile-image img-fluid float-left" src="{{ site.resource_url }}{{ site.author.image }}"
-             alt="{{ site.author.name }}" data-scroll-reveal="enter left move 100px over 0.7s after 0.1s"/>
+             alt="{{ site.author.name }}"/>
         <div class="profile-content float-left"></a>
-            <a href="{{ site.production_url }}" target="_blank"><h1 class="name" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.name }}</h1></a>
-            <h2 class="desc" data-scroll-reveal="enter top move 100px over 0.5s after 0.1s">{{ site.author.job_title }}</h2>
+            <a href="{{ site.production_url }}" target="_blank"><h1 class="name">{{ site.author.name }}</h1></a>
+            <h2 class="desc">{{ site.author.job_title }}</h2>
             <ul class="social list-inline">
-                <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
-                        class="fab fa-twitter"></i></a></li>
-                <li class="list-inline-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a
+                {% if site.author.social_links.github %}
+                <li class="list-inline-item"><a
                         href="https://www.github.com/{{ site.author.social_links.github }}"><i
                         class="fab fa-github"></i></a></li>
-                <li class="list-inline-item last-item" data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a
+                {% endif %}
+                {% if site.author.social_links.gitlab %}
+                <li class="list-inline-item"><a
+                        href="https://www.gitlab.com/{{ site.author.social_links.gitlab }}"><i
+                        class="fab fa-gitlab"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.bitbucket %}
+                <li class="list-inline-item"><a
+                        href="https://www.bitbucket.com/{{ site.author.social_links.bitbucket }}"><i
+                        class="fab fa-git-alt"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.twitter %}
+                <li class="list-inline-item"><a href="https://www.twitter.com/{{ site.author.social_links.twitter }}"><i
+                        class="fab fa-twitter"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.facebook %}
+                <li class="list-inline-item"><a href="https://www.facebook.com/{{ site.author.social_links.facebook }}"><i
+                        class="fab fa-facebook"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.instagram %}
+                <li class="list-inline-item"><a href="https://www.instagram.com/{{ site.author.social_links.instagram }}"><i
+                        class="fab fa-instagram"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.reddit %}
+                <li class="list-inline-item"><a href="https://www.reddit.com/u/{{ site.author.social_links.reddit }}"><i
+                        class="fab fa-reddit"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.soundcloud %}
+                <li class="list-inline-item"><a href="https://www.soundcloud.com/{{ site.author.social_links.soundcloud }}"><i
+                        class="fab fa-soundcloud"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.youtube %}
+                <li class="list-inline-item"><a
+                        href="https://www.youtube.com/channel/{{ site.author.social_links.youtube }}"><i
+                        class="fab fa-youtube"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.twitch %}
+                <li class="list-inline-item"><a
+                        href="https://www.twitch.com/{{ site.author.social_links.twitch }}"><i
+                        class="fab fa-twitch"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.mixer %}
+                <li class="list-inline-item"><a
+                        href="https://www.mixer.com/{{ site.author.social_links.mixer }}"><i
+                        class="fab fa-mixer"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.steam %}
+                <li class="list-inline-item"><a
+                        href="https://steamcommunity.com/id/{{ site.author.social_links.steam }}"><i
+                        class="fab fa-steam"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.spotify %}
+                <li class="list-inline-item"><a
+                        href="https://open.spotify.com/user/{{ site.author.social_links.spotify }}"><i
+                        class="fab fa-spotify"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.goodreads %}
+                <li class="list-inline-item"><a href="https://www.goodreads.com/{{ site.author.social_links.goodreads }}"><i
+                        class="fab fa-goodreads"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.tumblr %}
+                <li class="list-inline-item"><a href="https://{{ site.author.social_links.tumblr }}.tumblr.com/"><i
+                        class="fab fa-tumblr"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.kickstarter %}
+                <li class="list-inline-item"><a href="https://www.kickstarter.com/{{ site.author.social_links.kickstarter }}"><i
+                        class="fab fa-kickstarter"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.patreon %}
+                <li class="list-inline-item"><a href="https://www.patreon.com/{{ site.author.social_links.patreon }}"><i
+                        class="fab fa-patreon"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.medium %}
+                <li class="list-inline-item"><a
+                        href="https://www.medium.com/@{{ site.author.social_links.medium }}"><i
+                        class="fab fa-medium"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.flickr %}
+                <li class="list-inline-item"><a
+                        href="https://www.flickr.com/{{ site.author.social_links.flickr }}"><i
+                        class="fab fa-flickr"></i></a></li>
+                {% endif %}
+                {% if site.author.social_links.linkedin %}
+                <li class="list-inline-item"><a
                         href="https://www.linkedin.com/in/{{ site.author.social_links.linkedin }}"><i
                         class="fab fa-linkedin-in"></i></a></li>
+                {% endif %}
             </ul>
             <nav class="list-inline">
                 {% unless page.title contains "Resume" %}
-                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.1s"><a href="{{ site.production_url }}">Resume</a></div>
+                <div><a href="{{ site.production_url }}">Resume</a></div>
                 {% endunless %}
                 {% unless page.title contains "Portfolio" %}
-                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.15s"><a href="{{ site.production_url }}/portfolio">Portfolio</a></div>
+                <div><a href="{{ site.production_url }}/portfolio">Portfolio</a></div>
                 {% endunless %}
                 {% unless page.title contains "Blog" %}
-                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.2s"><a href="{{ site.production_url }}/blog">Blog</a></div>
+                <div><a href="{{ site.production_url }}/blog">Blog</a></div>
                 {% endunless %}
-                <div data-scroll-reveal="enter right move 100px over 0.5s after 0.25s"><a href="{{ site.production_url }}/rss">RSS</a></div>
+                <div><a href="{{ site.production_url }}/rss">RSS</a></div>
             </nav>
         </div><!--//profile-content-->
-        <div data-scroll-reveal="enter right move 100px over 0.5s after 0.3s"><a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank">
+        <div><a class="btn btn-cta-primary float-right" href="mailto:{{ site.author.email }}" target="_blank">
             <i class="fas fa-paper-plane"></i> Contact Me
         </a></div>
     </div><!--//container-->
 </header><!--//header-->
-
 <div class="loader-container">
     <div class="load-spinner"></div>
 </div>

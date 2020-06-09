@@ -1,0 +1,71 @@
+---
+title: Portfolio
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-off">
+
+<!--suppress HtmlRequiredTitleElement - Jekyll-->
+<head>
+    {% include header.html %}
+</head>
+
+<body>
+{% include nav.html %}
+
+<div class="container sections-wrapper">
+    <div class="row">
+        <div class="primary col-12">
+            <section class="section">
+                <section class="experience section">
+                    <div class="section-inner">
+                        {% if site.categories.jobs.size > 0 %}
+                        <h2 class="heading"><a href="{{ site.production_url }}/jobs">Work Experience</a></h2>
+                        <div class="content">
+                            {% assign sorted_jobs = site.categories.jobs | sort: "date" | sort: "years" | reverse %}
+                            {% for job in sorted_jobs %}
+                            <div class="item">
+                                <h3 class="title">
+                                    {% if job.position %}
+                                        {{ job.position }}
+                                    {% else %}
+                                        {{ job.title }}
+                                    {% endif %}
+                                    {% if job.company %}
+                                        - <span class="place">
+                                        {% if job.link %}
+                                        <a href="{{ job.link }}">{{ job.company }}</a>
+                                        {% else %}
+                                        {{ job.company }}
+                                        {% endif %}
+                                    {% endif %}
+                                    </a>
+                                </span>
+                                    <span class="year">({{ job.years }})</span></h3>
+                                {{ job.content }}
+                            
+                                {% if job.tags.size > 0 %}
+                                <h6>Technologies/Skills used:</h6>
+                                <ul class="list-inline">
+                                    {% for tag in job.tags %}
+                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ tag }}</span>
+                                    </li>
+                                    {% endfor %}
+                                </ul><!--//technologies-->
+                                {% endif %}
+                            </div><!--//item-->
+                            {% endfor %}
+                        </div><!--//content-->
+                        {% else %}
+                        <h2 class="heading"></h2>
+                        {% endif %}
+                    </div><!--//section-inner-->
+                </section><!--//section-->
+            </section>
+        </div>
+    </div>
+</div>
+{% include footer.html %}
+</body>
+
+</html>

@@ -56,10 +56,10 @@ window.scrollReveal = (function (window) {
   scrollReveal.prototype = {
 
     defaults: {
-      after:   '0s',
+      after:   '0.1s',
       enter:   'bottom',
-      move:    '24px',
-      over:    '0.66s',
+      move:    '100px',
+      over:    '0.5s',
       easing:  'ease-in-out',
       opacity: 0,
 

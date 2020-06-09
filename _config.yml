@@ -16,28 +16,85 @@ plugins:
 paginate: 10
 paginate_path: "/blog/page:num/"
 
-# Themes are encouraged to use these universal variables 
-# so be sure to set them if your theme uses them.
-#
-title : HBiede
+# Site Info
+projects-shown: 5
+jobs-shown: 5
+skills-shown: 10
+
+title: HBiede
 tagline: Hundter Biede's portfolio
-author :
-  name : Hundter Biede
+author:
+  name: Hundter Biede
   job_title: Computer Science Student
   email: hbiede@huskers.unl.edu
   location: Lincoln, NE
-  about_text: Hundter Biede is a junior at the University of Nebraska-Lincoln, currently studying Computer Science with obtaining a PhD and becoming a professor. Hundter enjoys working for introductory Computer Science courses, reffing intramural football, and playing board/card games with friends. 
+  about_text: Hundter Biede is a senior at the University of Nebraska-Lincoln, currently studying Computer Science with a goal of obtaining a PhD and becoming a professor. Hundter enjoys working for introductory Computer Science courses, reffing intramural football, and playing board/card games with friends. 
   image: /images/hbiede.jpg
   big_image: /images/hbiede-full.jpg
   social_links:
-    github : hbiede
-    twitter : HBiede
+    # Supports bitbucket, facebook, flickr, github, gitlab, goodreads, instagram, kickstarter, linkedin, medium, mixer, patreon, reddit, soundcloud, spotify, steam, tumblr, twitch, twitter, and youtube
+    github: hbiede
+    twitter: HBiede
     linkedin: hbiede
+    goodreads: hbiede
+    instagram: hbiede
+  skills:
+    - name: Java
+      level: Expert
+      perc: 95
+      desc: Served as a Course Leader for Computer Science II among numerous other activities
+    - name: UNIX
+      level: Expert
+      perc: 90
+      desc: Administered numerous web services requiring UNIX backends
+    - name: Ruby
+      level: Expert
+      perc: 82
+    - name: Golang
+      level: Experienced
+      perc: 75
+    - name: C
+      level: Experienced
+      perc: 55
+      desc: Served as a Course Leader for Computer Science I
+    - name: Python
+      level: Experienced
+      perc: 51
+    - name: Swift
+      level: Novice
+      perc: 43
+      desc: Published App Store Developer
+
+  education:
+    # Example incomplete education:
+    # - school: University of Nebraska-Lincoln
+    #   degree: BSc Computer Science
+    #   years: 2017-2021
+    # Example completed education:
+    # - school: Adams Central High School
+    #   degree: High School Diploma
+    #   years: 2013-2017
+    #   graduated: true
+    - school: University of Nebraska-Lincoln
+      degree: BSc Computer Science
+      years: 2017-2021
+    - school: Adams Central High School
+      degree: High School Diploma
+      years: 2013-2017
+      graduated: true
+
+  languages-spoken:
+    - name: English
+      skill-level: Native Speaker
+      rating: 10
+    - name: Spanish
+      skill-level: Conversational
+      rating: 5
   
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
-JB :
-  version : 0.3.0
+JB:
+  version: 0.3.0
 
   # All links will be namespaced by BASE_PATH if defined.
   # Links in your website should always be prefixed with {{BASE_PATH}}
@@ -61,7 +118,7 @@ JB :
   #   - Only the following values are falsy: ["", null, false]
   #   - When setting BASE_PATH it must be a valid url.
   #     This means always setting the protocol (http|https) or prefixing with "/"
-  BASE_PATH : false
+  BASE_PATH: false
 
   # By default, the asset_path is automatically defined relative to BASE_PATH plus the enabled theme.
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
@@ -71,42 +128,42 @@ JB :
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
-  ASSET_PATH : false
+  ASSET_PATH: false
 
   # These paths are to the main pages Jekyll-Bootstrap ships with.
   # Some JB helpers refer to these paths; change them here if needed.
   #
-  atom_path : /atom.xml
-  rss_path : /rss.xml
-  sitemap_path : /sitemap.txt
+  atom_path: /atom.xml
+  rss_path: /rss.xml
+  sitemap_path: /sitemap.txt
 
   # Settings for comments helper
   # Set 'provider' to the comment provider you want to use.
   # Set 'provider' to false to turn commenting off globally.
   #
-  comments :
-    provider : false
+  comments:
+    provider: false
    
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #        
-  analytics :
-    provider : false
+  analytics:
+    provider: false
 
   # Settings for sharing helper. 
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
   # Set 'provider' to the sharing provider you want to use.
   # Set 'provider' to false to turn sharing off globally.
   #
-  sharing :
-    provider : false
+  sharing:
+    provider: false
     
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
   #
-  #   pages_list :
-  #     provider : "custom"   
+  #   pages_list:
+  #     provider: "custom"   
   #
   # Setting any helper's provider to 'custom' will bypass the helper code
   # and include your custom code. Your custom file must be defined at:

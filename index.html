@@ -13,487 +13,237 @@ title: Resume
 {% include nav.html %}
 
 <div class="container sections-wrapper">
-
     <div class="row">
         <div class="primary col-lg-8 col-12">
             <section class="about section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">About Me</h2>
-                    <div class="content" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+                    <h2 class="heading">About Me</h2>
+                    <div class="content">
                         <p>{{ site.author.about_text }}</p>
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </section><!--//section-->
 
+            {% if site.categories.portfolio.size > 0 %}
             <section class="latest section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s"><a href="{{ site.production_url }}/portfolio">Latest Projects</a></h2>
+                    <h2 class="heading"><a href="{{ site.production_url }}/portfolio">Latest Projects</a></h2>
                     <div class="content">
 
-                        <div class="item featured text-center" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+                        {% for project in site.categories.portfolio limit:1 %}
+                        <div class="item featured text-center">
                             <h3 class="title"><a
-                                    href="https://itunes.apple.com/us/app/lazy-clock-natural-language/id1421644784"
-                                    target="_blank">Lazy Clock</a></h3>
-                            <p class="summary">A Natural Language Clock App for iOS</p>
-                            <div class="featured-image has-ribbon">
-                                <a href="https://itunes.apple.com/us/app/lazy-clock-natural-language/id1421644784"
+                                    href="{{ project.link }}"
+                                    target="_blank">{{ project.title }}</a></h3>
+                                    {{ project.date | date: " %B %Y" }}
+                            <p class="summary" style="text-transform: capitalize">{{ project.summary }}</p>
+                            <div class="featured-image">
+                                <a href="{{ project.link }}"
                                    target="_blank">
-                                    <img class="center img-fluid project-image"
-                                         src="{{ site.resource_url }}/images/projects/LazyClock.png" alt="Lazy Clock"
-                                         style="border-radius:20px;"/>
+                                    {% if project.image %}
+                                        {% if project.image contains "://" %}
+                                        <img class="center img-fluid project-image"
+                                             src="{{ project.image }}" alt="{{ project.image-alt }}"
+                                             style="border-radius:20px;"/>
+                                        {% else %}
+                                        <img class="center img-fluid project-image"
+                                             src="{{ site.resource_url }}/{{ project.image }}" alt="{{ project.image-alt }}"
+                                             style="border-radius:20px;"/>
+                                        {% endif %}
+                                    {% endif %}
                                 </a>
-                                <div class="ribbon">
-                                    <div class="text">App Store</div>
-                                </div>
                             </div>
 
-                            <div class="desc text-left" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                                <p>Lazy Clock was my first foray into Swift development, as well as my first
-                                    interactions with the App Store Developer Portal known as App Store Connect</p>
+                            <div class="desc">
+                                <p>{{ project.description }}</p>
                             </div><!--//desc-->
+                            
+                            {% if project.links.size > 0 %}
+                            <p>
+                                {% for link in project.links %}
+                                <a class="more-link" href="{{ link.link }}"
+                                           target="_blank"><i class="fas fa-external-link-alt"></i>{{ link.name }}</a>
+                                {% endfor %}
+                            </p>
+                            {% endif %}
 
-                            <h6>Technologies used:</h6>
+                            {% if project.tags.size > 0 %}
+                            <h6>Technolog{% if project.tags.size > 1 %}ies{% else %}y{% endif %} used:</h6>
                             <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Swift</span>
+                                {% for tag in project.tags %}
+                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ tag }}</span>
                                 </li>
+                                {% endfor %}
                             </ul><!--//technologies-->
+                            {% endif %}
                         </div><!--//item-->
+                        {% endfor %}
                         
-                        <div class="item row" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <a class="col-md-4 col-12" href="https://github.com/hbiede/LaTeX-Linter" target="_blank">
-                                <img class="center img-fluid project-image" src="{{ site.resource_url }}/images/projects/latex.png"
-                                     alt="LaTeX logo"/>
+                        {% assign remaining_projects = site.projects-shown | minus: 1 %}
+                        {% for project in site.categories.portfolio limit: remaining_projects offset:1 %}
+                        <div class="item row">
+                            <a class="col-md-4 col-12" href="{{ project.link }}" target="_blank">
+                                {% if project.image %}
+                                    {% if project.image contains "://" %}
+                                    <img class="center img-fluid project-image" src="{{ project.image }}"
+                                         alt="{{ project.image-alt }}"/>
+                                    {% else %}
+                                    <img class="center img-fluid project-image" src="{{ site.resource_url }}/{{ project.image }}"
+                                         alt="{{ project.image-alt }}"/>
+                                    {% endif %}
+                                {% endif %}
                             </a>
                             <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="https://github.com/hbiede/LaTeX-Linter"
-                                                     target="_blank">LaTeX linter</a></h3>
-                                <p class="mb-2">Lints a set of LaTeX source files for common grammatical, spelling, and syntactical errors using user defined rule sets</p>
-                                <h6>Technologies used:</h6>
+                                <h3 class="title"><a href="{{ project.link }}"
+                                                     target="_blank">{{ project.title }}</a><small> - {{ project.date | date: "%B %Y" }}</small></h3>
+                                <p class="mb-2">{{ project.description }}</h6>
+                                
+                                {% if project.tags.size > 0 %}
                                 <ul class="list-inline">
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Python</span>
+                                    {% for tag in project.tags %}
+                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ tag }}</span>
                                     </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">LaTeX</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">RegEx</span>
-                                    </li>
+                                    {% endfor %}
                                 </ul><!--//technologies-->
+                                {% endif %}
+                                
+                                {% if project.links.size > 0 %}
                                 <p>
-                                    <a class="more-link" href="https://github.com/hbiede/LaTeX-Linter"
-                                       target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
+                                    {% for link in project.links %}
+                                    <a class="more-link" href="{{ link.link }}"
+                                               target="_blank"><i class="fas fa-external-link-alt"></i>{{ link.name }}</a>
+                                    {% endfor %}
                                 </p>
+                                {% endif %}
                             </div><!--//desc-->
                         </div><!--//item-->
-                        
-                        <div class="item row" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <a class="col-md-4 col-12" href="https://github.com/hbiede/Codenames-Board-Generator" target="_blank">
-                                <img class="center img-fluid project-image" src="https://upload.wikimedia.org/wikipedia/commons/b/b0/Codenames_board_game.jpg"
-                                     alt="Codenames Board"/>
-                            </a>
-                            <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="https://github.com/hbiede/Codenames-Board-Generator"
-                                                     target="_blank">Codenames Board Generator</a></h3>
-                                <p class="mb-2">Generates a random board with team assignments for use in playing the game Codenames</p>
-                                <h6>Technologies used:</h6>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Ruby</span>
-                                    </li>
-                                </ul><!--//technologies-->
-                                <p>
-                                    <a class="more-link" href="https://github.com/hbiede/Codenames-Board-Generator"
-                                       target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                </p>
-                            </div><!--//desc-->
-                        </div><!--//item-->
-                        
-                        <div class="item row" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <a class="col-md-4 col-12" href="https://github.com/hbiede/Voting-Token-Parser" target="_blank">
-                                <img class="center img-fluid project-image" src="{{ site.resource_url }}/images/projects/poll.png"
-                                     alt="Poll"/>
-                            </a>
-                            <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="https://github.com/hbiede/Voting-Token-Parser"
-                                                     target="_blank">Voter Token Parser</a></h3>
-                                <p class="mb-2">Used to create a set of voter tokens for use in a password field on an online
-                                poll system (such as a Google Form). Results can then be parsed by the parsing system to determine
-                                majorities.</p>
-                                <h6>Technologies used:</h6>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Ruby</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">LaTeX</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">GNU Make</span>
-                                    </li>
-                                </ul><!--//technologies-->
-                                <p>
-                                    <a class="more-link" href="https://github.com/hbiede/Voting-Token-Parser"
-                                       target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                </p>
-                            </div><!--//desc-->
-                        </div><!--//item-->
-                        
-                        <div class="item row" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <a class="col-md-4 col-12" href="https://github.com/hbiede/AoC-2019" target="_blank">
-                                <img class="center img-fluid project-image" src="{{ site.resource_url }}/images/projects/advent_tree.png"
-                                     alt="Advent of Code"/>
-                            </a>
-                            <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="https://github.com/hbiede/AoC-2019"
-                                                     target="_blank">Advent of Code</a></h3>
-                                <p class="mb-2">I used Advent of Code 2019 as a chance to learn a new programming
-                                language, as well as to further my own problem solving abilities. Both goals were achieved
-                                successfully!</p>
-                                <h6>Technologies used:</h6>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Go</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Multithreading</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">IntCode</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">Python</span>
-                                    </li>
-                                </ul><!--//technologies-->
-                                <p>
-                                    <a class="more-link" href="https://github.com/hbiede/AoC-2019"
-                                       target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                </p>
-                            </div><!--//desc-->
-                        </div><!--//item-->
-                        
-                        <div class="item row" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <a class="col-md-4 col-12" href="https://github.com/hbiede/Podcast-Time-Machine" target="_blank">
-                                <img class="center img-fluid project-image" src="{{ site.resource_url }}/images/projects/podcast_time_machine.png"
-                                     alt="Podcast Time Machine"/>
-                            </a>
-                            <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="https://github.com/hbiede/Podcast-Time-Machine"
-                                                     target="_blank">Podcast Time Machine</a></h3>
-                                <p class="mb-2">A PHP script that takes an RSS feed in standard podcasting XML format
-                                    and delays it by a set number of days.</p>
-                                <h6>Technologies used:</h6>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">PHP</span>
-                                    </li>
-                                    <li class="list-inline-item"><span class="badge badge-primary badge-pill">XML</span>
-                                    </li>
-                                </ul><!--//technologies-->
-                                <p>
-                                    <a class="more-link" href="https://github.com/hbiede/Podcast-Time-Machine"
-                                       target="_blank"><i class="fas fa-external-link-alt"></i>Find out more</a>
-                                </p>
-                            </div><!--//desc-->
-                        </div><!--//item-->
-
-                        <div class="item row" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <a class="col-md-4 col-12" href="https://github.com/hbiede/Scripts/blob/master/defaults.sh"
-                               target="_blank">
-                                <img class="center img-fluid project-image" src="{{ site.resource_url }}/images/projects/macOSDefaults.png"
-                                     alt="Setup Script for macOS"/>
-                            </a>
-                            <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="https://github.com/hbiede/Scripts/blob/master/defaults.sh"
-                                                     target="_blank">Setup Script for macOS</a></h3>
-                                <p class="mb-2">A Bash script that sets up a new macOS machine according to my personal
-                                    preferences.</p>
-                                <h6>Technologies used:</h6>
-                                <ul class="list-inline">
-                                    <li class="list-inline-item"><span
-                                            class="badge badge-primary badge-pill">UNIX</span></li>
-                                    <li class="list-inline-item"><span
-                                            class="badge badge-primary badge-pill">macOS</span></li>
-                                </ul><!--//technologies-->
-                                <p>
-                                    <a class="more-link"
-                                       href="https://github.com/hbiede/Scripts/blob/master/defaults.sh" target="_blank"><i
-                                            class="fas fa-external-link-alt"></i>Find out more</a>
-                                </p>
-                            </div><!--//desc-->
-                        </div><!--//item-->
+                        {% endfor %}
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </section><!--//section-->
+            {% endif %}
 
+            {% if site.categories.jobs.size > 0 %}
             <section class="experience section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">Work Experience</h2>
+                    <h2 class="heading"><a href="{{ site.production_url }}/jobs">Work Experience</a></h2>
                     <div class="content">
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Software Development Intern - <span class="place"><a
-                                    href="https://www.dmsi.com">DMSi</a></span> <span class="year">(Summer 2020)</span>
-                            </h3>
-                            <ul>
-                                <li>Worked on a development team to add features to mobile warehouse management app</li>
-                                <li>Reviewed fellow developers' pull requests</li>
-                            </ul>
-                            <h6>Technologies used:</h6>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">React Native</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">TypeScript</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Git Workflow</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Agile Development Strategies</span>
-                                </li>
-                            </ul><!--//technologies-->
-                        </div><!--//item-->
-
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Senior Leader - <span class="place"><a href="https://cse.unl.edu/">UNL Computer Science Dept</a></span>
-                                <span
-                                        class="year">(2020 - 2021)</span></h3>
-                            <ul>
-                                <li>Served on the Program Committee, overseeing over 40 learning assistants</li>
-                                <li>Managed and wrote updates to the policies described in the operations manual</li>
-                                <li>Interviewed potential hires for the four courses overseen by the committee</li>
-                                <li>Presented workshops to train new learning assistants</li>
-                            </ul>
+                        {% assign sorted_jobs = site.categories.jobs | sort: "date" | sort: "years" | reverse %}
+                        {% for job in sorted_jobs limit: site.jobs-shown %}
+                        <div class="item">
+                            <h3 class="title">
+                                {% if job.position %}
+                                    {{ job.position }}
+                                {% else %}
+                                    {{ job.title }}
+                                {% endif %}
+                                {% if job.company %}
+                                    - <span class="place">
+                                    {% if job.link %}
+                                    <a href="{{ job.link }}">{{ job.company }}</a>
+                                    {% else %}
+                                    {{ job.company }}
+                                    {% endif %}
+                                {% endif %}
+                                </a>
+                            </span>
+                                <span class="year">({{ job.years }})</span></h3>
+                            {{ job.content }}
+                            
+                            {% if job.tags.size > 0 %}
                             <h6>Technologies/Skills used:</h6>
                             <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Git</span></li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Project Management</span>
+                                {% for tag in job.tags %}
+                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">{{ tag }}</span>
                                 </li>
+                                {% endfor %}
                             </ul><!--//technologies-->
+                            {% endif %}
                         </div><!--//item-->
-
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Judges Coordinator - <span class="place"><a
-                                    href="https://nebraskafbla.org/">Nebraska FBLA</a></span>
-                                <span class="year">(2019 - Present)</span></h3>
-                            <ul>
-                                <li>Contacted and arranged judges to assist with the State Leadership Conference</li>
-                                <li>Assisted
-                                    with general conference preparation
-                                </li>
-                                <li>Aided in the updating/migration of State Foundation
-                                    website and database
-                                </li>
-                            </ul>
-                            <h6>Technologies used:</h6>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Ruby</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">LaTeX</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Microsoft Office</span>
-                                </li>
-                                <li class="list-inline-item">
-                                    <span class="badge badge-primary badge-pill">WordPress</span>
-                                </li>
-                                <li class="list-inline-item">
-                                    <span class="badge badge-primary badge-pill">Google Drive/Sheets</span>
-                                </li>
-                            </ul><!--//technologies-->
-                        </div><!--//item-->
-
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Undergrad Research Assistant - <span class="place"><a
-                                    href="https://scimath.unl.edu/airne/">AIR@NE</a></span> <span
-                                    class="year">(2019 - Present)</span></h3>
-                            <ul>
-                                <li>Assisted in observations and ratings of group interactions</li>
-                                <li>Consulted Primary Investigators on common positives/negatives of the research
-                                    guidelines
-                                </li>
-                            </ul>
-                        </div><!--//item-->
-
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Youth Coordinator - <span class="place"><a href="https://fbla-pbl.org">FBLA-PBL</a></span>
-                                <span
-                                        class="year">(2019 - Present)</span></h3>
-                            <ul>
-                                <li>Ensured the smooth execution of over 3,000 online testing sessions</li>
-                                <li>Reviewed test question issues prompted by students</li>
-                            </ul>
-                        </div><!--//item-->
-
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Test Writer - <span class="place"><a
-                                    href="https://fbla-pbl.org">FBLA-PBL</a></span> <span
-                                    class="year">(2019 - Present)</span></h3>
-                            <p>Authored tests for national and state competitions</p>
-                        </div><!--//item-->
+                        {% endfor %}
                         
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Course Leader - <span class="place"><a href="https://cse.unl.edu/">UNL Computer Science Dept</a></span>
-                                <span
-                                        class="year">(2019 - 2020)</span></h3>
-                            <ul>
-                                <li>Aided students with assignments and labs</li>
-                                <li>Graded programming assignments</li>
-                                <li>Managed a team of learning assistants</li>
-                            </ul>
-                            <h6>Technologies used:</h6>
-                            <ul class="list-inline">
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">C</span></li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Java</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">PHP</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">UNIX</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">GitHub</span>
-                                </li>
-                                <li class="list-inline-item"><span class="badge badge-primary badge-pill">Slack</span>
-                                </li>
-                            </ul><!--//technologies-->
-                        </div><!--//item-->
-                        
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title">Intramural Flag Football Referee - <span class="place"><a
-                                    href="https://crec.unl.edu/intramural-sports">UNL Intramural Sports</a></span> <span
-                                    class="year">(2018 - 2019)</span></h3>
-                            <ul>
-                                <li>Refereed Flag Football for University Greek, Co-ed, and Individual Flag Football
-                                    games
-                                </li>
-                                <li>Intermediated disputes between players and between players and other refs</li>
-                                <li>Mentored new refs</li>
-                            </ul>
-                        </div><!--//item-->
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </section><!--//section-->
+            {% endif %}
+            
+            {% if site.author.social_links.github %}
             <section class="github section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">My <a href="https://github.com/hbiede">GitHub</a></h2>
-
-                    <div id="github-graph" class="github-graph" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-
-                    </div><!--//github-graph-->
+                    <h2 class="heading">My <a href="https://github.com/{{ site.author.social_links.github }}">GitHub</a></h2>
+                    <div id="github-graph" class="github-graph"></div><!--//github-graph-->
                 </div><!--//secton-inner-->
             </section><!--//section-->
+            <!-- github calendar plugin -->
+            <script type="text/javascript"
+                    src="{{ site.resource_url }}/plugins/github-calendar/dist/github-calendar.min.js"></script>
+            <script type="text/javascript">
+                /* Github Calendar - https://github.com/IonicaBizau/github-calendar */
+                new GitHubCalendar("#github-graph", "{{ site.author.social_links.github }}");
+            </script>
+            {% endif %}
+            
         </div><!--//primary-->
+        
+        
         <div class="secondary col-lg-4 col-12">
+        
+            {% if site.author %}
             <aside class="info aside section">
                 <div class="section-inner">
-                    <h2 class="heading sr-only" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">Basic Information</h2>
+                    <h2 class="heading sr-only">Basic Information</h2>
                     <div class="content">
-                        <ul class="list-unstyled" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+                        <ul class="list-unstyled">
+                            {% if site.author.location %}
                             <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>{{
                                 site.author.location }}
                             </li>
+                            {% endif %}
+                            {% if site.author.email %}
                             <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
                                     href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+                            {% endif %}
                             <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a
                                     href="{{ site.production_url }}">{{ site.production_url }}</a></li>
                         </ul>
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </aside><!--//aside-->
+            {% endif %}
 
+            {% if site.author.skills.size > 0 %}
             <aside class="skills aside section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">Skills</h2>
+                    <h2 class="heading">Skills</h2>
                     <div class="content">
                         <div class="skillset">
+                            {% assign sorted_skills = site.author.skills | sort: "perc" | reverse %}
+                            {% for skill in sorted_skills limit: site.skills-shown %}
                             <div class="item">
-                                <h3 class="level-title">Java<span class="level-label"
-                                                                  data-toggle="tooltip"
-                                                                  data-placement="left"
-                                                                  data-animation="true"
-                                                                  title="Served as a Course Leader for Computer Science II among numerous other activities">
-                                    <i class="fas fa-info-circle"></i>Expert</span></h3>
+                                <h3 class="level-title">{{ skill.name }}
+                                
+                                <span class="level-label"
+                                    {% if skill.desc %}
+                                        data-toggle="tooltip"
+                                        data-placement="left"
+                                        data-animation="true"
+                                        title="{{ skill.desc }}">
+                                        <i class="fas fa-info-circle"></i>
+                                    {% else %}
+                                    >
+                                    {% endif %}
+                                {{ skill.level }}</span></h3>
                                 <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="93%">
+                                    <div class="level-bar-inner" data-level="{{ skill.perc }}%">
                                     </div>
                                 </div><!--//level-bar-->
                             </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">HTML/CSS<span class="level-label" data-toggle="tooltip"
-                                                                      data-placement="left" data-animation="true"
-                                                                      title="Created numerous websites">
-                                    <i class="fas fa-info-circle"></i>Experienced</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="85%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">UNIX<span class="level-label"
-                                                                  data-toggle="tooltip"
-                                                                  data-placement="left"
-                                                                  data-animation="true"
-                                                                  title="Administered numerous web services requiring UNIX backends">
-                                    <i class="fas fa-info-circle"></i>Experienced</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="79%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="level-title">Golang<span class="level-label"
-                                                                   data-toggle="tooltip"
-                                                                   data-placement="left"
-                                                                   data-animation="true"
-                                                                   title="See Advent of Code 2019">
-                                    <i class="fas fa-info-circle"></i>Experienced</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="63%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="level-title">Ruby<span class="level-label"
-                                                                   data-toggle="tooltip"
-                                                                   data-placement="left"
-                                                                   data-animation="true"
-                                                                   title="See Vote Parser">
-                                    <i class="fas fa-info-circle"></i>Experienced</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="61%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">C<span class="level-label"
-                                                               data-toggle="tooltip"
-                                                               data-placement="left"
-                                                               data-animation="true"
-                                                               title="Served as a Course Leader for Computer Science I">
-                                    <i class="fas fa-info-circle"></i>Experienced</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="55%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
-                            
-                            <div class="item">
-                                <h3 class="level-title">Python<span class="level-label"
-                                                               data-toggle="tooltip"
-                                                               data-placement="left"
-                                                               data-animation="true"
-                                                               title="See Advent of Code Template Repo">
-                                    <i class="fas fa-info-circle"></i>Experienced</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="51%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
-
-                            <div class="item">
-                                <h3 class="level-title">Swift<span class="level-label"
-                                                                   data-toggle="tooltip"
-                                                                   data-placement="left"
-                                                                   data-animation="true"
-                                                                   title="Published App Store Developer">
-                                    <i class="fas fa-info-circle"></i>Novice</span></h3>
-                                <div class="level-bar">
-                                    <div class="level-bar-inner" data-level="42%">
-                                    </div>
-                                </div><!--//level-bar-->
-                            </div><!--//item-->
+                            {% endfor %}
                         </div>
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </aside><!--//section-->
+            {% endif %}
 
             <!--            <aside class="testimonials aside section">-->
             <!--                <div class="section-inner">-->
@@ -516,54 +266,67 @@ title: Resume
             <!--                </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
             <!--            </aside>&lt;!&ndash;//section&ndash;&gt;-->
 
+            
+            {% if site.author.education.size > 0 %}
             <aside class="education aside section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">Education</h2>
+                    <h2 class="heading">Education</h2>
                     <div class="content">
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title"><i class="fas fa-spinner"></i> BSc Computer Science</h3>
-                            <h4 class="university">University of Nebraska-Lincoln <span class="year">(2017-2021)</span>
+                        {% assign sorted_education = site.author.education | sort: "years" | reverse %}
+                        {% for education in sorted_education %}
+                        <div class="item">
+                            <h3 class="title">
+                            {% if education.graduated %}
+                                <i class="fas fa-graduation-cap"></i>
+                            {% else %}
+                                <i class="fas fa-spinner"></i> 
+                            {% endif %}
+                            {{ education.degree }}</h3>
+                            <h4 class="university">{{ education.school }} <span class="year">({{ education.years }})</span>
                             </h4>
                         </div><!--//item-->
-                        <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                            <h3 class="title"><i class="fas fa-graduation-cap"></i> High School</h3>
-                            <h4 class="university">Adams Central High School <span class="year">(2013-2017)</span></h4>
-                        </div><!--//item-->
+                        {% endfor %}
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </aside><!--//section-->
+            {% endif %}
 
+            {% if site.author.languages-spoken.size > 0 %}
             <aside class="languages aside section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">Languages</h2>
+                    <h2 class="heading">Languages</h2>
                     <div class="content">
                         <ul class="list-unstyled">
-                            <li class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                                <span class="title"><strong>English:</strong></span>
-                                <span class="level">Native Speaker <br class="visible-xs"/>
-                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i>
+                            {% assign sorted_languages = site.author.languages-spoken | sort: "rating" | reverse %}
+                            {% for language in sorted_languages %}
+                            <li class="item">
+                                <span class="title"><strong>{{ language.name }}:</strong></span>
+                                <span class="level">{{ language.skill-level }} <br class="visible-xs"/>
+                                    {% for i in (1..language.rating) %}
+                                        {% capture oddity %}{% cycle 'odd', 'even' %}{% endcapture %}
+                                        {% if forloop.last and oddity == 'odd' %}
+                                        <i class="fas fa-star-half"></i>
+                                        {% elsif oddity == 'even' %}
+                                        <i class="fas fa-star"></i>
+                                        {% endif %}
+                                    {% endfor %}
                                 </span>
                             </li><!--//item-->
-                            <li class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
-                                <span class="title"><strong>Spanish:</strong></span>
-                                <span class="level">Proficient <br class="visible-sm visible-xs"/>
-                                    <i class="fas fa-star"></i> <i class="fas fa-star"></i> <i
-                                            class="fas fa-star-half"></i>
-                                </span>
-                            </li><!--//item-->
+                            {% endfor %}
                         </ul>
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </aside><!--//section-->
+            {% endif %}
 
+            {% if site.categories.blog.size > 0 %}
             <aside class="blog aside section">
                 <div class="section-inner">
-                    <h2 class="heading" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">Latest Blog Posts</h2>
+                    <h2 class="heading">Latest Blog Posts</h2>
                     <div id="rss-feeds" class="content">
                         <div class="items">
-                            {% for post in site.posts limit:5 %}
-                            <div class="item" data-scroll-reveal="enter bottom move 100px over 0.5s after 0.1s">
+                            {% for post in site.categories.blog limit:5 %}
+                            <div class="item">
                                 <h3 class="title">
                                     <a href="{{ post.url }}" target="_blank">{{ post.title }}</a>
                                 </h3>
@@ -572,7 +335,7 @@ title: Resume
                                         post.date | date: "%A, %B %-d, %Y"}}
                                     </time>
                                     <p>
-                                        {{ post.content | strip_html | truncatewords: 20 }}
+                                        {{ post.content | strip_html | smartify | truncatewords: 20 }}
                                     </p>
                                 </div>
                             </div>
@@ -581,21 +344,7 @@ title: Resume
                     </div><!--//content-->
                 </div><!--//section-inner-->
             </aside><!--//section-->
-
-            <!--            <aside class="list music aside section">-->
-            <!--                <div class="section-inner">-->
-            <!--                    <h2 class="heading">Favourite coding music</h2>-->
-            <!--                    <div class="content">-->
-            <!--                        <ul class="list-unstyled">-->
-            <!--                            <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>-->
-            <!--                            <li><i class="fas fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a>-->
-            <!--                            </li>-->
-            <!--                            <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>-->
-            <!--                            <li><i class="fas fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>-->
-            <!--                        </ul>-->
-            <!--                    </div>&lt;!&ndash;//content&ndash;&gt;-->
-            <!--                </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-            <!--            </aside>&lt;!&ndash;//section&ndash;&gt;-->
+            {% endif %}
 
             <!--            <aside class="list conferences aside section">-->
             <!--                <div class="section-inner">-->
@@ -611,72 +360,15 @@ title: Resume
             <!--                </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
             <!--            </aside>&lt;!&ndash;//section&ndash;&gt;-->
 
-            <!--            <aside class="credits aside section">-->
-            <!--                <div class="section-inner">-->
-            <!--                    <h2 class="heading">Credits</h2>-->
-            <!--                    <div class="content">-->
-            <!--                        <ul class="list-unstyled pb-2">-->
-            <!--                            <li><a href="https://getbootstrap.com/" target="_blank"><i-->
-            <!--                                    class="fas fa-external-link-alt"></i>Bootstrap</a></li>-->
-            <!--                            <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><i-->
-            <!--                                    class="fas fa-external-link-alt"></i>FontAwesome</a></li>-->
-            <!--                            <li><a href="https://jquery.com/" target="_blank"><i class="fas fa-external-link-alt"></i>jQuery</a>-->
-            <!--                            </li>-->
-            <!--                            <li><a href="https://github.com/IonicaBizau/github-calendar" target="_blank"><i-->
-            <!--                                    class="fas fa-external-link-alt"></i>GitHub Calendar Plugin</a></li>-->
-            <!--                            <li><a href="https://caseyscarborough.com/projects/github-activity/" target="_blank"><i-->
-            <!--                                    class="fas fa-external-link-alt"></i>GitHub Activity Stream</a></li>-->
-            <!--                            <li><a href="https://github.com/sdepold/jquery-rss" target="_blank"><i-->
-            <!--                                    class="fas fa-external-link-alt"></i>jQuery RSS</a></li>-->
-            <!--                            <li>Profile image: <a href="https://www.flickr.com/photos/dotbenjamin/2577394151"-->
-            <!--                                                  target="_blank">Ben Smith</a></li>-->
-            <!--                        </ul>-->
-            <!--                        <hr/>-->
-
-            <!--                        <p class="pt-2">This Bootstrap 4 portfolio template is handcrafted by UX designer <a-->
-            <!--                                href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a> at <a-->
-            <!--                                href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a> for-->
-            <!--                            developers and is <strong>FREE</strong> as long as you keep the footer attribution link.</p>-->
-            <!--                        <p>If you’d like to <strong>use this template without the attribution link</strong>, you can <a-->
-            <!--                                href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/"-->
-            <!--                                target="_blank">buy the commercial license</a>.</p>-->
-
-            <!--                        <a class="btn btn-cta-primary btn-download"-->
-            <!--                           href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/"-->
-            <!--                           target="_blank"><i class="fas fa-download"></i> I want to download</a>-->
-            <!--                        <hr/>-->
-            <!--                        <h5 class="subheading pt-3">Want more free Bootstrap themes and templates?</h5>-->
-            <!--                        <p>Check out our <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/">collection-->
-            <!--                            of free themes and templates.</a></p>-->
-            <!--                        <p>Follow <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying</a> on twitter-->
-            <!--                            so you don't miss any future freebies!</p>-->
-
-            <!--                        <a class="btn btn-cta-secondary btn-follow" href="https://twitter.com/3rdwave_themes"-->
-            <!--                           target="_blank"><i class="fab fa-twitter"></i> Follow on twitter</a>-->
-
-            <!--                    </div>&lt;!&ndash;//content&ndash;&gt;-->
-            <!--                </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-            <!--            </aside>&lt;!&ndash;//section&ndash;&gt;-->
 
         </div><!--//secondary-->
     </div><!--//row-->
 </div><!--//masonry-->
 
-<!-- ******FOOTER****** -->
-<footer class="footer">
-    <div class="container text-center">
-        <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-        <small class="copyright">Original template designed by <a href="https://themes.3rdwavemedia.com" target="_blank">Xiaoying
-            Riley</a> and modified by Hundter Biede</small>
-    </div><!--//container-->
-</footer><!--//footer-->
+{% include footer.html %}
 
 <!-- custom js -->
 <script defer type="text/javascript" src="{{ site.resource_url }}/js/main.js"></script>
-
-<!-- github calendar plugin -->
-<script type="text/javascript"
-        src="{{ site.resource_url }}/plugins/github-calendar/dist/github-calendar.min.js"></script>
 </body>
 </html> 
 

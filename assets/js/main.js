@@ -1,3 +1,5 @@
+---
+---
 $(window).on('load', function () {
     $('.level-bar-inner').each(function () {
         var itemWidth = $(this).data('level');
@@ -17,7 +19,4 @@ jQuery(document).ready(function ($) {
 
     /* Bootstrap Tooltip for Skillset */
     $('.level-label').tooltip();
-
-    /* Github Calendar - https://github.com/IonicaBizau/github-calendar */
-    new GitHubCalendar("#github-graph", "HBiede");
 });
