@@ -1,7 +1,7 @@
 ---
 company: University of Nebraska-Lincoln
 link: https://cse.unl.edu/
-years: 2020-2021
+years: 2020-Present
 tags: [Project Management, Kanban, Git, LaTeX]
 ---
 
