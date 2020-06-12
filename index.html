@@ -33,12 +33,12 @@ title: Resume
                         {% for project in site.categories.portfolio limit:1 %}
                         <div class="item featured text-center">
                             <h3 class="title"><a
-                                    href="{{ project.link }}"
+                                    href="{{ project.links[0].link }}"
                                     target="_blank">{{ project.title }}</a></h3>
                                     {{ project.date | date: " %B %Y" }}
                             <p class="summary" style="text-transform: capitalize">{{ project.summary }}</p>
                             <div class="featured-image">
-                                <a href="{{ project.link }}"
+                                <a href="{{ project.links[0].link }}"
                                    target="_blank">
                                     {% if project.image %}
                                         {% if project.image contains "://" %}
@@ -82,7 +82,7 @@ title: Resume
                         {% assign remaining_projects = site.projects-shown | minus: 1 %}
                         {% for project in site.categories.portfolio limit: remaining_projects offset:1 %}
                         <div class="item row">
-                            <a class="col-md-4 col-12" href="{{ project.link }}" target="_blank">
+                            <a class="col-md-4 col-12" href="{{ project.links[0].link }}" target="_blank">
                                 {% if project.image %}
                                     {% if project.image contains "://" %}
                                     <img class="center img-fluid project-image" src="{{ project.image }}"
@@ -94,7 +94,7 @@ title: Resume
                                 {% endif %}
                             </a>
                             <div class="desc col-md-8 col-12">
-                                <h3 class="title"><a href="{{ project.link }}"
+                                <h3 class="title"><a href="{{ project.links[0].link }}"
                                                      target="_blank">{{ project.title }}</a><small> - {{ project.date | date: "%B %Y" }}</small></h3>
                                 <p class="mb-2">{{ project.description }}</h6>
                                 
