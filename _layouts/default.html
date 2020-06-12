@@ -12,7 +12,9 @@
             <section class="section">
                 <div class="section-inner blogPost">
                     <h2 class="postTitle">{{ page.title | smartify }}</h2>
-                    <h3 class="subtitle">{{ page.description |smartify }}</h3>
+                    {% if page.subtitle %}
+                    <h3 class="subtitle">{{ page.subtitle | smartify }}</h3>
+                    {% endif %}
                     <div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
                         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date |
                             date: "%A, %B %-d, %Y"}}

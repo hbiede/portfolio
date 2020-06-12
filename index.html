@@ -335,7 +335,11 @@ title: Resume
                                         post.date | date: "%A, %B %-d, %Y"}}
                                     </time>
                                     <p>
-                                        {{ post.content | strip_html | smartify | truncatewords: 20 }}
+                                        {% if post.subtitle %}
+                                            {{ post.subtitle }}
+                                        {% else %}
+                                            {{ post.content | strip_html | smartify | truncatewords: 20 }}
+                                        {% endif %}
                                     </p>
                                 </div>
                             </div>
