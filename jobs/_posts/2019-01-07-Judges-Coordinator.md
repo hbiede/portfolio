@@ -1,7 +1,7 @@
 ---
 company: Nebraska FBLA
 link: https://www.nebraskafbla.org/
-years: 2019-Present
+years: 2019-2020
 tags: [Ruby, LaTeX, Microsoft Office, WordPress, Google Sheets]
 ---
 
