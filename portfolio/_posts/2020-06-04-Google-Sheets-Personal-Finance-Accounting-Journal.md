@@ -1,5 +1,5 @@
 ---
-image: https://upload.wikimedia.org/wikipedia/en/7/7d/Google_Sheets_Logo.jpg
+image: https://upload.wikimedia.org/wikipedia/commons/e/eb/Analyzing_Financial_Data_%285099605109%29.jpg
 image-alt: Google Sheets Template
 links:
   - name: Google Sheets
