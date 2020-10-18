@@ -4,6 +4,5 @@ link: https://fbla-pbl.org/
 years: 2019-Present
 ---
 
-* Contacted and arranged judges to assist with the State Leadership Conference
-* Assisted with general conference preparation
-* Aided in the updating/migration of State Foundation website and database
+* Ensure the smooth execution of over 3,000 online testing sessions
+* Review test question issues prompted by students
