@@ -499,6 +499,10 @@ a.dotted-link:hover {
     box-sizing: content-box;
 }
 
+.contrib-number{
+    color: var(--textcolor);
+}
+
 /* Info Section */
 .info .svg-inline--fa {
     margin-right: 15px;
