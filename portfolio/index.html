@@ -26,7 +26,7 @@ title: Portfolio
                         {% if filtered_tags.size > 0 %}
                             <h2>{{ tag[0] }}:</h2>
                             <ul>
-                            {% for post in filtered_tags %}
+                            {% for post in filtered_tags reversed %}
                                 <li>{{post.title}}
                                 {% for link in post.links %}
                                     (<a href="{{link.link}}">{{link.name}}</a>)
