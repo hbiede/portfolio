@@ -23,15 +23,15 @@ skills-shown: 10
 
 # Author Info
 title: HBiede
-tagline: Hundter Biede's portfolio
+tagline: Hundter Biede's Portfolio
 author:
   name: Hundter Biede
   job_title: Computer Science Student
   email: hbiede@huskers.unl.edu
   location: Lincoln, NE
   about_text: Hundter Biede is a senior at the University of Nebraska-Lincoln, currently studying Computer Science with a goal of obtaining a Master's degree. Hundter enjoys working for introductory Computer Science courses as a learning assistant, reffing intramural football, and playing board/card games with friends. 
-  image: /images/hbiede.jpg
-  big_image: /images/hbiede-full.jpg
+  image: /images/headshot.jpg
+  big_image: /images/headshot-full.jpg
   social_links:
     # Supports bitbucket, facebook, flickr, github, gitlab, goodreads, instagram, kickstarter, linkedin, medium, mixer, patreon, reddit, soundcloud, spotify, steam, tumblr, twitch, twitter, and youtube
     github: hbiede
