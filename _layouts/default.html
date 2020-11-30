@@ -13,16 +13,18 @@
                 <div class="section-inner blogPost">
                     <h2 class="postTitle">{{ page.title | smartify }}</h2>
                     {% if page.subtitle %}
-                    <h3 class="subtitle">{{ page.subtitle | smartify }}</h3>
+                    <h3 class="subtitle" style="font-size: 1rem">{{ page.subtitle | smartify }}</h3>
+                    {% elsif page.description %}
+                    <h3 class="subtitle" style="font-size: 1rem">{{ page.description | smartify }}</h3>
                     {% endif %}
                     <div class="byline" itemscope itemtype="http://schema.org/Person"><span itemprop="author" hidden>{{ site.author.name}}</span>
                         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date |
                             date: "%A, %B %-d, %Y"}}
                         </time>
                     </div>
-                    {% if project.links.size > 0 %}
-                    <p>
-                        {% for link in project.links %}
+                    {% if page.links.size > 0 %}
+                    <p style="margin-top: 1rem">
+                        {% for link in page.links %}
                         <a class="more-link" href="{{ link.link }}"
                                    target="_blank"><i class="fas fa-external-link-alt"></i>{{ link.name }}</a>
                         {% endfor %}
