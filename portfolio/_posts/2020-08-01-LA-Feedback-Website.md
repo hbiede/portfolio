@@ -1,4 +1,5 @@
 ---
+title: LA Feedback Website
 image: images/projects/poll.png
 image-alt: Feedback Form
 links:
