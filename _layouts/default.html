@@ -20,6 +20,14 @@
                             date: "%A, %B %-d, %Y"}}
                         </time>
                     </div>
+                    {% if project.links.size > 0 %}
+                    <p>
+                        {% for link in project.links %}
+                        <a class="more-link" href="{{ link.link }}"
+                                   target="_blank"><i class="fas fa-external-link-alt"></i>{{ link.name }}</a>
+                        {% endfor %}
+                    </p>
+                    {% endif %}
                     {{ content | smartify }}
                 </div>
             </section>
