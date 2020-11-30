@@ -1,4 +1,5 @@
 ---
+title: FBLA Alumni Advertisement
 links:
   - name: YouTube
     link: https://youtu.be/llZ3sR2GdoQ
