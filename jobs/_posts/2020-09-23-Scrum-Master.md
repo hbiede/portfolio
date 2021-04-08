@@ -1,7 +1,7 @@
 ---
 company: Farm Credit Services Design Studio Team
 link: https://raikes.unl.edu/design-studio
-years: 2020-Present
+years: 2020-2021
 tags: [Project Management, Agile, Git, CI, C#, Python, Machine Learning]
 ---
 

@@ -29,7 +29,7 @@ author:
   job_title: Computer Science Student
   email: hbiede@huskers.unl.edu
   location: Lincoln, NE
-  about_text: Hundter Biede is a senior at the University of Nebraska-Lincoln, currently studying Computer Science with a goal of obtaining a Master's degree. Hundter enjoys working for introductory Computer Science courses as a learning assistant, reffing intramural football, and playing board/card games with friends. 
+  about_text: Hundter Biede is a senior at the University of Nebraska-Lincoln, currently studying Computer Science with a goal of obtaining a Master's degree. Hundter enjoys photgraphy, reading, and playing board/card games with friends. 
   image: /images/headshot.jpg
   big_image: /images/headshot-full.jpg
   social_links:
@@ -40,27 +40,31 @@ author:
     goodreads: hbiede
     instagram: hbiede
   skills:
-    - name: Java
+    - name: TypeScript/JavaScript
       level: Expert
-      perc: 95
-      desc: Served as a Course Leader for Computer Science II among numerous other activities
+      perc: 98
+      desc: First fulltime job was working with React Native with a TypeScript. Was the "the TypeScript guru" for the team.
     - name: UNIX
       level: Expert
       perc: 90
       desc: Administered numerous web services requiring UNIX backends
+    - name: Java
+      level: Expert
+      perc: 85
+      desc: Served as a Course Leader for Computer Science II among numerous other activities
     - name: Ruby
       level: Expert
       perc: 82
     - name: Golang
       level: Experienced
       perc: 75
-    - name: C
-      level: Experienced
-      perc: 55
-      desc: Served as a Course Leader for Computer Science I
     - name: Python
       level: Experienced
-      perc: 51
+      perc: 72
+    - name: C
+      level: Experienced
+      perc: 67
+      desc: Served as a Course Leader for Computer Science I
     - name: Swift
       level: Novice
       perc: 43
@@ -77,8 +81,13 @@ author:
     #   years: 2013-2017
     #   graduated: true
     - school: University of Nebraska-Lincoln
-      degree: BSc Computer Science
+      degree: MS - Computer Science
+      years: 2021-2022
+      graduated: true
+    - school: University of Nebraska-Lincoln
+      degree: BSc - Computer Science
       years: 2017-2021
+      graduated: true
     - school: Adams Central High School
       degree: High School Diploma
       years: 2013-2017
