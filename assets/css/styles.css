@@ -218,6 +218,7 @@ a.dotted-link:hover {
 }
 
 .section .content .more-link .svg-inline--fa {
+    margin-left: 1rem;
     margin-right: 5px;
     font-size: 14px;
     position: relative;
