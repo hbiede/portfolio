@@ -1,6 +1,6 @@
 ---
 title: Pokemon React Native
-image: https://cdn.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/500px-006Charizard.png
+image: https://cdn2.bulbagarden.net/upload/thumb/7/7e/006Charizard.png/1200px-006Charizard.png
 image-alt: Charizard
 links: 
   - name: GitHub
