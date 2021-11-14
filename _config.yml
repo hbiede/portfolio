@@ -83,7 +83,9 @@ author:
     - school: University of Nebraska-Lincoln
       degree: MS - Computer Science
       years: 2021-2022
-      graduated: true
+    - school: University of Nebraska-Lincoln
+      degree: MEM - Engineering Management
+      years: 2021-2022
     - school: University of Nebraska-Lincoln
       degree: BSc - Computer Science
       years: 2017-2021
