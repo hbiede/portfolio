@@ -1,11 +1,12 @@
 ---
 company: University of Nebraska-Lincoln
 link: https://cse.unl.edu/
-years: 2020-Present
-tags: [Project Management, Kanban, Git, LaTeX]
+years: 2020-2021
+tags: [Project Management, Kanban, Git, LaTeX, Matlab, Java]
 ---
 
-* Served on the Program Committee, overseeing over 60 learning assistants
-* Managed and wrote updates to the policies described in the operations manual
-* Interviewed potential hires for the four courses overseen by the committee
-* Presented workshops to train new learning assistants
+* Managed over 60 teaching assistants (TAs) for four introductory computer science courses, ensuring quality resources were available to all students.
+* Created three technical interview prompts in Java and Matlab and provided feedback on materials written by coworkers in C and Python.
+* Executed dozens of interviews and hired new TAs as a member of the hiring subcommittee.
+* Presented workshops on debugging and pedagogy, impacting teaching strategies for hundreds of students.
+* Drafted four accepted amendments to official policies for the teaching assistant program.
