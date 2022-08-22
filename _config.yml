@@ -61,14 +61,14 @@ author:
     - name: Python
       level: Experienced
       perc: 72
+    - name: Swift
+      level: Experienced
+      perc: 62
+      desc: Published App Store Developer
     - name: C
       level: Experienced
-      perc: 67
+      perc: 50
       desc: Served as a Course Leader for Computer Science I
-    - name: Swift
-      level: Novice
-      perc: 43
-      desc: Published App Store Developer
 
   education:
     # Example incomplete education:
