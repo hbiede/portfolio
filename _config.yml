@@ -35,10 +35,10 @@ author:
   social_links:
     # Supports bitbucket, facebook, flickr, github, gitlab, goodreads, instagram, kickstarter, linkedin, medium, mixer, patreon, reddit, soundcloud, spotify, steam, tumblr, twitch, twitter, and youtube
     github: hbiede
-    twitter: HBiede
+#    twitter: HBiede
     linkedin: hbiede
-    goodreads: hbiede
-    instagram: hbiede
+#    goodreads: hbiede
+#    instagram: hbiede
   skills:
     - name: TypeScript/JavaScript
       level: Expert
