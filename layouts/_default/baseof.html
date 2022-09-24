@@ -5,13 +5,13 @@
 <head>
   <meta charset="utf-8">
   <title>
-          {{ block "title" . }}
-          {{ if .IsHome}}
-              {{ .Site.Params.author.fullName }} - {{ .Site.Title }}
-          {{else}}
-              {{ .Page.Title }} - {{ .Site.Title }}
-          {{ end }}
-          {{ end }}
+    {{ block "title" . }}
+    {{ if .IsHome}}
+    {{ .Site.Params.author.fullName }} - {{ .Site.Title }}
+    {{else}}
+    {{ .Page.Title }} - {{ .Site.Title }}
+    {{ end }}
+    {{ end }}
   </title>
   <meta name="author" content="{{ .Site.Params.author.fullName }}">
   <meta name="copyright" content="© {{ .Site.Copyright }}">
@@ -56,7 +56,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="{{ .Permalink }}/">
   <meta property="og:site_name" content="{{ .Site.Title }}">
-  <meta property="og:title" content="{{ .Site.Title }}"/>
+  <meta property="og:title" content="{{ .Site.Title }}" />
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.author.image }}">
 
   <!-- Styles -->
