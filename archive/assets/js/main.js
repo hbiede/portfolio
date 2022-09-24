@@ -1,5 +1,3 @@
----
----
 $(window).on('load', function () {
     $('.level-bar-inner').each(function () {
         var itemWidth = $(this).data('level');

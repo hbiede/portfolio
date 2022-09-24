@@ -1,3 +1,13 @@
+*.log
+
+# IDE
+.idea/
+
+# Site Generator
 _site/*
 .bundle/*
 .jekyll-cache/*
+.hugo_build.lock
+
+# MacOS
+.DS_Store

@@ -1,0 +1,24 @@
+{
+  "languageCode": "en-US",
+  "baseURL": "https://hbiede.com",
+  "params": {
+    "author": {
+      "shortName": "Hundter",
+      "fullName": "Elijah Biede",
+      "jobTitle": "Software Engineer",
+      "image": "images/headshot.jpg",
+      "twitter": "HBiede",
+      "links": [
+        {
+          "name": "GitHub",
+          "link": "https://github.com/hbiede"
+        }
+      ]
+    }
+  },
+  "title": "Portfolio",
+  "copyright": "Hundter Biede",
+  "defaultContentLanguage": "en",
+  "enableGitInfo": true,
+  "assetDir": "assets"
+}

@@ -1,0 +1,44 @@
+{{ define "header" }}
+<header>
+    <div id="header-name">
+        <h1>{{ .Site.Params.author.fullName }}</h1>
+        <h2>{{ .Site.Params.author.jobTitle }}</h2>
+        {{ range $i, $link := .Site.Params.author.links }}
+        <a href="{{ $link.link }}">{{ $link.name }}</a>
+        {{ end }}
+    </div>
+    {{ if .IsHome }}
+        <img
+            class="headshot"
+            src="{{ .Site.Params.author.image }}"
+            alt="Image of {{ .Site.Params.author.shortName }}"
+        />
+    {{ else }}
+        <a href="{{ .Site.BaseURL }}" aria-label="Go Home">
+            <img
+                class="headshot"
+                src="{{ .Site.Params.author.image }}"
+                alt="Image of {{ .Site.Params.author.shortName }}"
+            />
+        </a>
+    {{ end }}
+</header>
+{{ end }}
+
+{{ define "main" }}
+<div class="homepage-content">
+    <!-- Note that the content for main.html, as a sort of list page, will pull from content/_index.md -->
+    {{.Content}}
+</div>
+<div>
+    {{ range first 10 .Site.RegularPages }}
+    {{ .Render "summary"}}
+    {{ end }}
+</div>
+{{ end }}
+
+{{ define "footer" }}
+<footer>
+
+</footer>
+{{ end }}
