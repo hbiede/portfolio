@@ -8,6 +8,7 @@ _site/*
 .bundle/*
 .jekyll-cache/*
 .hugo_build.lock
+resources/_gen
 
 # MacOS
 .DS_Store

@@ -4,14 +4,64 @@
   "params": {
     "author": {
       "shortName": "Hundter",
-      "fullName": "Elijah Biede",
+      "fullName": "Hundter Biede",
       "jobTitle": "Software Engineer",
+      "email": "hbiede@huskers.unl.edu",
+      "location": "Lincoln, NE",
       "image": "images/headshot.jpg",
       "twitter": "HBiede",
+      "education": [
+        {
+          "degreeName": "MS - Computer Science",
+          "school": "University of Nebraska - Lincoln",
+          "dates": "2021-2023"
+        },
+        {
+          "degreeName": "MEM - Engineering Management",
+          "school": "University of Nebraska - Lincoln",
+          "dates": "2021-2023"
+        },
+        {
+          "degreeName": "BSc - Computer Science",
+          "school": "University of Nebraska - Lincoln",
+          "dates": "2017-2021"
+        }
+      ],
+      "skills": [
+        {
+          "name": "TypeScript/JavaScript",
+          "percent": 95
+        },
+        {
+          "name": "UNIX",
+          "percent": 90
+        },
+        {
+          "name": "Python",
+          "percent": 85
+        },
+        {
+          "name": "Ruby",
+          "percent": 82
+        },
+        {
+          "name": "Java",
+          "percent": 80
+        },
+        {
+          "name": "Golang",
+          "percent": 75
+        },
+        {
+          "name": "Swift",
+          "percent": 62
+        }
+      ],
       "links": [
         {
           "name": "GitHub",
-          "link": "https://github.com/hbiede"
+          "link": "https://github.com/hbiede",
+          "username": "hbiede"
         }
       ]
     }
@@ -20,5 +70,16 @@
   "copyright": "Hundter Biede",
   "defaultContentLanguage": "en",
   "enableGitInfo": true,
-  "assetDir": "assets"
+  "assetDir": "assets",
+  "outputs": {
+    "home": [
+      "HTML",
+      "RSS",
+      "Sitemap",
+      "WebAppManifest"
+    ]
+  },
+  "taxonomies": {
+    "tag": "tags"
+  }
 }

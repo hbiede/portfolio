@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JavaScript on Portfolio</title>
+    <link>https://hbiede.com/tags/javascript/</link>
+    <description>Recent content in JavaScript on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright>
+    <lastBuildDate>Fri, 22 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hbiede.com/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pokemon React Native App</title>
+      <link>https://hbiede.com/projects/2020-05-22-pokemon-react-native/</link>
+      <pubDate>Fri, 22 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2020-05-22-pokemon-react-native/</guid>
+      <description>Basic Pokemon battle app in React Native</description>
+    </item>
+    
+  </channel>
+</rss>

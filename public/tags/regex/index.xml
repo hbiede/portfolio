@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>RegEx on Portfolio</title>
+    <link>https://hbiede.com/tags/regex/</link>
+    <description>Recent content in RegEx on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright>
+    <lastBuildDate>Fri, 29 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hbiede.com/tags/regex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTeX Linter</title>
+      <link>https://hbiede.com/projects/2020-05-29-latex-linter/</link>
+      <pubDate>Fri, 29 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2020-05-29-latex-linter/</guid>
+      <description>Checks LaTeX source files for common errors</description>
+    </item>
+    
+    <item>
+      <title>Online Voting Password Generator/Parser</title>
+      <link>https://hbiede.com/projects/2020-04-15-online-voting-password-generator-parser/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2020-04-15-online-voting-password-generator-parser/</guid>
+      <description>Generates voter tokens and parses responses</description>
+    </item>
+    
+  </channel>
+</rss>

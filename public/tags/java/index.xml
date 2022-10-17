@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Portfolio</title>
+    <link>https://hbiede.com/tags/java/</link>
+    <description>Recent content in Java on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright>
+    <lastBuildDate>Mon, 11 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://hbiede.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>vCard to Image Collection Converter</title>
+      <link>https://hbiede.com/projects/2019-02-11-vcard-to-image-collection-converter/</link>
+      <pubDate>Mon, 11 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2019-02-11-vcard-to-image-collection-converter/</guid>
+      <description>Takes a vCard as input, outputs a folder full of contact photos</description>
+    </item>
+    
+    <item>
+      <title>Course Leader</title>
+      <link>https://hbiede.com/work-experience/2019-01-17-course-leader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/work-experience/2019-01-17-course-leader/</guid>
+      <description> Aided students with assignments and labs Graded programming assignments Managed a team of learning assistants </description>
+    </item>
+    
+    <item>
+      <title>Senior Leader</title>
+      <link>https://hbiede.com/work-experience/2020-05-01-senior-leader/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/work-experience/2020-05-01-senior-leader/</guid>
+      <description>Managed over 60 teaching assistants (TAs) for four introductory computer science courses, ensuring quality resources were available to all students. Created three technical interview prompts in Java and Matlab and provided feedback on materials written by coworkers in C and Python. Executed dozens of interviews and hired new TAs as a member of the hiring subcommittee. Presented workshops on debugging and pedagogy, impacting teaching strategies for hundreds of students. Drafted four accepted amendments to official policies for the teaching assistant program.</description>
+    </item>
+    
+  </channel>
+</rss>

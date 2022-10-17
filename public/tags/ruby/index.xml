@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on Portfolio</title>
+    <link>https://hbiede.com/tags/ruby/</link>
+    <description>Recent content in Ruby on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright>
+    <lastBuildDate>Tue, 05 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hbiede.com/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codenames Board Generator</title>
+      <link>https://hbiede.com/projects/2020-05-05-codenames-board-generator/</link>
+      <pubDate>Tue, 05 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2020-05-05-codenames-board-generator/</guid>
+      <description>A script to generate a board of words for the game &amp;ldquo;Codenames&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>Online Voting Password Generator/Parser</title>
+      <link>https://hbiede.com/projects/2020-04-15-online-voting-password-generator-parser/</link>
+      <pubDate>Wed, 15 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2020-04-15-online-voting-password-generator-parser/</guid>
+      <description>Generates voter tokens and parses responses</description>
+    </item>
+    
+    <item>
+      <title>CSV Sorter</title>
+      <link>https://hbiede.com/projects/2019-10-09-csv-sorter/</link>
+      <pubDate>Wed, 09 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2019-10-09-csv-sorter/</guid>
+      <description>A Ruby script to sort a basic CSV and output to the console.</description>
+    </item>
+    
+    <item>
+      <title>Judges Coordinator</title>
+      <link>https://hbiede.com/work-experience/2019-01-07-judges-coordinator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/work-experience/2019-01-07-judges-coordinator/</guid>
+      <description> Contacted and arranged judges to assist with the State Leadership Conference Assisted with general conference preparation Aided in the updating/migration of State Foundation website and database </description>
+    </item>
+    
+    <item>
+      <title>Undergraduate Research Assistant</title>
+      <link>https://hbiede.com/work-experience/2019-09-02-undergraduate-research-assistant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/work-experience/2019-09-02-undergraduate-research-assistant/</guid>
+      <description> Assisted in creating rating frameworks Assessed computer science instructors based on their teach efficacy </description>
+    </item>
+    
+  </channel>
+</rss>

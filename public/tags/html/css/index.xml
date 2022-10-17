@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTML/CSS on Portfolio</title>
+    <link>https://hbiede.com/tags/html/css/</link>
+    <description>Recent content in HTML/CSS on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright><atom:link href="https://hbiede.com/tags/html/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Personal Website</title>
+      <link>https://hbiede.com/projects/2019-11-17-this-website/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2019-11-17-this-website/</guid>
+      <description>Personal website</description>
+    </item>
+    
+    <item>
+      <title>Example Bakery Website</title>
+      <link>https://hbiede.com/projects/2016-02-11-fake-bakery-website/</link>
+      <pubDate>Thu, 11 Feb 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2016-02-11-fake-bakery-website/</guid>
+      <description>Mock website created for a competition</description>
+    </item>
+    
+  </channel>
+</rss>

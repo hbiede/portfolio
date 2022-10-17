@@ -1,44 +1,87 @@
-{{ define "header" }}
-<header>
-  <div id="header-name">
-    <h1>{{ .Site.Params.author.fullName }}</h1>
-    <h2>{{ .Site.Params.author.jobTitle }}</h2>
-    {{ range $i, $link := .Site.Params.author.links }}
-    <a href="{{ $link.link }}">{{ $link.name }}</a>
-    {{ end }}
-  </div>
-  {{ if .IsHome }}
-  <img
-      class="headshot"
-      src="{{ .Site.Params.author.image }}"
-      alt="Image of {{ .Site.Params.author.shortName }}"
-  />
-  {{ else }}
-  <a href="{{ .Site.BaseURL }}" aria-label="Go Home">
-    <img
-        class="headshot"
-        src="{{ .Site.Params.author.image }}"
-        alt="Image of {{ .Site.Params.author.shortName }}"
-    />
-  </a>
-  {{ end }}
-</header>
-{{ end }}
-
 {{ define "main" }}
-<div class="homepage-content">
-  <!-- Note that the content for main.html, as a sort of list page, will pull from content/_index.md -->
-  {{.Content}}
-</div>
-<div>
-  {{ range first 10 .Site.RegularPages }}
-  {{ .Render "summary"}}
-  {{ end }}
-</div>
-{{ end }}
+<main>
+  <div>
+    <section id="about-me">
+      {{ .Content }}
+    </section>
 
-{{ define "footer" }}
-<footer>
+    <section id="contact-info">
+      {{ if isset .Site.Params.author "location" }}<p>{{ .Site.Params.author.location }}</p>{{ end }}
+      {{ if isset .Site.Params.author "email" }}
+      <p><a href="mailto:{{ .Site.Params.author.email }}">{{ .Site.Params.author.email }}</a></p>
+      {{ end }}
+      {{ if isset .Site.Params.author "phoneNumber" }}
+      <p><a href="tel:{{ .Site.Params.author.phoneNumber }}">{{ .Site.Params.author.phoneNumber }}</a></p>
+      {{ end }}
+      <p><a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a></p>
+    </section>
 
-</footer>
+    <section id="skill-set" aria-role="list">
+      <h3>Skills</h3>
+      <hr />
+      {{ range .Site.Params.author.skills }}
+      <div aria-role="listitem">
+        <p>{{ .name }}</p>
+        <div class="skill-container">
+          <div class="skill-bar" style="width:{{ .percent }}%;"></div>
+        </div>
+      </div>
+      {{ end }}
+    </section>
+
+    <section id="education-history" aria-role="list">
+      {{ range .Site.Params.author.education }}
+      <div aria-role="list-item">
+        <p>{{ .degreeName }}</p>
+        <p>{{ .school }} <span>({{ .dates }})</span></p>
+        <hr />
+      </div>
+      {{ end }}
+    </section>
+  </div>
+
+  <div>
+    <section id="project-list" aria-role="list">
+      <h3>Projects</h3>
+      <hr />
+      {{ range first 6 (sort (where .Site.RegularPages "Section" "projects") ".Params.Date" "desc") }}
+      <div class="project-list-item" aria-role="listitem">
+        <div class="project-item-desc">
+          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+          <p>{{ .Summary }}</p>
+          <div class="project-item-tags">
+            {{ range .Params.Tags }}
+            <p><a href="/tags/{{ . }}">{{ . }}</a></p>
+            {{ end }}
+          </div>
+        </div>
+        {{ if isset .Params "image" }}
+        <img class="project-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}" />
+        {{ end }}
+      </div>
+      {{ end }}
+      <a class="more-projects" href="/projects">More &gt;</a>
+    </section>
+
+    <section id="work-experience" aria-role="list">
+      <h3>Work Experience</h3>
+      <hr />
+      {{ range first 5 (sort (sort (where .Site.RegularPages "Section" "work-experience") ".Date" "desc")
+      ".Params.Years" "desc") }}
+      <div class="work-experience-list-item" aria-role="listitem">
+        <div class="work-experience-item-desc">
+          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        </div>
+        {{ .Content }}
+        <div class="work-experience-item-tags">
+          {{ range .Params.Tags }}
+          <a href="/tags/{{ . }}">{{ . }}</a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+      <a class="more-work-experience" href="/work-experience">More &gt;</a>
+    </section>
+  </div>
+</main>
 {{ end }}

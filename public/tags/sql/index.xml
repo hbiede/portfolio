@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SQL on Portfolio</title>
+    <link>https://hbiede.com/tags/sql/</link>
+    <description>Recent content in SQL on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright>
+    <lastBuildDate>Sat, 01 Aug 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://hbiede.com/tags/sql/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LA Feedback Website</title>
+      <link>https://hbiede.com/projects/2020-08-01-la-feedback-website/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2020-08-01-la-feedback-website/</guid>
+      <description>A website to track feedback from students about Learning Assistants</description>
+    </item>
+    
+  </channel>
+</rss>

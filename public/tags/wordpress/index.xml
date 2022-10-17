@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>WordPress on Portfolio</title>
+    <link>https://hbiede.com/tags/wordpress/</link>
+    <description>Recent content in WordPress on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright><atom:link href="https://hbiede.com/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Judges Coordinator</title>
+      <link>https://hbiede.com/work-experience/2019-01-07-judges-coordinator/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/work-experience/2019-01-07-judges-coordinator/</guid>
+      <description> Contacted and arranged judges to assist with the State Leadership Conference Assisted with general conference preparation Aided in the updating/migration of State Foundation website and database </description>
+    </item>
+    
+    <item>
+      <title>Undergraduate Research Assistant</title>
+      <link>https://hbiede.com/work-experience/2019-09-02-undergraduate-research-assistant/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/work-experience/2019-09-02-undergraduate-research-assistant/</guid>
+      <description> Assisted in creating rating frameworks Assessed computer science instructors based on their teach efficacy </description>
+    </item>
+    
+  </channel>
+</rss>

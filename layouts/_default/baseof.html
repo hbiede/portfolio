@@ -1,17 +1,13 @@
-{{ $css := resources.Get "css/common.css" | minify | resources.Fingerprint "sha512" }}
+{{ $inlineCSS := resources.Get "css/common.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+{{ $css := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) | resources.Fingerprint "sha512" }}
 
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
   <title>
-    {{ block "title" . }}
-    {{ if .IsHome}}
-    {{ .Site.Params.author.fullName }} - {{ .Site.Title }}
-    {{else}}
-    {{ .Page.Title }} - {{ .Site.Title }}
-    {{ end }}
-    {{ end }}
+    {{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.author.fullName }} - {{ .Site.Title }}{{ else }}{{ .Page.Title
+    }} - {{ .Site.Title }}{{ end }}{{ end }}
   </title>
   <meta name="author" content="{{ .Site.Params.author.fullName }}">
   <meta name="copyright" content="© {{ .Site.Copyright }}">
@@ -60,16 +56,15 @@
   <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.author.image }}">
 
   <!-- Styles -->
-  <link rel="stylesheet" type="text/css" href="{{ $css.Permalink }}" integrity="{{ $css.Data.Integrity }}">
+  <style>{{ $inlineCSS.Content | safeCSS }}</style>
+  <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
 </head>
 <body>
-<main>
-  {{ block "header" . }}
-  {{ end }}
-  {{ block "main" . }}
-  {{ end }}
-</main>
-{{ block "footer" . }}
+{{ partial "header.html" . }}
+
+{{ block "main" . }}
 {{ end }}
+
+{{ partial "footer.html" . }}
 </body>
 </html>

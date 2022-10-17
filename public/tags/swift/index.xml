@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Swift on Portfolio</title>
+    <link>https://hbiede.com/tags/swift/</link>
+    <description>Recent content in Swift on Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>Hundter Biede</copyright>
+    <lastBuildDate>Sun, 03 Oct 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://hbiede.com/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What&#39;s Next - Media Recommendation Tracker</title>
+      <link>https://hbiede.com/projects/2021-10-03-whats-next/</link>
+      <pubDate>Sun, 03 Oct 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2021-10-03-whats-next/</guid>
+      <description>Track media recommendations from friends</description>
+    </item>
+    
+    <item>
+      <title>Lazy Clock</title>
+      <link>https://hbiede.com/projects/2018-08-01-lazy-clock/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2018-08-01-lazy-clock/</guid>
+      <description>A Natural Language Clock App for iOS</description>
+    </item>
+    
+    <item>
+      <title>Natural Language Time Library</title>
+      <link>https://hbiede.com/projects/2018-08-01-natural-language-time-framework/</link>
+      <pubDate>Wed, 01 Aug 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://hbiede.com/projects/2018-08-01-natural-language-time-framework/</guid>
+      <description>A Natural Language Framework in Swift</description>
+    </item>
+    
+  </channel>
+</rss>
