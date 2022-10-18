@@ -23,6 +23,7 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
+          extended: true # extended is needed due to use of SCSS
 
       - name: Build
         run: hugo --minify
