@@ -63,7 +63,7 @@
   {{ if .IsHome }}
     {{ $css := resources.Get "css/home.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
-  {{ else if eq .Kind "page" }}
+  {{ else if (or (eq .Kind "page") (eq .Kind "404")) }}
     {{ $css := resources.Get "css/single.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
   {{ else if eq .Section "projects" }}
