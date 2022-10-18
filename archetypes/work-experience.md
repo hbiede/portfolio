@@ -1,5 +1,7 @@
 ---
-date: {{ .Date.Format "2006-01-02" }}
+company:
 title: "{{ replace .Name "-" " " | title }}"
-draft: true
+years:
 ---
+
+* 
