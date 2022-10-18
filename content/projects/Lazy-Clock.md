@@ -1,7 +1,7 @@
 ---
 date: 2018-08-01
 title: Lazy Clock
-image: images/projects/LazyClock.png
+image: /images/projects/LazyClock.png
 imageAlt: Lazy Clock
 links:
 - name: App Store

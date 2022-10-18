@@ -1,7 +1,7 @@
 ---
 date: 2019-02-11
 title: vCard to Image Collection Converter
-image: images/projects/ContactOutput.png
+image: /images/projects/ContactOutput.png
 imageAlt: Contact Output Project
 links:
 - name: Production JARs

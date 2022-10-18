@@ -1,5 +1,5 @@
-{{ $inlineCSS := resources.Get "css/common.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
-{{ $css := resources.Get "css/main.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) | resources.Fingerprint "sha512" }}
+{{ $inlineCSS := resources.Get "css/header.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+{{ $cssConvertOptions := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
 
 <!DOCTYPE html>
 <html lang="en-US">
@@ -57,7 +57,16 @@
 
   <!-- Styles -->
   <style>{{ $inlineCSS.Content | safeCSS }}</style>
-  <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ if .IsHome }}
+    {{ $css := resources.Get "css/home.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ else if eq .Section "projects" }}
+    {{ $css := resources.Get "css/project_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ else if eq .Type "tags" }}
+    {{ $css := resources.Get "css/tag_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ end }}
 </head>
 <body>
 {{ partial "header.html" . }}

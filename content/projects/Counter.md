@@ -2,7 +2,7 @@
 date: 2021-05-03
 title: Counter - Counting Utility
 linkTitle: Counter
-image: images/projects/counter.png
+image: /images/projects/counter.png
 imageAlt: Counter App Icon
 links:
 - name: GitHub

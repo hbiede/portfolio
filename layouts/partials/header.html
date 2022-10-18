@@ -1,26 +1,42 @@
-<header>
+{{ if .IsHome}}<header style="height:100vh;">{{ else }}<header>{{ end }}
   <div class="header-name">
-    <h1>{{ .Site.Params.author.fullName }}</h1>
-    <h2>{{ .Site.Params.author.jobTitle }}</h2>
+    {{ if .IsHome }}
+      <h1 style="font-size:6vw;">
+    {{ else }}
+      <h1>
+    {{ end }}
+      {{ .Site.Params.author.fullName }}
+    </h1>
+    {{ if .IsHome }}
+      <h2 style="font-size:4vw;">
+    {{ else }}
+      <h2>
+    {{ end }}
+      {{ .Site.Params.author.jobTitle }}
+    </h2>
     <div class="header-links">
       {{ range $i, $link := .Site.Params.author.links }}
       <a href="{{ $link.link }}">{{ $link.name }}</a>
       {{ end }}
     </div>
   </div>
-  {{ if .IsHome }}
-  <img
+  <div class="headshot-container">
+    {{ if .IsHome }}
+    <img
       class="headshot"
       src="{{ .Site.Params.author.image }}"
       alt="Image of {{ .Site.Params.author.shortName }}"
-  />
-  {{ else }}
-  <a href="{{ .Site.BaseURL }}" aria-label="Go Home">
-    <img
-        class="headshot"
-        src="{{ .Site.Params.author.image }}"
-        alt="Image of {{ .Site.Params.author.shortName }}"
+      style="max-height: 80vh;"
     />
-  </a>
+    {{ else }}
+    <a href="{{ .Site.BaseURL }}" aria-label="Go Home">
+      <img
+        class="headshot"
+        src="/{{ .Site.Params.author.image }}"
+        alt="Image of {{ .Site.Params.author.shortName }}"
+        style="max-height: 25vh;"
+      />
+    </a>
   {{ end }}
+  </div>
 </header>

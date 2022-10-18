@@ -74,10 +74,12 @@
   "outputs": {
     "home": [
       "HTML",
-      "RSS",
-      "Sitemap",
-      "WebAppManifest"
-    ]
+      "RSS"
+    ],
+    "page": [],
+    "section": ["HTML", "RSS"],
+    "term": ["HTML"],
+    "taxonomy": ["HTML", "RSS"]
   },
   "taxonomies": {
     "tag": "tags"

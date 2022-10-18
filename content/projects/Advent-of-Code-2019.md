@@ -1,7 +1,7 @@
 ---
 date: 2019-12-25
 title: Advent of Code 2019
-image: images/projects/advent_tree.png
+image: /images/projects/advent_tree.png
 imageAlt: Advent of Code
 links:
 - name: GitHub

@@ -1,7 +1,7 @@
 ---
 date: 2020-05-29
 title: LaTeX Linter
-image: images/projects/latex.png
+image: /images/projects/latex.png
 imageAlt: LaTeX Logo
 links:
 - name: GitHub

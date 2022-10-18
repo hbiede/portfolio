@@ -1,0 +1,17 @@
+{{ define "main" }}
+
+<main>
+  <section id="tag-list" aria-role="list">
+    <h3>Tags</h3>
+    <hr>
+    {{ range .Data.Terms.Alphabetical }}
+    <h4>{{ .Name }} ({{ .WeightedPages.Count }})</h4>
+    <ul>
+    {{ range .WeightedPages }}
+    <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    {{ end }}
+    </ul>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

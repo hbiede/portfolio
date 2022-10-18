@@ -1,0 +1,25 @@
+@import "common";
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  section {
+    @include content-container;
+    min-width: 550px;
+    width: 60%;
+
+    h3 {
+      font-size: 2em;
+    }
+
+    @media (max-width: 600px) {
+      min-width: auto;
+      width: 100%;
+    }
+
+    @import "project_list_item";
+    @include project_list(false, false);
+  }
+}

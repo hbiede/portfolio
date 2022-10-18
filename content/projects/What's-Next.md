@@ -2,7 +2,7 @@
 date: 2021-10-03
 title: What's Next - Media Recommendation Tracker
 linkTitle: What's Next
-image: images/projects/whats-next.png
+image: /images/projects/whats-next.png
 imageAlt: What's Next App Icon
 links:
 - name: GitHub

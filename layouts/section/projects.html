@@ -1,0 +1,24 @@
+{{ define "main" }}
+<main>
+  <section id="project-list" aria-role="list">
+    <h3>Projects</h3>
+    <hr />
+    {{ range sort (where .Site.RegularPages "Section" "projects") ".Params.Date" "desc" }}
+    <div class="project-list-item" aria-role="listitem">
+      <div class="project-item-desc">
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        <p>{{ .Summary }}</p>
+        <div class="project-item-tags">
+          {{ range .Params.Tags }}
+          <p><a href="/tags/{{ . }}">{{ . }}</a></p>
+          {{ end }}
+        </div>
+      </div>
+      {{ if isset .Params "image" }}
+      <img class="project-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}" />
+      {{ end }}
+    </div>
+    {{ end }}
+  </section>
+</main>
+{{ end }}

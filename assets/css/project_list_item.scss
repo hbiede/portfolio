@@ -1,0 +1,128 @@
+@import "common";
+
+@mixin project_list($hide_tags: true, $special-primary: true) {
+  &#project-list {
+    @include content-container;
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+
+    a {
+      font-size: 1.25em;
+
+      &:hover {
+        color: var(--SpecialTextColor);
+      }
+
+      &.more-projects {
+        align-self: flex-end;
+        font-size: 1em;
+      }
+    }
+
+    hr {
+      margin-bottom: 2em;
+      margin-top: 1em;
+    }
+
+    .project-list-item {
+      align-items: center;
+      border-bottom-color: var(--Accent);
+      border-bottom-style: solid;
+      border-bottom-width: 0.1em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 1em;
+      padding-left: 1em;
+      padding-right: 1em;
+      margin-bottom: 1em;
+
+      .project-item-desc {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      img {
+        margin-left: 1em;
+        max-width: 10vw;
+      }
+
+      @if $hide_tags {
+        .project-item-tags {
+          display: none;
+        }
+      } @else {
+        .project-item-tags {
+          align-items: center;
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          margin: 0.75em 0 0.75em -0.5em;
+
+          a {
+            background-color: var(--Accent);
+            border-radius: 0.5em;
+            color: var(--TextOnDarkColor);
+            font-size: 1em;
+            margin-left: 0.5em;
+            margin-top: 0.5em;
+            padding: 0.25em 0.5em;
+          }
+        }
+      }
+
+      @if $special-primary {
+        &:nth-of-type(1) {
+          display: flex;
+          flex-direction: column-reverse;
+
+          .project-item-desc {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+
+            a {
+              font-size: 2em;
+            }
+
+            @if $hide_tags {
+              .project-item-tags {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 0.75em 0 0.75em -0.5em;
+
+                a {
+                  background-color: var(--Accent);
+                  border-radius: 0.5em;
+                  color: var(--TextOnDarkColor);
+                  font-size: 1em;
+                  margin-left: 0.5em;
+                  margin-top: 0.5em;
+                  padding: 0.25em 0.5em;
+                }
+              }
+            } @else {
+              .project-item-tags {
+                justify-content: center;
+              }
+            }
+          }
+
+          img {
+            margin-bottom: 1em;
+            margin-left: 0;
+            max-height: 15em;
+            max-width: none;
+          }
+        }
+      }
+    }
+  }
+}

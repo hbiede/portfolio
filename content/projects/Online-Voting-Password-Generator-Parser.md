@@ -1,7 +1,7 @@
 ---
 date: 2020-04-15
 title: Online Voting Password Generator/Parser
-image: images/projects/poll.png
+image: /images/projects/poll.png
 imageAlt: Poll
 links:
 - name: GitHub
