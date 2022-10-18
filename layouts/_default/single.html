@@ -1,0 +1,40 @@
+{{ define "main" }}
+<main>
+  <article>
+    <section>
+      <h3>{{ .Title }}</h3>
+      {{ with .Date }}
+      <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
+      {{ end }}
+
+      {{ if isset .Params "image" }}
+      <img class="post-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}"/>
+      {{ end }}
+      {{ with .Params.Tags }}
+        <h4>Tags</h4>
+        <div class="item-tags">
+          {{ range . }}
+          <p><a href="/tags/{{ urlize . }}">{{ . }}</a></p>
+          {{ end }}
+        </div>
+      {{ end }}
+
+      {{ with .Params.Links }}
+      <h4>Links</h4>
+      <div class="item-links">
+        {{ range . }}
+        <p><a href="{{ .link }}">{{ .name }}</a></p>
+        {{ end }}
+      </div>
+      {{ end }}
+
+      {{ with .Content }}
+        {{ . }}
+      {{ end }}
+      {{ with .Params.Years }}
+        <p class="years-marker">Years: {{ . }}</p>
+      {{ end }}
+    </section>
+  </article>
+</main>
+{{ end }}

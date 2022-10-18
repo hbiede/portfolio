@@ -1,10 +1,41 @@
 @import "common";
+
+$smallSizeBoundary: 900px;
+
 main {
+  display: grid;
+  grid-template-areas:
+  "about-me   main-column"
+  "extra-info main-column"
+  ".          main-column";
+  grid-template-columns: max(35vw) auto;
+  grid-template-rows: min-content min-content auto;
+
+  div.about-me-container {
+    grid-area: about-me;
+  }
+
+  div.extra-info-container {
+    grid-area: extra-info;
+
+    @media (min-width: $smallSizeBoundary) {
+      margin-top: -1em;
+    }
+  }
+
+  div.main-column-container {
+    grid-area: main-column;
+  }
+
   section {
     @include content-container;
 
     @import "project_list_item";
     @include project_list(true, true);
+
+    h3 {
+      font-size: 2em;
+    }
 
     &#about-me {
       font-size: 1.05em;
@@ -73,9 +104,13 @@ main {
 
     &#work-experience {
       @include content-container;
+      @import "work_exp_mixin";
+      @include work_exp_section;
       display: flex;
       flex-direction: column;
       margin-left: 0;
+      min-width: auto;
+      width: auto;
 
       a {
         font-size: 1.25em;
@@ -91,53 +126,26 @@ main {
       }
 
       hr {
-        margin-bottom: 2em;
         margin-top: 1em;
       }
 
-      .work-experience-list-item {
-        border-bottom-color: var(--Accent);
-        border-bottom-style: solid;
-        border-bottom-width: 0.1em;
-        padding-bottom: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
-        margin-bottom: 1em;
-
-        .work-experience-item-desc {
-          margin-bottom: 0.5em;
-        }
-
-        .work-experience-item-tags {
-          align-items: center;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          margin: 0.75em 0 0.75em -0.5em;
-
-          a {
-            background-color: var(--Accent);
-            color: var(--TextOnDarkColor);
-            border-radius: 0.5em;
-            font-size: 1em;
-            margin-left: 0.5em;
-            margin-top: 0.5em;
-            padding: 0.25em 0.5em;
-          }
-        }
-      }
+      @import "work_experience_list_item";
     }
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: $smallSizeBoundary) {
   main {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
 
     section#project-list, section#work-experience {
-      margin-bottom: 0;
+      margin-top: 0;
       margin-left: 1em;
+    }
+
+    div.extra-info-container {
+      margin-top: -1em;
     }
   }
 }

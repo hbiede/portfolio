@@ -7,6 +7,7 @@ links:
 - name: GitHub
   link: https://github.com/hbiede/portfolio
 summary: Personal website
-description: Personal website used as a resume/portfolio by Hundter Biede
-tags: [HTML/CSS, Hugo]
+tags: [HTML, CSS, Hugo]
 ---
+
+A personal website used as a resume/portfolio.

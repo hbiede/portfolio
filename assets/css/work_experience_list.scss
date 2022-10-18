@@ -1,0 +1,15 @@
+@import "common";
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  section {
+    @include content-container;
+    @import "work_exp_mixin";
+    @include work_exp_section;
+
+    @import "work_experience_list_item";
+  }
+}

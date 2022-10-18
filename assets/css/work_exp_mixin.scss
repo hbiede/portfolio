@@ -1,0 +1,26 @@
+@import "common";
+@mixin work_exp_section {
+  min-width: 550px;
+  width: 75%;
+
+  h3 {
+    font-size: 2em;
+  }
+
+  h4 {
+    font-size: 1.5em;
+  }
+
+  hr {
+    margin-bottom: 1.5em;
+  }
+
+  p.years-marker {
+    margin-bottom: 1em;
+  }
+
+  @media (max-width: 600px) {
+    min-width: auto;
+    width: 100%;
+  }
+}

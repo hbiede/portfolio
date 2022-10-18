@@ -1,0 +1,31 @@
+.work-experience-list-item {
+  border-bottom-color: var(--Accent);
+  border-bottom-style: solid;
+  border-bottom-width: 0.1em;
+  padding-bottom: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-bottom: 1em;
+
+  .work-experience-item-desc {
+    margin-bottom: 0.5em;
+  }
+
+  .work-experience-item-tags {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0.75em 0 0.75em -0.5em;
+
+    a {
+      background-color: var(--Accent);
+      color: var(--TextOnDarkColor);
+      border-radius: 0.5em;
+      font-size: 1em;
+      margin-left: 0.5em;
+      margin-top: 0.5em;
+      padding: 0.25em 0.5em;
+    }
+  }
+}

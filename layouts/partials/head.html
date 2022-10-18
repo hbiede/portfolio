@@ -1,0 +1,79 @@
+{{ $inlineCSS := resources.Get "css/header.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+{{ $cssConvertOptions := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+
+<head>
+  <meta charset="utf-8">
+  <title>
+    {{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.author.fullName }} - {{ .Site.Title }}{{ else }}{{ .Page.Title
+    }} - {{ .Site.Title }}{{ end }}{{ end }}
+  </title>
+  <meta name="author" content="{{ .Site.Params.author.fullName }}">
+  <meta name="copyright" content="© {{ .Site.Copyright }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {{- with .Description }}
+  <meta name="description" content="{{ . }}">
+  {{- else -}}
+  {{- with .Site.Params.description }}
+  <meta name="description" content="{{ . }}">
+  {{- end -}}
+  {{- end }}
+
+  <!-- Favicon -->
+  <link href="{{ .Site.BaseURL }}images/icons/favicon.ico" rel="shortcut icon">
+  <link rel="icon" type="image/png" href="{{ .Site.BaseURL }}images/icons/favicon.png">
+
+  <!-- Apple Home Screen Icons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ .Site.BaseURL }}images/icons/apple-touch-icon-180x180.png">
+
+  <!-- Safari Pinned Tab -->
+  <link rel="mask-icon" href="{{ .Site.BaseURL }}images/icons/favicon.svg" color="black">
+
+  <!-- Android -->
+  <link rel="manifest" href="{{ .Site.BaseURL }}manifest.json">
+
+  <!-- Microsoft -->
+  <meta name="msapplication-TileColor" content="#0083ff">
+  <meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}images/icons/mstile-144x144.png">
+  <meta name="theme-color" content="#0077b6">
+
+  <!-- Twitter Cards -->
+  <meta property="twitter:card" content="summary">
+  <meta property="twitter:site" content="{{ .Permalink }}">
+  <meta property="twitter:creator" content="@{{ .Site.Params.author.twitter }}">
+  <meta property="twitter:title" content="{{ .Page.Title }}">
+  <meta property="twitter:image" content="{{ .Site.BaseURL }}{{ .Site.Params.author.image }}">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ .Permalink }}/">
+  <meta property="og:site_name" content="{{ .Site.Title }}">
+  <meta property="og:title" content="{{ .Site.Title }}" />
+  <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.author.image }}">
+
+  <!-- Styles -->
+  <style>{{ $inlineCSS.Content | safeCSS }}</style>
+  {{ if .IsHome }}
+    {{ $css := resources.Get "css/home.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ else if eq .Kind "page" }}
+    {{ $css := resources.Get "css/single.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ else if eq .Section "projects" }}
+    {{ $css := resources.Get "css/project_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ else if eq .Section "work-experience" }}
+    {{ $css := resources.Get "css/work_experience_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ else if eq .Type "tags" }}
+    {{ $css := resources.Get "css/tag_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
+  {{ end }}
+</head>

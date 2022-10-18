@@ -1,0 +1,28 @@
+{{ $projectList := sort (where .Site.RegularPages "Section" "projects") ".Params.Date" "desc" }}
+{{ if .IsHome }}
+  {{ $projectList = first 6 $projectList }}
+{{ end }}
+
+<section id="project-list" aria-role="list">
+  <h3>Projects</h3>
+  <hr />
+  {{ range $projectList }}
+  <div class="project-list-item" aria-role="listitem">
+    <div class="project-item-desc">
+      <h4><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h4>
+      <p>{{ .Summary }}</p>
+      <div class="project-item-tags">
+        {{ range .Params.Tags }}
+        <p><a href="/tags/{{ urlize . }}">{{ . }}</a></p>
+        {{ end }}
+      </div>
+    </div>
+    {{ if isset .Params "image" }}
+    <img class="project-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}" />
+    {{ end }}
+  </div>
+  {{ end }}
+  {{ if .IsHome }}
+  <a class="more-projects" href="/projects">More &gt;</a>
+  {{ end }}
+</section>

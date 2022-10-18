@@ -1,6 +1,6 @@
 {{ define "main" }}
 <main>
-  <div>
+  <div class="about-me-container">
     <section id="about-me">
       {{ .Content }}
     </section>
@@ -15,7 +15,15 @@
       {{ end }}
       <p><a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a></p>
     </section>
+  </div>
 
+  <div class="main-column-container">
+    {{ partial "project-list.html" . }}
+
+    {{ partial "work-experience-list.html" . }}
+  </div>
+
+  <div class="extra-info-container">
     <section id="skill-set" aria-role="list">
       <h3>Skills</h3>
       <hr />
@@ -37,50 +45,6 @@
         <hr />
       </div>
       {{ end }}
-    </section>
-  </div>
-
-  <div>
-    <section id="project-list" aria-role="list">
-      <h3>Projects</h3>
-      <hr />
-      {{ range first 6 (sort (where .Site.RegularPages "Section" "projects") ".Params.Date" "desc") }}
-      <div class="project-list-item" aria-role="listitem">
-        <div class="project-item-desc">
-          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-          <p>{{ .Summary }}</p>
-          <div class="project-item-tags">
-            {{ range .Params.Tags }}
-            <p><a href="/tags/{{ . }}">{{ . }}</a></p>
-            {{ end }}
-          </div>
-        </div>
-        {{ if isset .Params "image" }}
-        <img class="project-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}" />
-        {{ end }}
-      </div>
-      {{ end }}
-      <a class="more-projects" href="/projects">More &gt;</a>
-    </section>
-
-    <section id="work-experience" aria-role="list">
-      <h3>Work Experience</h3>
-      <hr />
-      {{ range first 5 (sort (sort (where .Site.RegularPages "Section" "work-experience") ".Date" "desc")
-      ".Params.Years" "desc") }}
-      <div class="work-experience-list-item" aria-role="listitem">
-        <div class="work-experience-item-desc">
-          <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-        </div>
-        {{ .Content }}
-        <div class="work-experience-item-tags">
-          {{ range .Params.Tags }}
-          <a href="/tags/{{ . }}">{{ . }}</a>
-          {{ end }}
-        </div>
-      </div>
-      {{ end }}
-      <a class="more-work-experience" href="/work-experience">More &gt;</a>
     </section>
   </div>
 </main>

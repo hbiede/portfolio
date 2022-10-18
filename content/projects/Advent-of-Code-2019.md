@@ -7,6 +7,7 @@ links:
 - name: GitHub
   link: https://github.com/hbiede/AoC-2019
 summary: Advent of Code Solutions for 2019
-description: My solutions for the 2019 version of Advent of Code. This was my first year doing Advent of Code, I used it as an opportunity to learn Go(lang).
 tags: [Golang]
 ---
+
+My solutions for the 2019 version of Advent of Code. This was my first year doing Advent of Code, I used it as an opportunity to learn Go(lang).
