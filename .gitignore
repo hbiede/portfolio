@@ -9,6 +9,7 @@ _site/*
 .jekyll-cache/*
 .hugo_build.lock
 resources/_gen
+public/*
 
 # MacOS
 .DS_Store
