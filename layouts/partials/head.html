@@ -42,7 +42,6 @@
   <!-- Microsoft -->
   <meta name="msapplication-TileColor" content="#0083ff">
   <meta name="msapplication-TileImage" content="{{ .Site.BaseURL }}/images/icons/mstile-144x144.png">
-  <meta name="theme-color" content="#0077b6">
 
   <!-- Twitter Cards -->
   <meta property="twitter:card" content="summary">
@@ -59,6 +58,8 @@
   <meta property="og:image" content="{{ .Site.BaseURL }}/{{ .Site.Params.author.image }}">
 
   <!-- Styles -->
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#0077b6">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529">
   <style>{{ $inlineCSS.Content | safeCSS }}</style>
   {{ if .IsHome }}
     {{ $css := resources.Get "css/home.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
