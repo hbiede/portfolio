@@ -3,13 +3,16 @@
 main {
   display: flex;
   justify-content: center;
+  padding-bottom: 0.5em;
+  padding-top: 0.5em;
   width: 100%;
 
   section {
-    @include content-container;
     @import "work_exp_mixin";
     @include work_exp_section;
-
     @import "work_experience_list_item";
+
+    min-width: 550px;
+    width: 75%;
   }
 }

@@ -1,49 +1,61 @@
 {{ define "main" }}
 <main>
   <div class="about-me-container">
-    <section id="about-me">
-      {{ .Content }}
-    </section>
+    <article aria-label="About {{ .Site.Params.author.shortName }}">
+      <section id="about-me">
+        {{ .Content }}
+      </section>
+    </article>
 
-    <section id="contact-info">
-      {{ if isset .Site.Params.author "location" }}<p>{{ .Site.Params.author.location }}</p>{{ end }}
-      {{ if isset .Site.Params.author "email" }}
-      <p><a href="mailto:{{ .Site.Params.author.email }}">{{ .Site.Params.author.email }}</a></p>
-      {{ end }}
-      {{ if isset .Site.Params.author "phoneNumber" }}
-      <p><a href="tel:{{ .Site.Params.author.phoneNumber }}">{{ .Site.Params.author.phoneNumber }}</a></p>
-      {{ end }}
-      <p><a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a></p>
-    </section>
+    <article aria-label="Contact Information">
+      <section id="contact-info">
+        {{ if isset .Site.Params.author "location" }}<p>{{ .Site.Params.author.location }}</p>{{ end }}
+        {{ if isset .Site.Params.author "email" }}
+        <p><a href="mailto:{{ .Site.Params.author.email }}">{{ .Site.Params.author.email }}</a></p>
+        {{ end }}
+        {{ if isset .Site.Params.author "phoneNumber" }}
+        <p><a href="tel:{{ .Site.Params.author.phoneNumber }}">{{ .Site.Params.author.phoneNumber }}</a></p>
+        {{ end }}
+        <p><a href="{{ .Site.BaseURL }}">{{ .Site.BaseURL }}</a></p>
+      </section>
+    </article>
   </div>
 
   <div class="main-column-container">
-    {{ partial "project-list.html" . }}
+    <article aria-label="Project Experience">
+      {{ partial "project-list.html" . }}
+    </article>
 
-    {{ partial "work-experience-list.html" . }}
+    <article aria-label="Work Experience">
+      {{ partial "work-experience-list.html" . }}
+    </article>
   </div>
 
   <div class="extra-info-container">
-    <section id="skill-set">
-      <h3>Skills</h3>
-      <hr />
-      {{ range .Site.Params.author.skills }}
-      <p>{{ .name }}</p>
-      <div class="skill-container">
-        <div class="skill-bar" style="width:{{ .percent }}%;"></div>
-      </div>
-      {{ end }}
-    </section>
+    <article aria-label="Skill Sets">
+      <section id="skill-set">
+        <h3>Skills</h3>
+        <hr aria-hidden="true" />
+        {{ range .Site.Params.author.skills }}
+        <p>{{ .name }}</p>
+        <div class="skill-container">
+          <div class="skill-bar" style="width:{{ .percent }}%;"></div>
+        </div>
+        {{ end }}
+      </section>
+    </article>
 
-    <section id="education-history">
-      {{ range .Site.Params.author.education }}
-      <div>
-        <p>{{ .degreeName }}</p>
-        <p>{{ .school }} <span>({{ .dates }})</span></p>
-        <hr />
-      </div>
-      {{ end }}
-    </section>
+    <article aria-label="Education History">
+      <section id="education-history">
+        {{ range .Site.Params.author.education }}
+        <div>
+          <p>{{ .degreeName }}</p>
+          <p>{{ .school }} <span>({{ .dates }})</span></p>
+          <hr />
+        </div>
+        {{ end }}
+      </section>
+    </article>
   </div>
 </main>
 {{ end }}

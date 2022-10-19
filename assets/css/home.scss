@@ -103,33 +103,11 @@ main {
     }
 
     &#work-experience {
-      @include content-container;
       @import "work_exp_mixin";
       @include work_exp_section;
-      display: flex;
-      flex-direction: column;
-      margin-left: 0;
-      min-width: auto;
-      width: auto;
-
-      a {
-        font-size: 1.25em;
-
-        &:hover {
-          color: var(--SpecialTextColor);
-        }
-
-        &.more-work-experience {
-          align-self: flex-end;
-          font-size: 1em;
-        }
-      }
-
-      hr {
-        margin-top: 1em;
-      }
-
       @import "work_experience_list_item";
+
+      margin-left: 0;
     }
   }
 }

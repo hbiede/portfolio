@@ -5,9 +5,9 @@
 
 <section id="work-experience">
   <h3>Work Experience</h3>
-  <hr />
+  <hr aria-hidden="true" />
   {{ range $expList }}
-  <div class="work-experience-list-item">
+  <article class="work-experience-list-item" aria-label="{{ .LinkTitle }}">
     <div class="work-experience-item-desc">
       <h4>
         <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
@@ -17,7 +17,7 @@
       </h4>
     </div>
     {{ with .Params.Years }}
-      <p class="years-marker">Years: {{ . }}</p>
+    <p class="years-marker">Years: {{ . }}</p>
     {{ end }}
     {{ .Content }}
     <div class="work-experience-item-tags">
@@ -25,7 +25,9 @@
       <a href="/tags/{{ urlize . }}">{{ . }}</a>
       {{ end }}
     </div>
-  </div>
+  </article>
   {{ end }}
-  <a class="more-work-experience" href="/work-experience">More &gt;</a>
+  {{ if .IsHome }}
+    <a class="more-work-experience" href="/work-experience" aria-label="More">More &gt;</a>
+  {{ end }}
 </section>

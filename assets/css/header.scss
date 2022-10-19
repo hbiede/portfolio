@@ -61,8 +61,17 @@ header {
       max-width: 40vw;
     }
 
-    a img.headshot:hover {
-      filter: brightness(60%);
+    a img.headshot {
+      &:hover {
+        filter: brightness(60%);
+      }
+    }
+
+    a:focus {
+      outline: none;
+      img.headshot {
+        outline-style: solid;
+      }
     }
   }
 

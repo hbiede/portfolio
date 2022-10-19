@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>
-    {{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.author.fullName }} - {{ .Site.Title }}{{ else }}{{ .Page.Title
+    {{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.author.fullName }}{{ else }}{{ .Page.Title
     }} - {{ .Site.Title }}{{ end }}{{ end }}
   </title>
   <meta name="author" content="{{ .Site.Params.author.fullName }}">

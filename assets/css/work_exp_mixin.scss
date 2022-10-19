@@ -1,7 +1,10 @@
 @import "common";
 @mixin work_exp_section {
-  min-width: 550px;
-  width: 75%;
+  @include content-container;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h3 {
     font-size: 2em;
@@ -17,6 +20,11 @@
 
   p.years-marker {
     margin-bottom: 1em;
+  }
+
+  a.more-work-experience {
+    align-self: flex-end;
+    font-size: 1em;
   }
 
   @media (max-width: 600px) {

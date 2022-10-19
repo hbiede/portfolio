@@ -1,6 +1,6 @@
 ---
 company:
-title: "{{ replace .Name "-" " " | title }}"
+title: "{{ humanize .Name | title }}"
 years:
 ---
 

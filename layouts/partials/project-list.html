@@ -7,9 +7,9 @@
 
 <section id="project-list">
   <h3>Projects</h3>
-  <hr />
+  <hr aria-hidden="true" />
   {{ range $projectList }}
-  <div class="project-list-item">
+  <article class="project-list-item" aria-label="{{ .LinkTitle }}">
     <div class="project-item-desc">
       <h4><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h4>
       <p>{{ .Summary }}</p>
@@ -22,9 +22,9 @@
     {{ if isset .Params "image" }}
       <img class="project-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}" />
     {{ end }}
-  </div>
+  </article>
   {{ end }}
   {{ if .IsHome }}
-  <a class="more-projects" href="/projects">More &gt;</a>
+  <a class="more-projects" href="/projects" aria-label="More">More &gt;</a>
   {{ end }}
 </section>
