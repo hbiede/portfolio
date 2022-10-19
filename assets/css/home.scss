@@ -31,7 +31,7 @@ main {
     @include content-container;
 
     @import "project_list_item";
-    @include project_list(true, true);
+    @include project_list(false, true);
 
     h3 {
       font-size: 2em;

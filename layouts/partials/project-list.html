@@ -13,11 +13,7 @@
     <div class="project-item-desc">
       <h4><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h4>
       <p>{{ .Summary }}</p>
-        {{ if $isHome }}
-          <div class="project-item-tags" style="justify-content:center;">
-        {{ else }}
-          <div class="project-item-tags">
-        {{ end }}
+        <div class="project-item-tags">
         {{ range .Params.Tags }}
         <p><a href="/tags/{{ urlize . }}">{{ . }}</a></p>
         {{ end }}
