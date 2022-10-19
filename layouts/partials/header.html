@@ -34,6 +34,7 @@
             class="headshot"
             src="{{ ($headshot.Resize "1000x jpeg").RelPermalink }}"
             alt="Image of {{ $name }}"
+            style="max-height:80vh;"
           />
         </picture>
       {{ else }}
