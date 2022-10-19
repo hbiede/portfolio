@@ -9,7 +9,12 @@
   {{ range $expList }}
   <div class="work-experience-list-item">
     <div class="work-experience-item-desc">
-      <h4><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></h4>
+      <h4>
+        <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+        {{ with .Params.Company }}
+        <span>{{ . }}</span>
+        {{ end }}
+      </h4>
     </div>
     {{ with .Params.Years }}
       <p class="years-marker">Years: {{ . }}</p>

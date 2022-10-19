@@ -2,10 +2,16 @@
 <main>
   <article>
     <section>
-      <h3>{{ .Title }}</h3>
+      <h3>
+        {{ .Title }}
+        {{ with .Params.Company }}
+        <span>{{ . }}</span>
+        {{ end }}
+      </h3>
       {{ with .Date }}
       <time datetime="{{ .Format "2006-01-02" }}">{{ .Format "January 2, 2006" }}</time>
       {{ end }}
+
 
       {{ if isset .Params "image" }}
       <img class="post-image" src="{{ .Params.Image }}" alt="{{ .Params.ImageAlt }}"/>
