@@ -1,3 +1,8 @@
+{{ $headshot := resources.Get .Site.Params.author.image }}
+{{ $isHome := .IsHome }}
+{{ $name := .Site.Params.author.shortName }}
+{{ $baseURL := .Site.BaseURL }}
+
 {{ if .IsHome}}<header style="height:100vh;">{{ else }}<header>{{ end }}
   <div class="header-name">
     {{ if .IsHome }}
@@ -21,22 +26,29 @@
     </div>
   </div>
   <div class="headshot-container">
-    {{ if .IsHome }}
-    <img
-      class="headshot"
-      src="{{ .Site.Params.author.image }}"
-      alt="Image of {{ .Site.Params.author.shortName }}"
-      style="max-height: 80vh;"
-    />
-    {{ else }}
-    <a href="{{ .Site.BaseURL }}" aria-label="Go Home">
-      <img
-        class="headshot"
-        src="/{{ .Site.Params.author.image }}"
-        alt="Image of {{ .Site.Params.author.shortName }}"
-        style="max-height: 15em;"
-      />
-    </a>
-  {{ end }}
+    {{ with $headshot }}
+      {{ if $isHome }}
+        <picture>
+          <source srcset="{{ ($headshot.Resize "1000x webp").RelPermalink }}" type="image/webp">
+          <img
+            class="headshot"
+            src="{{ ($headshot.Resize "1000x jpeg").RelPermalink }}"
+            alt="Image of {{ $name }}"
+          />
+        </picture>
+      {{ else }}
+        <a href="{{ $baseURL }}" aria-label="Go Home">
+          <picture>
+            <source srcset="{{ ($headshot.Resize "600x webp").RelPermalink }}" type="image/webp">
+            <img
+              class="headshot"
+              src="{{ ($headshot.Resize "600x jpeg").RelPermalink }}"
+              alt="Image of {{ $name }}"
+              style="max-height: 15em;"
+            />
+          </picture>
+        </a>
+      {{ end }}
+    {{ end }}
   </div>
 </header>

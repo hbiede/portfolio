@@ -24,22 +24,20 @@
   </div>
 
   <div class="extra-info-container">
-    <section id="skill-set" aria-role="list">
+    <section id="skill-set">
       <h3>Skills</h3>
       <hr />
       {{ range .Site.Params.author.skills }}
-      <div aria-role="listitem">
-        <p>{{ .name }}</p>
-        <div class="skill-container">
-          <div class="skill-bar" style="width:{{ .percent }}%;"></div>
-        </div>
+      <p>{{ .name }}</p>
+      <div class="skill-container">
+        <div class="skill-bar" style="width:{{ .percent }}%;"></div>
       </div>
       {{ end }}
     </section>
 
-    <section id="education-history" aria-role="list">
+    <section id="education-history">
       {{ range .Site.Params.author.education }}
-      <div aria-role="list-item">
+      <div>
         <p>{{ .degreeName }}</p>
         <p>{{ .school }} <span>({{ .dates }})</span></p>
         <hr />

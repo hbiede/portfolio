@@ -4,6 +4,7 @@
   --TitleTextColor: #f2f0f0;
   --SpecialTextColor: #778492;
   --Accent: #0077b6;
+  --Button: #38BBFF;
   --PortfolioGrey: #999999;
   --PortfolioWhite: #f2f0f0;
   --DarkColor: #212529;
@@ -26,7 +27,7 @@
 }
 
 a {
-  color: var(--Accent);
+  color: var(--Button);
   text-decoration: none;
 
   &:hover {
@@ -93,10 +94,10 @@ header {
       justify-content: flex-start;
 
       a {
-        background-color: var(--Accent);
-        border: 0.1em solid var(--Accent);
+        background-color: var(--Button);
+        border: 0.1em solid var(--Button);
         border-radius: 0.5em;
-        color: var(--TitleTextColor);
+        color: var(--DarkColor);
         font-size: 1.3em;
         font-weight: 500;
         margin-left: 1em;
@@ -109,7 +110,7 @@ header {
 
         &:hover {
           background-color: var(--DarkColor);
-          color: var(--Accent);
+          color: var(--Button);
         }
       }
     }
@@ -132,6 +133,8 @@ header {
     align-items: center;
     display: flex;
     flex-direction: column-reverse;
+    min-height: 300px;
+    max-height: 80vh;
 
     .header-name {
       margin: 1vh 0 0 0;

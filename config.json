@@ -2,6 +2,7 @@
   "languageCode": "en-US",
   "baseURL": "https://hbiede.com",
   "params": {
+    "description": "Portfolio website for Hundter Biede",
     "author": {
       "shortName": "Hundter",
       "fullName": "Hundter Biede",
@@ -71,10 +72,19 @@
   "defaultContentLanguage": "en",
   "enableGitInfo": true,
   "assetDir": "assets",
+  "outputFormats": {
+    "manifest": {
+      "name": "manifest",
+      "baseName": "manifest",
+      "mediaType": "application/json",
+      "notAlternative": true
+    }
+  },
   "outputs": {
     "home": [
       "HTML",
-      "RSS"
+      "RSS",
+      "MANIFEST"
     ],
     "page": [],
     "section": ["HTML", "RSS"],
