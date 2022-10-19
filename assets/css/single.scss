@@ -34,25 +34,27 @@ main {
       max-height: 50em;
     }
 
-    .item-tags {
+    .item-tags, .item-links {
       @import "project_list_item";
       @include tags;
       align-items: flex-start;
-    }
 
-    .item-links {
-      @import "project_list_item";
-      @include tags;
-      align-items: flex-start;
+      > p {
+        margin-top: 0;
+        margin-bottom: 1em;
+      }
     }
 
     hr {
-      margin-bottom: 2em;
+      margin-bottom: 1em;
+      margin-top: 1em;
+    }
+
+    p {
       margin-top: 1em;
     }
 
     p.years-marker {
-      margin-top: 1em;
       font-weight: 550;
     }
   }
