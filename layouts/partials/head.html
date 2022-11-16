@@ -7,9 +7,9 @@
     {{ block "title" . }}{{ if .IsHome }}{{ .Site.Params.author.fullName }}{{ else }}{{ .Page.Title
     }} - {{ .Site.Title }}{{ end }}{{ end }}
   </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="{{ .Site.Params.author.fullName }}">
   <meta name="copyright" content="© {{ .Site.Copyright }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {{- with .Description }}
   <meta name="description" content="{{ . }}">
   {{- else -}}
