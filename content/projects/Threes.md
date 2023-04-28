@@ -2,7 +2,7 @@
 date: 2023-04-28
 title: Threes - Programming Language
 linkTitle: Threes
-image: /images/projects/Threes.png
+image: /images/projects/threes.png
 imageAlt: Threes Language Logo
 links:
 - name: GitHub
