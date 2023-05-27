@@ -1,6 +1,6 @@
 ---
 title: Portfolio
 ---
-{{< fullname >}} is a graduate student at the University of Nebraska-Lincoln, currently studying Computer Science with a
-goal of obtaining a Master's degree. {{< shortname >}} enjoys photography, reading, and playing board/card games with
-friends.
+{{< fullname >}} is a recent Computer Science master's degree graduate from the University
+of Nebraska-Lincoln. Outside of work, {{< shortname >}} enjoys photography, biking, and
+playing board/card games with friends.
