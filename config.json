@@ -86,7 +86,7 @@
       "RSS",
       "MANIFEST"
     ],
-    "page": [],
+    "page": ["HTML"],
     "section": ["HTML", "RSS"],
     "term": ["HTML"],
     "taxonomy": ["HTML", "RSS"]
