@@ -7,11 +7,13 @@
   <div class="header-name">
     {{ if .IsHome }}
       <h1 style="font-size:6vw;">
+        {{ .Site.Params.author.fullName }}
+      </h1>
     {{ else }}
       <h1>
+        <a href="{{ $baseURL }}" aria-label="Go Home">{{ .Site.Params.author.fullName }}</a>
+      </h1>
     {{ end }}
-      {{ .Site.Params.author.fullName }}
-    </h1>
     {{ if .IsHome }}
       <h2 style="font-size:4vw;">
     {{ else }}
