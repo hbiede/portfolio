@@ -38,16 +38,16 @@
           "percent": 90
         },
         {
+          "name": "Swift",
+          "percent": 85
+        },
+        {
           "name": "Python",
           "percent": 85
         },
         {
           "name": "Ruby",
           "percent": 82
-        },
-        {
-          "name": "Swift",
-          "percent": 75
         },
         {
           "name": "Java",
