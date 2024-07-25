@@ -8,7 +8,11 @@
     <h4>{{ .Name }} ({{ .WeightedPages.Count }})</h4>
     <ul>
     {{ range .WeightedPages.Pages }}
-    <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+    <li>
+      <a href="{{ .Permalink }}">
+        {{ .LinkTitle }}{{ if isset .Params "company" }}&nbsp;-&nbsp;{{ .Params.Company }}{{ end }}
+      </a>
+    </li>
     {{ end }}
     </ul>
     {{ end }}
