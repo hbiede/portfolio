@@ -1,4 +1,4 @@
-{{ $inlineCSS := resources.Get "css/header.scss" | resources.ToCSS (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
+{{ $inlineCSS := resources.Get "css/header.scss" | css.Sass (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
 {{ $cssConvertOptions := (dict "outputStyle" "compressed" "enableSourceMap" (not hugo.IsProduction)) }}
 
 <head>
@@ -62,19 +62,19 @@
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#212529">
   <style>{{ $inlineCSS.Content | safeCSS }}</style>
   {{ if .IsHome }}
-    {{ $css := resources.Get "css/home.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    {{ $css := resources.Get "css/home.scss" | css.Sass $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
   {{ else if (or (eq .Kind "page") (eq .Kind "404")) }}
-    {{ $css := resources.Get "css/single.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    {{ $css := resources.Get "css/single.scss" | css.Sass $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
   {{ else if eq .Section "projects" }}
-    {{ $css := resources.Get "css/project_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    {{ $css := resources.Get "css/project_list.scss" | css.Sass $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
   {{ else if eq .Section "work-experience" }}
-    {{ $css := resources.Get "css/work_experience_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    {{ $css := resources.Get "css/work_experience_list.scss" | css.Sass $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
   {{ else if eq .Type "tags" }}
-    {{ $css := resources.Get "css/tag_list.scss" | resources.ToCSS $cssConvertOptions | resources.Fingerprint "sha512" }}
+    {{ $css := resources.Get "css/tag_list.scss" | css.Sass $cssConvertOptions | resources.Fingerprint "sha512" }}
     <link rel="stylesheet" type="text/css" integrity="{{ $css.Data.Integrity }}" href="{{ $css.Permalink }}" />
   {{ end }}
 </head>
